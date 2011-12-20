@@ -1,0 +1,29 @@
+﻿/* lightbox layout */
+.light-box {width:449px;height:424px;background:#fff;}
+.light-box .title {background:#f28801;}
+.light-box .title h3{color:#fff;padding:8px 10px;font-size:14px;font-weight:bold;}
+.light-box .sub-title {background:#fff;}
+.light-box .sub-title h4 {padding:8px 10px;font-size:14px;color:#516064;}
+.light-box .tools {background:#f8fbd3;padding:5px;}
+.light-box .tools .filter {float:left;padding:7px;}
+.light-box .tools .search {float:right;}
+.light-box .tools .filter a{ margin:0 10px 0 0;color:#516064;}
+.light-box .tools .filter a.current{color:#fff;margin:0 10px 0 0;}
+.light-box .tools .filter a.current .start {background:image-url('filter_link_start.jpg') top left no-repeat;padding:3px 0px 4px 8px;}
+.light-box .tools .filter a.current .end {background:image-url('filter_link_end.jpg') top right no-repeat;padding:3px 8px 4px 0px;}
+.light-box .people-list-scroll {height:278px;overflow:auto;background:#fff;}
+.light-box .people-list-scroll li {width:132px;height:69px;float:left;margin:0 6px;}
+.light-box .people-list-scroll li.state-1, .light-box .people-list-scroll li:hover {background:image-url('people_list_state_1.jpg') center center no-repeat;}
+.light-box .people-list-scroll li.state-2 {background:image-url('people_list_state_2.jpg') center center no-repeat;}
+.light-box .people-list-scroll li .img {float:left;padding:2px;border:1px solid #e0e0e0;width:50px;margin:6px 3px;background:#fff;}
+.light-box .people-list-scroll li.state-1 .img , .light-box .people-list-scroll li.state-2 .img  {border:1px solid #858585;}
+.light-box .people-list-scroll li .details {float:right;width:70px;margin-top:7px;}
+.light-box .people-list-scroll li .details .group {color:#666;}
+.light-box .people-list-scroll li .details a {color:#333;}
+.light-box .action {background:#f8fbd3;padding:11px;text-align:right;}
+.light-box .lightbox-submit {background:image-url('lightbox_submit.gif');width:92px;height:29px;color:#fff;border:0px none;line-height:29px;}
+.light-box .lightbox-submit:hover {background-position:left -29px;outline:none;}
+.light-box .lightbox-submit:active {background-position:left -58px;outline:none;}
+.light-box .lightbox-cancel {background:image-url('lightbox_cancel.gif');width:92px;height:29px;color:#516064;border:0px none;line-height:29px;}
+.light-box .lightbox-cancel:hover {background-position:left -29px;outline:none;}
+.light-box .lightbox-cancel:active {background-position:left -58px;outline:none;}

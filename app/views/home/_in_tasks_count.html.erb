@@ -1,0 +1,22 @@
+<div id="in_tasks_count" class="in-out">
+  <ul>
+    <li class="title">IN</li>
+    <li class="item">
+      <span class="number"><%= user.for_me.waiting.count %></span>
+      <span class="txt">Wait</span>
+    </li>
+    <li class="item">
+      <span class="number"><%= user.for_me.will.count %></span>
+      <span class="txt">Will</span>
+    </li>
+    <li class="item">
+      <span class="number"><%= user.for_me.did.count %></span>
+      <span class="txt">Done</span>
+    </li>
+    <li class="item last">
+      <span class="number"><%= user.for_me.cant.count %></span>
+      <span class="txt">Can't</span>
+    </li>
+  </ul>
+  <div class="clear"></div>
+</div>

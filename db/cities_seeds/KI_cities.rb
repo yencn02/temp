@@ -1,0 +1,1 @@
+City.new(:country_id => "120", :name => "Tarawa", :aliases => "Bajriki,South Tarawa,Tarawa,Tarawa-Sud,Tarawa-Sul,Zuid-Tarawa,nam talawa,ÐÐ°Ð¹ÑÐ¸ÐºÐ¸,××¨×× ×××¨××××,ë¨ íë¼ì,Tarawa", :latitude => "1.3278", :longitude => "172.97696").save

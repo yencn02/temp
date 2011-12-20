@@ -1,0 +1,2 @@
+address_data = "<%=params[:address_data]%>";
+jQuery(".address-container[data='"+address_data+"'] #city").html(""+<%=cities_combo_tag({:country_id => params[:country_id], :name => params[:address_data]})%>);

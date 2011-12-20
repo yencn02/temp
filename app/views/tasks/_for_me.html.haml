@@ -1,0 +1,5 @@
+%div.inner-container{'data-page'=>"#{session[:filters][:tasks]}"}
+  - @tasks.each do |task|
+    - unless current_user.user_marked_as_spam?(task.assigner)
+      = render "shared/task", :task => task, :sep => (@tasks.last == task ? false : true), :task_lists => @task_lists
+      %div.dotted-line

@@ -1,0 +1,28 @@
+<p>
+  <b>Description:</b>
+  <%=h @task.description %>
+</p>
+
+<p>
+  <b>Task list:</b>
+  <%=h @task.task_list_id %>
+</p>
+
+<p>
+  <b>Private task:</b>
+  <%=h @task.private_task %>
+</p>
+
+<p>
+  <b>From user:</b>
+  <%=h @task.from_user_id %>
+</p>
+
+<p>
+  <b>To user:</b>
+  <%=h @task.to_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

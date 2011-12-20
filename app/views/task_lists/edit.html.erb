@@ -1,0 +1,93 @@
+<div id="edit-task-list-div" class="list-box edit">
+  <% form_remote_for(@task_list, :html => {:id => "update_form",:onsubmit=>"prepareSelectedFriendsForSubmit('edit')"}) do |f| -%>
+  <div class="title">
+   <label>Edit List</label>
+    <% if @task_list.editable %>
+    <a class="inline-edit-toggle selector tipsy" title="Click here to edit"><%=@task_list.title%></a>
+    <div class="inline-edit-form">
+      <%= f.text_field :title, :value=>"#{@task_list.title}" %>
+      <input type="button" value="Save" class="save" />
+      <input type="button" value="Cancel" class="cancel" />
+    </div>
+    <%else%>
+    <span class="list-title"><%=@task_list.title%></span>
+    <%end%>
+  </div>
+  
+  <%if @task_list.editable%>
+  <div class="sub-title">
+    <label>Choose icon </label>
+    <div class="icon-list icon-list-closed">
+      <div class="icon-main">
+        <a class="selector"><img id="icon-selector-image" <%="src='images/list_icons/#{@task_list.icon_name}'"%> width="32" height="32" alt="sample icon" /></a>
+        </div>
+        <div class="icon-dropdown">
+          <div class="icon-dropdown-head">
+              <ul>
+                <%@list_images.each do |img|%>
+                  <li><a <%="title='#{img}'"%> class="selector"> <img <%="src='images/list_icons/#{img}'"%> width="32" height="32" alt="sample icon" /></a></li>
+                <%end%>
+              </ul>
+              <div class="clear"></div>
+          </div>
+        <span class="icon-dropdown-foot"></span>
+      </div>
+    </div>
+    <%= f.hidden_field :icon_name, :value=>"#{@task_list.icon_name}" %>      
+  </div>
+  <%end%>
+  <div class="tools">
+    <div class="filter">
+      <a class="show-all selector current"><span class="end"><span class="start">All</span></span></a>
+      <a class="show-selected selector"><span class="end"><span class="start">Selected</span></span></a>
+    </div>
+    <div style="float:right;">
+      <div class="search-box">
+        <input type="text"  class="search-text" value="Search ..." />
+        <input type="submit" value="Go" class="search-btn" />
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>  
+  
+  <%= f.hidden_field :selected_friends_edit, :value=>"" %>
+  <div class="people-list-scroll">
+    <div class="people-list-scroll-inner">
+      <ul class="people-list">
+      <%@friends.each do |friend|%>
+      <%if @already_connected_friend.include?(friend.id)%>
+        <li <%="title='#{friend.id}'"%> class="selector state-2" >
+      <%else%>
+        <li <%="title='#{friend.id}'"%> class="selector" >
+      <%end%>
+        <div class="img"><%= image_tag profile_avatar_path(friend.user_info.id, :medium), :height => '50', :width => '50', :alt => "#{friend.first_name} #{friend.last_name}"%></div>
+        <div class="details">
+          <span class="name friend-name"><%="#{friend.first_name} #{friend.last_name}"%></span>
+          <span class="group">VCU</span>
+        </div>
+      </li>
+      <% end %>       
+      </ul>
+    </div>
+  </div>
+  <div class="action">
+    <%= f.submit 'Save List', :class=>"lightbox-submit no-style"%>
+    <%if @task_list.editable %>
+    <%= button_to_destroy({:caption => "Delete list", :url => "/task_lists/#{@task_list.id}", :confirm_msg => "Are you sure?", :style_class => "lightbox-cancel no-style", :ajax => true}) %>
+    <%end %>
+    <input type="button" value="Cancel"  class="lightbox-cancel no-style" />
+    <div id="ajax-destroy-wrapper"></div>
+  </div>
+  <% end -%> <!-- end of update form -->
+</div>
+
+<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<script type="text/javascript" charset="utf-8">
+  jQuery('#cboxOverlay').addClass('background-transparent-overlay');
+	
+  jQuery(document).ready(UI.commonScripts);
+  jQuery(document).ready(UI.List.ready);
+  jQuery(document).ready(UI.List.handlers);
+  
+  initListOfAllFriends('edit');
+</script>

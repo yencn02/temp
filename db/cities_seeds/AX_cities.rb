@@ -1,0 +1,1 @@
+City.new(:country_id => "17", :name => "Mariehamn", :aliases => "Maarianhamina,Marianhamina,Mariankhamina,Mariehameena,Mariehamn,Mariekhamn,Mariuhoefn,Mariyekhamn,Marrianhamina,MarÃ­uhÃ¶fn,mariehamun,ÐÐ°ÑÐ¸ÐµÑÐ°Ð¼Ð½,ããªã¨ãã ã³,Mariehamn", :latitude => "60.09726", :longitude => "19.93481").save

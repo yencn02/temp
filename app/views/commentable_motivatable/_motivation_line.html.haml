@@ -1,0 +1,15 @@
+%div.motivate-line
+  - if commentable.users_who_liked.count >= 2
+    - u_1 = commentable.users_who_liked[0]
+    - u_2 = commentable.users_who_liked[1]
+    %a.motivater-name.hand-pointer{:href=>"/profile/#{u_1.user_info.id}"} #{u_1.formatted_name}
+    %span ,
+    %a.motivater-name.hand-pointer{:href=>"/profile/#{u_2.user_info.id}"} #{u_2.formatted_name}
+    - if commentable.users_who_liked.count > 2
+      %span , and #{commentable.users_who_liked.count - 2} others
+  - elsif commentable.users_who_liked.count == 1
+    - u = commentable.users_who_liked[0]
+    %a.motivater-name.hand-pointer{:href=>"/profile/#{u.user_info.id}"} #{u.formatted_name}
+  - else
+    %span no one
+  %span motivate(s) this

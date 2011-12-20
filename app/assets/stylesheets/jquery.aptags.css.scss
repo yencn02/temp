@@ -1,0 +1,21 @@
+div.apTagDiv { width: 100%; }
+span.apTagSpan { margin-right: 10px; }
+span.apTagSpan a {  background-image:image-url('delete-12x12.png'); background-position: left center; background-repeat: no-repeat; 
+	display:block;
+	background-color:#eff2dd;
+	
+	-webkit-border-radius:9px;
+	-moz-border-radius:9px;
+	-khtml-border-radius:9px;
+	border-radius:9px;
+	behavior: url(../ie-css3.htc);
+
+	border: 1px solid #cfd4b8;
+	width:auto;
+	float:left;
+	padding:1px 1px 1px 16px;
+	margin:3px 3px;
+	color:#6e8080;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+}

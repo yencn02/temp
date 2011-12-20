@@ -1,0 +1,58 @@
+<% form_remote_for user.user_info, :html=>{:id=>"address_form",:onsubmit=>"prepareHiddenFields();", :multipart => true} do |f| -%>
+<input type="hidden" name="section" value="addresses"/>
+<h4>Address:</h4>
+<div id="address-info-group" class="info-group">
+  <div class="row">
+    <div class="col-1">Town:</div>
+    <div class="col-2">
+      <input id="address_town" name="address[town]" type="hidden" value="<%=@user.user_info.address_as_ids('town')%>"/>
+      <%town_country_id = @user.user_info.address('town').nil? ? 0 : @user.user_info.address('town').country_id%>
+      <%=render "address", :data=>"town", :country_id => town_country_id%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Home:</div>
+    <div class="col-2">
+      <input id="address_home" name="address[home]" type="hidden" value="<%=@user.user_info.address_as_ids('home')%>"/>
+      <%home_country_id = @user.user_info.address('home').nil? ? 0 : @user.user_info.address('home').country_id%>
+      <%=render "address", :data=>"home", :country_id => home_country_id%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Work:</div>
+    <div class="col-2">
+      <input id="address_work" name="address[work]" type="hidden" value="<%=@user.user_info.address_as_ids('work')%>"/>
+      <%work_country_id = @user.user_info.address('work').nil? ? 0 : @user.user_info.address('work').country_id%>
+      <%=render "address", :data=>"work", :country_id => work_country_id%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">University:</div>
+    <div class="col-2">
+      <input id="address_university" name="address[university]" type="hidden" value="<%=@user.user_info.address_as_ids('university')%>"/>
+      <%university_country_id = @user.user_info.address('university').nil? ? 0 : @user.user_info.address('university').country_id%>
+      <%=render "address", :data=>"university", :country_id => university_country_id%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div>
+      <div class="action-buttons">
+        <%= f.submit 'Save', :class=>"save-button selector"%>
+        <%=button_to_custom({:caption=>"Discard", :url=>'/profile/show_section/addresses', :confirm_msg => "Are you sure?" ,:style_class => "cancel-button selector", :method => 'get', :ajax => true})%>                    
+      </div>
+    </div>
+  </div>
+</div>
+<%end%>
+
+<script type="text/javascript">
+  addressEditEvents();
+  jQuery(".address-container[data='town'] #city").val("<%=@town_city_name%>");
+  jQuery(".address-container[data='home'] #city").val("<%=@home_city_name%>");
+  jQuery(".address-container[data='work'] #city").val("<%=@work_city_name%>");
+  jQuery(".address-container[data='university'] #city").val("<%=@university_city_name%>");
+</script>

@@ -1,0 +1,1 @@
+replaceCommentableComments("<%=".#{@commentable.class.to_s.downcase}-unit[data-id='#{@commentable.id}']"%>", "<%= escape_javascript(render("comments", :commentable => @commentable)) %>", <%= @commentable.comments.count %>, true);

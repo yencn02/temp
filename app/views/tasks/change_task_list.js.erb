@@ -1,0 +1,7 @@
+(function($) {
+<%- unless @all_list_selected -%>
+  replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");
+  removeTask(<%= @task.id %>)  
+<%- end -%>
+  $(".task-unit .task-loading").hide();          
+})(jQuery);

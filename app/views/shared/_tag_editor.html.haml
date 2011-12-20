@@ -1,0 +1,12 @@
+%div{:class=>"tag-editor hidden", 'data-id'=>"#{taggable.id}"}
+  %span.tage-editor-triangle
+  %span.tag-window
+    %span.top-graphic
+    %span.tag-inner-container
+      = render "shared/tag_editor_tag_list", :taggable => taggable
+    %span.tag-action-container
+      %input#add_tag.add-tag-textfield{:id=>"#{taggable.id}", :type=>"text", :name=>"tagEntry"}
+      = button_to_custom({:caption=>'Add', :style_class=>'add-tag-btn', :ajax=>true,
+                          :url=>"#{add_tag_to_task_url(taggable)}",
+                          :additional_params=>[{:key=>'tag', :value=>"add_tag_#{taggable.id}"}]})
+    %span.tag-down-graphic

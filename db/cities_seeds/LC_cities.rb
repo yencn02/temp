@@ -1,0 +1,1 @@
+City.new(:country_id => "130", :name => "Castries", :aliases => "Castries,Kastri,Kastris,Port Castries,kaeseuteuliseu,kasutorizu,qstrys,ÎÎ¬ÏÏÏÎ¹Ï,ÐÐ°ÑÑÑÐ¸,×§×¡××¨××¡,á«áµáµáªáµ,ã«ã¹ããªã¼ãº,ìºì¤í¸ë¦¬ì¤,Castries", :latitude => "13.9957", :longitude => "-61.00614").save

@@ -1,0 +1,75 @@
+<%if @user.id == current_user.id %>
+<span style="float:right;"><br /><a class="profile-edit-link" id="basic-info-edit-link">Edit</a></span>
+<%end%>
+<h4>Basic Info:</h4>
+<div class="info-group">
+  <%unless user.user_info.sex.nil? or user.user_info.sex.blank?%>
+  <div class="row">
+    <div class="col-1">Sex:</div>
+    <div class="col-2">
+      <%=user.user_info.sex_as_string%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.birthday.nil? or user.user_info.birthday.blank?%>
+  <div class="row">
+    <div class="col-1">Birthday:</div>
+    <div class="col-2">
+      <%=user.user_info.birthday%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.position.nil? or user.user_info.position.blank?%>
+  <div class="row">
+    <div class="col-1">Position:</div>
+    <div class="col-2">
+      <%=user.user_info.position%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.study.nil? or user.user_info.study.blank?%>
+  <div class="row">
+    <div class="col-1">Study:</div>
+    <div class="col-2">
+      <pre><%=user.user_info.study%></pre>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.home_town.nil? or user.user_info.home_town.blank?%>
+  <div class="row">
+    <div class="col-1">Home town:</div>
+    <div class="col-2">
+      <%=user.user_info.home_town%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.relatives_infos.nil? or user.user_info.relatives_infos.length == 0%>
+  <div class="row">
+    <div class="col-1">Relatives:</div>
+    <div class="col-2">
+      <%user.user_info.relatives_infos.each do |r|%>
+        <a <%="href='#{profile_url(r.user.user_info.id)}'"%>><%="#{r.user.formatted_name}"%></a><br />
+      <%end%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.hobbies.nil? or user.user_info.hobbies.blank?%>
+  <div class="row">
+    <div class="col-1">Hobbies:</div>
+    <div class="col-2">
+      <pre><%=user.user_info.hobbies%></pre>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>                          
+</div>
+
+<script type="text/javascript">
+  basicInfoShowEvents();
+</script>

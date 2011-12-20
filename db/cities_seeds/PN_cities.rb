@@ -1,0 +1,1 @@
+City.new(:country_id => "183", :name => "Adamstown", :aliases => "Adams Town,Adamstaun,Adamstauno,AdamstaÅ­no,Adamstown,adamusutaun,ÐÐ´Ð°Ð¼ÑÑÐ°ÑÐ½,××××¡××××,ã¢ãã ã¹ã¿ã¦ã³,Adamstown", :latitude => "-25.06597", :longitude => "-130.10147").save

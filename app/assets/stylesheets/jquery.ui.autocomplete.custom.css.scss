@@ -1,0 +1,108 @@
+.ui-autocomplete {
+	background-color: #eee;
+	position: absolute;
+	cursor: default;
+}
+.ui-autocomplete .ui-menu-item {
+}
+.ui-autocomplete  .ui-menu-item a {
+	display:block;
+	padding:4px 6px;
+	text-decoration:none;
+	line-height:12px;
+}
+.ui-autocomplete .ui-menu-item a.ui-state-hover,
+.ui-autocomplete .ui-menu-item a.ui-state-active {
+	background-color:#78959D;
+	color:#fff;
+	margin:0;
+}
+.ui-autocomplete-loading {
+	background: white url(images/ui-anim_basic_16x16.gif) right center no-repeat;
+}
+
+.new-task-wrapper div.tagit-grand-container {
+	width: 256px !important;
+	display: block;
+	position: absolute !important;
+	background-color: white;
+	height: 44px;
+
+	-webkit-box-shadow: #333 0px 1px 5px 0px;
+	-moz-box-shadow:0 1px 5px #333333;
+	
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	behavior: url(../ie-css3.htc);
+}
+
+.new-task-wrapper div.tagit-grand-container.focused,
+.new-task-wrapper div.tagit-grand-container:hover {
+	background:#fff8b0;
+}
+
+.new-task-wrapper div.tagit-container {
+	width: 200px !important;
+	left: 50px !important;
+	display: block;
+	position: absolute !important;
+}
+
+#mytags {
+	background-color:transparent;
+}
+
+#mytags input{
+	background-color:transparent;
+	margin-top: 13px;
+	margin-bottom: 13px;
+}
+
+ul.tagit li {
+  -webkit-border-radius:5px 5px 5px 5px;
+  -moz-border-radius:5px 5px 5px 5px;
+	-khtml-border-radius:5px 5px 5px 5px;
+	border-radius:5px 5px 5px 5px;
+	behavior: url(../ie-css3.htc);
+
+	display: block;
+	float: left;
+	margin:0px 5px 0px 0;
+}
+
+ul.tagit li.tagit-choice {
+	background-color:#DEE7F8;
+	border:1px solid #CAD8F3;
+	padding:2px 4px 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+ul.tagit li.tagit-choice:hover {
+	background-color:#bbcef1;
+	border-color:#6d95e0;
+}
+
+ul.tagit li.tagit-choice input {
+	display:block;
+	float:left;
+	margin:2px 5px 2px 0;
+}
+ul.tagit li.tagit-choice a.close {
+	color:#777777;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	outline:medium none;
+	padding:2px 0 2px 3px;
+	text-decoration:none;
+}
+ul.tagit input[type="text"] {
+	-moz-box-sizing:border-box;
+	border:none;
+	margin:0;
+	padding:0;
+	width:inherit;
+	color:#333333;
+}

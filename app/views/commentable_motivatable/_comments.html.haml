@@ -1,0 +1,25 @@
+%div.comments.comments-holder.hide
+  %div.triangle
+  = render "commentable_motivatable/motivation_line", :commentable => commentable
+  - commentable.comments.each do |c|
+    %div.comment-unit.comment-container{'data-id'=>"#{c.id}", :onmouseover=>"$j(this).find('.x-div').show()", :onmouseout=>"$j(this).find('.x-div').hide();"}
+      - if current_user.id == c.user.id
+        %div.x-div{:style=>"display:none"}
+          = link_to_remote '&nbsp;&nbsp;', :url => destroy_comment_path(:commentable_type => commentable.class,:commentable_id => commentable, :comment_id => c), :confirm => "Are you sure?"
+      %div    
+        %div.commenter-pic
+          = image_tag profile_avatar_path(c.user.user_info.id, :medium), :size=>"36x36"
+        %div.comment-body
+          %span.comment-text
+            %a.commenter-name.hand-pointer{:href=>"/profile/#{c.user.user_info.id}"} #{c.user.formatted_name}:
+            #{h c.comment}
+          %span.comment-date #{get_user_friendly_time(c.created_at)}
+  %div.new-comment-unit
+    %div.commenter-pic
+      = image_tag profile_avatar_path(current_user.user_info.id, :medium), :size=>"36x36"
+    %div.comment-body
+      - form_for commentable.comments.build(:user_id => current_user.id), :url => create_comment_path(:commentable_type=>commentable.class, :commentable_id=>commentable.id), :html=>{:onSubmit => "$j(this).find('#comment_submit').attr('disabled','disabled');$j(this).find('.loading-image').show();return true;"} do |f|
+        = f.text_field :comment, :class => "comment-text-field",:onkeyup => "updateSubmitButtonDisplay(\".#{commentable.class.to_s.downcase.dasherize}-unit[data-id='#{commentable.id}']\", event.keyCode)", :placeholder=>"Add comment..."
+        = f.submit 'Add', :class=>"comment-add-button selector", :style => "display:none"
+        %div{:style=>"text-align:right;display:inline;float:right;"}
+          = image_tag "small_ajax_indicator.gif", :class=>"loading-image", :style=>"display:none;margin-right:5px;margin-bottom:0px;margin-top:0px;"

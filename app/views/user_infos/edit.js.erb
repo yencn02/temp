@@ -1,0 +1,11 @@
+section = "<%=@section%>";
+
+if(section == 'basic_info'){
+  replaceSection(section ,"<%= escape_javascript(render("basic_info_edit", :user => @user)) %>");
+}
+else if (section == 'addresses'){
+  replaceSection(section ,"<%= escape_javascript(render("addresses_edit", :user => @user)) %>");
+}
+else if (section == 'contact_info'){
+  replaceSection(section ,"<%= escape_javascript(render("contact_info_edit", :user => @user)) %>");
+}

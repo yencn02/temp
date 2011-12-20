@@ -1,0 +1,133 @@
+<div class="left">
+  <div class="left-in">
+    
+    <div class="form-head">
+      <div class="left">
+        <h2>Join the Hive</h2>
+      </div>
+      <div class="right">
+        Already a Cheever? <%= link_to "Sign in", new_user_session_path %>.
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="form">
+    	<%= form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => {:id => "signup_form"} do |f| %>
+        <div class="form-row">
+          <div class="col-1"><label for="txt_name">First name</label></div>
+          <div class="col-2">
+            <%= f.text_field :first_name, :id => "txt_first_name", :maxlength => 20 %>
+            <span class="hint">Your name will appear on your profile</span>
+          </div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :first_name) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+        
+        <div class="form-row">
+          <div class="col-1"><label for="txt_name">Last name</label></div>
+          <div class="col-2">
+            <%= f.text_field :last_name, :id => "txt_last_name", :maxlength => 20 %>
+            <span class="hint">Your name will appear on your profile</span>
+          </div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :last_name) %>
+          </div>
+          <div class="clear"></div>
+        </div>        
+                
+        <div class="form-row">
+          <div class="col-1"><label for="txt_usrname">Username</label></div>
+          <div class="col-2">
+            <%= f.text_field :username, :id => "txt_username", :maxlength => 20 %>
+            <span class="hint">this will be your cheeve address </span>
+            <span class="hint">username@cheeve.it</span>
+          </div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :username) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+                
+        <div class="form-row">
+          <div class="col-1"><label for="txt_password">Password</label></div>
+          <div class="col-2"><%= f.password_field :password, :id => "txt_password" %></div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :password) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+        
+        <div class="form-row">
+          <div class="col-1"><label for="txt_password">Password Confirmation</label></div>
+          <div class="col-2"><%= f.password_field :password_confirmation, :id => "txt_password_confirmation" %></div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :password_confirmation) %>
+          </div>
+          <div class="clear"></div>
+        </div>        
+                
+        <div class="form-row">
+          <div class="col-1"><label for="txt_email">Email</label></div>
+          <div class="col-2"><%= f.text_field :email, :id => "txt_email" %></div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :email) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+                
+        <div class="form-row">
+          <div class="col-1"><label for="txt_mobile">Mobile Number</label></div>
+          <div class="col-2">
+            <%= f.text_field :mobile_number, :id => "txt_mobile" %>
+            <span class="hint">So you can get your task on your phone </span>
+          </div>
+          <div class="col-3">
+            <%= render :inline => user_errors(f.object, :mobile_number) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+                
+        <div class="form-row">
+          <div class="col-1"></div>
+          <div class="col-23">
+            <%= f.check_box "terms_of_service", :id => "chk_terms" %>
+            <label for="chk_terms">I Agree, on the <a href="#">Terms of Services</a> and the <a href="#">Privacy Policy</a></label>
+            <br /><br />
+            <%= render :inline => user_errors(f.object, :terms_of_service) %>
+          </div>
+          <div class="clear"></div>
+        </div>
+                
+        <div class="form-row">
+          <div class="col-1"></div>
+            <div class="col-2">
+              <%= f.submit "Create your Account", :class => "signup-btn" %>
+            </div>
+        </div>
+        
+      <% end %>      
+    </div>
+    
+    <%= render "signup_script" %>
+    
+    <div class="clear"></div>
+    <%= render :partial => "devise/shared/links" %>
+  </div>
+</div>
+
+<div class="right">
+  <div class="right-in">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </p>
+    <div class="img">
+      <%= image_tag "signup_side_bee.gif", :alt => "Bee" %>
+    </div>
+  </div>
+</div>
+   
+<div class="clear"></div>
+
+              

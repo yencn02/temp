@@ -1,0 +1,12 @@
+<%- if @task -%>
+flashNotice("Task Deleted.");
+  <%- if !@from_me && me?(@task.assignee) -%>
+  replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");
+  var taskToDelete = $j("#main-tasks .task-unit[data-id='<%= @task.id %>']:first-child")[0];
+  if($j(taskToDelete.next()).hasClass("dotted-line"))
+    taskToDelete.next().remove();
+  taskToDelete.remove();
+  <%- end -%>
+<%- else -%>        
+alert("Error Deleting Task.");
+<%- end -%>

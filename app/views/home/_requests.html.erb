@@ -1,0 +1,21 @@
+<div class="side-component">
+  <div class="title">Requests</div>
+  <div class="side-content requests-content">
+    <%- @pending_friends.each do |f| -%>    
+    <div class="info" data-request_id="<%= f.id %>">
+      <div class="img">
+        <img src="/images/sample_info_img.jpg" alt="<%= f.formatted_name %>" />
+      </div>
+      <div class="details">
+        <span><a href="<%= profile_url(f.user_info) %>"><%= f.formatted_name %></a></span>
+        <span><%= f.username %>@cheeve.it</span>
+        <span><%= pluralize(f.pending_tasks, "Pending Task") %></span>
+      </div>
+      <a href="<%= accepted_friendship_path(f) %>" class="edit-link">Accept</a>
+      <div class="clear"></div>
+    </div>
+    
+    <%= hsep unless @pending_friends.last.eql?(f) %>            
+    <%- end -%>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<%- if flash[:error] -%>
+colorboxClose("<%= flash[:error] %>")
+<%- else -%>
+var friendRequest = $j(".info[data-request_id='<%= @friendship.friend.id %>']");
+if($j(friendRequest.next()).hasClass("h-sep"))
+  $j(friendRequest.next()).remove();
+friendRequest.remove();
+
+fixNotification('<%=@notification.id%>');
+colorboxClose("<%= flash[:notice] %>");
+<%- end -%>

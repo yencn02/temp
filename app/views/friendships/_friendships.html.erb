@@ -1,0 +1,16 @@
+<div class="people">
+  <%- friends.each do |friend| -%>
+    <%= render 'friendship', :friend => friend, :user_task_lists => user_task_lists, :user => user %>
+  <%- end -%>
+  
+  <div class="paging">
+    <a href="#" class="people-arrow-left">first</a>
+    <a href="#" class="people-arrow-right" data-page="<%= next_page %>">right</a>
+    <a href="#" class="people-arrow-dis-left">left</a>
+    <a href="#" class="people-arrow-dis-right">last</a>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	$j(".people .paging .people-arrow-right").click(loadAllConnectionsTab);
+</script>

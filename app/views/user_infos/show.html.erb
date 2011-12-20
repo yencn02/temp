@@ -1,0 +1,161 @@
+<%=javascript_include_tag "jquery-ui-1.8.9.custom.min" %>
+<% javascript "profile_common" %>
+<%- javascript_head_block do -%>
+var $current_page = "profile"; 
+var $unvisited_notifications_count = <%=@all_unvisited_notifications_count %>;
+<%- end -%>
+
+<input id='kill-current-user' type='button' value='..:: Kill Me ::..' style="float: none;position: relative;left: 50px;top: 0px;"/>
+
+<div class="dual-box-inv">
+    <div class="box-hd">
+    </div>
+    <div class="box-content">
+        <div class="left">
+            <div class="left-in">
+                <div class="user-data">
+                    <div class="user-name">
+                        <h3><%= @user.formatted_name %><span>(<%="#{@user.username}" %>)</span></h3>
+                    </div>
+                    <div class="img">
+                        <%=image_tag profile_avatar_path(@user.user_info.id, :thumb), :size=>'100x100', :alt=>"#{@user.name}" %>
+                    </div>
+                    <div class="user-stats">
+                        <span><strong><%= @user.pending_tasks %></strong>Pending Task</span>
+                        <span><strong>150</strong> Points</span>
+                        <span><strong><%= @user.accepted_friends.count %></strong>Connection</span>
+                    </div>
+                    <div class="user-actions">
+                        <a href="#">Add to your network</a>
+                        <a href="#">Send a Message</a>
+                    </div>
+                    <div class="in-out-outer">
+                        <div class="h-sep">
+                        </div>
+                        <%= render "home/in_tasks_count", :user => @user %>
+                        <div class="h-sep">
+                        </div>
+                        <%= render "home/out_tasks_count", :user => @user %>
+                    </div>
+                    <div class="Compliment">
+                        <h4>Compliment</h4>
+                        <ul>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                            <li>
+                                <a href="#">102</a>
+                            </li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                    </div>
+                    <div class="user-report">
+                        <a href="#">Report this user</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-in">
+                <div class="ads">
+                    <a href="#"><img src="/images/sample_ad.jpg" alt="ads" /></a>
+                </div>
+                <div class="user-info">
+                    <div id="basic_info_section">
+                        <%=render "basic_info_show", :user => @user %>
+                    </div>
+                    <div id="addresses_section">
+                        <%=render "addresses_show", :user => @user %>
+                    </div>
+                    <div id="contact_info_section">
+                        <%=render "contact_info_show", :user => @user %>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="box-ft">
+    </div>
+</div>
+</div>
+<div id='ajax-form-wrapper'>
+</div>
+<iframe id='upload_frame' name="upload_frame" style="width:1px;height:1px;border:0px" src="about:blank">
+</iframe>
+<script "text/javascript">
+          userInfoOnReady();
+          onUserInfoShowReady();
+          
+          var user_id = "<%=@user.id%>"
+          
+          <% if @user.id == current_user.id %>
+          $j('.img').click(function(){
+            $j(this).colorbox({href: '/profile/'+user_id+'/edit_avatar_image'});
+          });
+          <%end%>
+          
+          var selectedRelative = -1;
+          function addRelativeAutoCompleteEvents(){
+            var ac = jQuery("#add-new-relative-text").autocomplete("<%= auto_complete_user_friends_path %>", {
+                cacheLength: 1,
+                formatItem: function(row) {
+                  var item = jQuery("<div />").append(
+                    jQuery("<div />").attr({'class': 'acinfo'}).append(
+                      jQuery("<div />").attr({'class': 'acimg'}).append(jQuery("<img />").attr({'src': row[2], 'style': 'width:100%;'})),
+                      jQuery("<div />").attr({'class': 'acdetails'}).append(
+                        jQuery("<span />").attr({'class': 'acname'}).text(row[0]),
+                        jQuery("<span />").attr({'class': 'acpending'}).text(row[3] + " pending tasks"),
+                        "<br />",
+                        jQuery("<span />").attr({'class': 'acinfo'}).text(row[1])
+                      )                       
+                    )
+                  );
+                  return item.html();
+                },
+                minLength: 0,
+                selectFirst: true,
+                select: function(event, ui) {
+                 if(event.keyCode == 13) {
+                   window.open(ui.item.url);
+                 }
+                }
+            });
+            
+            ac.bind("result", function(e, item) {
+                jQuery("#relative_img").attr('src', item[2]);
+                jQuery("#add-new-relative-text").addClass("completed");
+                selectedRelative = item[5];
+                jQuery.get('<%= user_accessible_task_lists_path %>', {uid: item[4]});
+                textchange_flag = true;
+              });
+          }
+</script>

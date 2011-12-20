@@ -1,0 +1,1 @@
+City.new(:country_id => "196", :name => "Honiara", :aliases => "Honiara,Honiaro,Khoniara,Oniara,ho ni xa ra,honiala,honiara,huo ni ya la,hwnyara,ÎÎ½Î¹Î¬ÏÎ±,Ð¥Ð¾Ð½Ð¸Ð°ÑÐ°,××× ×××¨×,ÙÙÙÙØ§Ø±Ø§,ÙÙÙÛØ§Ø±Ø§,à¹à¸®à¸à¸µà¸­à¸²à¸£à¸²,ááá«á«,ããã¢ã©,éå°¼äºæ,éå°¼äºæ,í¸ëìë¼,Honiara", :latitude => "-9.43333", :longitude => "159.95").save

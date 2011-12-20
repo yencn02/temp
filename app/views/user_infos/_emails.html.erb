@@ -1,0 +1,10 @@
+<%@user.user_info.emails.each do |email|%>
+<div class="email-container">
+  <div class="delete-email x-div" style="float:left;">x</div>
+  | <span><%=email.email%></span>
+</div>
+<br />
+<%end%>
+
+<input class="add-new-email-text" type="text" />
+<input class="save-button-small" type="button" value="Add"/>

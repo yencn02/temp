@@ -1,0 +1,15 @@
+%div#side-tabs.no-style
+  %ul.list-tabs
+    %li.all-list#task_list_0{'data-id'=>0, :class => @task_list.blank? && "selected"}
+      %div.list-bkg
+      %span.icon
+      %span.count #{current_user.pending_tasks} 
+      %span.text All List
+      %a.link.hand-pointer
+    - current_user.task_lists.each do |t|
+      = render 'task_lists/task_list', :t => t, :selected => (t == @task_list)   
+    %li.add.no-style
+      %div.list-bkg
+      %span.icon   
+      %span.text Add
+      %a.link.hand-pointer{:href=>"#{new_task_list_path}", :title=>""}

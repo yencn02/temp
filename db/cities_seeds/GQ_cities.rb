@@ -1,0 +1,3 @@
+City.new(:country_id => "90", :name => "Ebebiyin", :aliases => "Ebebiyin,EbebiyÃ­n,Ebibeyin,Ebibeying,Ehbebijina,Ð­Ð±ÐµÐ±Ð¸Ð¹Ð¸Ð½Ð°,EbebiyÃ­n", :latitude => "2.15", :longitude => "11.33333").save
+City.new(:country_id => "90", :name => "Malabo", :aliases => "Ciudad de Malabo,Malaba,Malabas,Malabo,Malampo,Port Clarence,Rev Malebo,Santa Isabel,ma la bo,malabw,mallabo,marabo,ÎÎ±Î»Î¬Î¼ÏÎ¿,ÐÐ°Ð»Ð°Ð±Ð¾,×××××,ÙØ§ÙØ§Ø¨Ù,ááá¦,ãã©ã,é¦¬æå,ë§ë¼ë³´,Malabo", :latitude => "3.75", :longitude => "8.78333").save
+City.new(:country_id => "90", :name => "Bata", :aliases => "Bata,Kokapipa,ba ta,bata,ÐÐ°ÑÐ°,ãã¿,å·´å¡,Bata", :latitude => "1.85", :longitude => "9.75").save

@@ -1,0 +1,54 @@
+<%- javascript_head_block do -%>
+  var $current_page = "people";
+  var $current_sub_page = "for_me"
+<%- end -%>
+
+<div class="single-box">
+  <div class="box-hd"></div>
+  <div class="box-content">
+    <div class="left">
+      <div class="left-in">
+        <div class="people-tabs">
+          <%= @emails %>
+          <ul class="tabs">
+          	
+            <li>
+              <a href="#tab1">All Connections</a>
+            </li>
+            <li>
+              <a id="tab-2" href="#tab2"}>Find Connection</a>
+            </li>
+            <li>
+              <a href="#tab3">Invite Connection</a>
+            </li>
+          </ul>
+          
+          <div class="tab_container">            
+            <%= render 'accepted_friends' %>
+
+            <%= render 'friends_search' %>
+            
+            <div id="tab3" class="tab_content"></div>            
+          
+		  </div>
+        </div>
+      </div>
+      <% if @contacts%>
+  		<%= render 'finding_people'%>
+	  <% end%>
+    </div>
+    
+    
+    <div class="right">
+      <div class="right-in">
+        <div class="ads">
+          <a href="#"><img src="/images/sample_ad.jpg" alt="ads" /></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="clear"></div>
+  </div>
+  
+  <div class="box-ft"></div>
+</div>

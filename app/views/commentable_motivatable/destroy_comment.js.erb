@@ -1,0 +1,1 @@
+replaceCommentableCommentsAfterDestroy("<%=".#{@commentable.class.to_s.downcase}-unit[data-id='#{@commentable.id}']"%>", "<%= params[:comment_id] %>", <%= @commentable.comments.count %>);

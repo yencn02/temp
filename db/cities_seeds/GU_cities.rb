@@ -1,0 +1,2 @@
+City.new(:country_id => "94", :name => "Dededo", :aliases => ",Dededo", :latitude => "13.51528", :longitude => "144.83611").save
+City.new(:country_id => "94", :name => "Hagatna", :aliases => "Agan'ja,Agana,Agana - Hagatna,AgaÃ±a,AgaÃ±a - HagatÃ±a,Hagatna,HagÃ¥tÃ±a,a jia ni ya,hagania,hagasnya,ÐÐ³Ð°Ð½ÑÑ,ãã¬ãã¢,é¿å å°¼äº,íê°ë,HagÃ¥tÃ±a", :latitude => "13.47417", :longitude => "144.74778").save

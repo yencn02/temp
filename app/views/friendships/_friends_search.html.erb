@@ -1,0 +1,49 @@
+<div id="tab2" class="tab_content">
+  <span class="tab-intro">Many of your friends and colleagues already use Cheeve. Find and connect with them from different network.</span>
+  <div class="left-tabs-cont">
+    <div class="left-tabs-left">
+      <ul class="left-tabs-ul">
+        <li>
+          <a href="#left_tab1" class="tab-cheeve">Cheeve</a>
+        </li>
+        <li>
+          <a href="#left_tab2" class="tab-gmail">Gmail</a>
+        </li>
+        <li>
+          <a href="#left_tab3" class="tab-yahoo">Yahoo</a>
+        </li>
+        <li>
+          <a href="#left_tab4" class="tab-hotmail">Hotmail</a>
+        </li>
+      </ul>
+    </div>
+    <div class="left-tab_container">
+      <div id="left_tab1" class="left-tab_content">
+        <span class="tab-intro">Who are you looking for?</span>
+        <div class="search-connection">
+          <%- form_for :friend, :url => search_cheeve_people_path do |f| -%>
+            <div class="input">
+              <%= f.text_field :name %>
+            </div>
+            <div class="button">
+              <%= f.submit "Search", :class=>"selector" %>
+            </div>
+          <%- end -%>
+          <div class="clear"></div>
+        </div><span class="tab-intro">Examples: Bill, Bill Smith, or Bill@gmail.com</span>                
+      </div>
+      
+      <%= render 'people_from_gmail' %>
+      <%= render 'people_from_yahoo' %>
+      <%= render 'people_from_hotmail' %>
+      
+    </div>
+    
+    <div class="clear"></div>
+        
+  </div>
+  
+  <div class="results">
+    
+  </div>  
+</div>

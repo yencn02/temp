@@ -1,0 +1,15 @@
+<div class='motivate-wrapper' <%="data-type='#{motivatable.class.to_s}' data-id='#{motivatable.id}'"%> >
+  <%if motivatable.likes_count > 0%>
+  <div class='motivate-img motivate-on'></div>
+  <%else%>
+  <div class='motivate-img motivate-off'></div>
+  <%end%>
+  
+  <span class="motivate-count"><%="(#{motivatable.likes_count})" if motivatable.likes_count > 0%></span>  
+  
+  <%if motivatable.liked_by_user?(current_user)%>
+  <span><%= link_to "Unmotivate", "", :class => "motivate-action"%></span>
+  <%else%>
+  <span><%= link_to "Motivate", "", :class => "motivate-action" %></span>
+  <%end%>
+</div>

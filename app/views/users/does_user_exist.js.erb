@@ -1,0 +1,9 @@
+// create the user box in To User
+<% if @user %>
+  jQuery('#task_to_user_name').removeClass('new-task-text-error');
+  jQuery('#to-user-tip').hide();
+  row = <%= auto_complete_row_data_to_javascript_array @user %>;
+  createUserToBoxAndAppendToInput(row);
+  jQuery("#task_to_2").val(row[4]);
+  enableNewTaskFormSubmit();
+<% end %>

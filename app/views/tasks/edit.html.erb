@@ -1,0 +1,32 @@
+<h1>Editing task</h1>
+
+<% form_for(@task) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :task_list_id %><br />
+    <%= f.text_field :task_list_id %>
+  </p>
+  <p>
+    <%= f.label :private_task %><br />
+    <%= f.check_box :private_task %>
+  </p>
+  <p>
+    <%= f.label :from_user_id %><br />
+    <%= f.text_field :from_user_id %>
+  </p>
+  <p>
+    <%= f.label :to_user_id %><br />
+    <%= f.text_field :to_user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @task %> |
+<%= link_to 'Back', tasks_path %>

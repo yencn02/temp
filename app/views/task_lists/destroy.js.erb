@@ -1,0 +1,16 @@
+<%- if @task_list.destroyed? -%>
+(function($) {    
+  var tl = $("#task_list_<%= @task_list.id %>");
+  if(tl.hasClass("selected")) {
+    selectSideTab($("#side-tabs li:first-child").attr("id"));
+  }
+  tl.remove();
+  fixTasksAreaHeight();
+  
+  updateTaskListsSelect("<%= task_lists_options_for_select(current_user.task_lists) %>");
+  
+  colorboxClose();       
+})(jQuery);
+<%- else -%>
+alert("This task list can't be deleted.");
+<%- end -%>

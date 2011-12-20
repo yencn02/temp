@@ -1,0 +1,172 @@
+%table{:bgcolor => "#f0f0f0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+  %tr
+    %td{:colspan => "2"}
+      %img{:height => "30", :src => "#{root_url}/transparent.gif", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "#{root_url}/transparent.gif", :width => "16"}/
+    %td
+      %table{:bgcolor => "#494949", :cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %a{:href => "#{root_url}"}
+              %img{:border => "0", :height => "46", :src => "#{root_url}/logo2.png", :width => "132"}/
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#eff2dd", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td
+                  - if @task.status.will?
+                    %img{:height => "36", :src => "#{root_url}/ico7.gif", :width => "44"}/
+                  - elsif @task.status.did?
+                    %img{:height => "36", :src => "#{root_url}/ico6.gif", :width => "44"}/
+                  - elsif @task.status.cant?
+                    %img{:height => "36", :src => "#{root_url}/ico5.gif", :width => "44"}/
+                %td{:width => "432"}
+                  %font{:color => "#595a58", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                    %strong
+                      - path = "profile=#{@task.assignee.user_info.id}"
+                      %a{:href => "#{external_action_url(path)}", :style => "color: #3399cc;text-decoration: none;"}
+                        #{@task.assignee.formatted_name}
+                      - if @task.status.did?
+                        did your assigned #{@task.task_list.title} task
+                      - else
+                        #{@task.status_formatted_name} do your assigned #{@task.task_list.title} task
+                %td{:width => "48"}
+                  %font{:color => "#999999", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "1", :style => "font-size: 11px;"}
+                    - if @task.private_task
+                      Private
+                    - else 
+                      Public
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td{:colspan => "4"}
+                  %img{:height => "15", :src => "#{root_url}/transparent.gif", :width => "1"}/
+              %tr
+                %td
+                  %img{:height => "15", :src => "#{root_url}/transparent.gif", :width => "14"}/
+                %td{:valign => "top", :width => "70"}
+                  %table{:bgcolor => "#cacaca", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "1"}/
+                      %td{:width => "68"}
+                        %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "2"}/
+                            %td{:bgcolor => "#cae3e2"}
+                              %img{:alt => "portrait", :border => "0", :height => "64", :src => "#{root_url}/img1.jpg", :style => "display: block;", :title => "Rami Khalil", :width => "64"}/
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "2"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                      %td
+                        %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "1"}
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "12"}/
+                %td{:valign => "top", :width => "423"}
+                  %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td
+                        %font{:color => "#999999", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                          To:
+                          %strong
+                            - path = "profile=#{@task.assignee.user_info.id}"
+                            %a{:href => "#{external_action_url(path)}", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"}
+                                #{@task.assignee.formatted_name}
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "6", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %font{:color => "#494949", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                          #{@task.description}
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "8", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+                          %a{:href => "#{external_action_url('from_me')}"}
+                            %font{:color => "#3399cc"} View
+                          the task, or replay this mail to add comment.
+                        %br
+                          %br/
+                    %tr
+                      %td
+                        %font{:color => "#a9a9a9", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+                          - if @task.status.will?
+                            %a{:href => "#{registered_user_action_url(@task.assigner.id, @task.id, 'remind')}", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"} Send Reminder
+                            |
+                            %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"} Mark As Done
+                            |
+                          - unless @task.status.did?
+                            %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"} Cancel Task
+                            |
+                            %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"} Cancel and Reassign
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "40", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "10"}/
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "2"}/
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "2", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "#{root_url}/transparent.gif", :width => "16"}/
+    %td
+      %table{:cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td{:colspan => "2", :style => "line-height:0; font-size:0;"}
+            %img{:height => "8", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/transparent.gif", :width => "14"}/
+          %td
+            %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+              The message was sent to
+              = succeed "." do
+                %a{:href => "#"}
+                  %font{:color => "#3399cc"} ramikh81@yahoo.com
+              If you don't want to receive these emails
+              %br
+                %br
+                  from Cheeve in the future, please follow the link below to unsubscribe.
+                  %br
+                    %br
+                      %a{:href => "http://www.cheeve.com/o.php?k=984c34&u=619106716&mid="}
+                        %font{:color => "#3399cc"} http://www.cheeve.com/o.php?k=984c34&u=619106716&mid=
+        %tr
+          %td{:colspan => "2", :style => "line-height:0; font-size:0;"}
+            %img{:height => "20", :hspace => "0", :src => "#{root_url}/transparent.gif", :vspace => "0", :width => "1"}/

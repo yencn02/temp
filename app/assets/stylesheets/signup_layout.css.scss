@@ -1,0 +1,50 @@
+/* -------------------------------  layout rules  --------------------------------- */
+
+
+/* -------------------------------  layout classes  --------------------------------- */
+/* overall */
+.wrapper-in {margin:0 auto;width:822px;}
+.logo {padding:18px 0;}
+
+/* right */
+.dual-box .right p {margin:15px 0 20px 0;color:#838570;}
+.dual-box .right img {text-align:center;}
+
+/* left */
+.form-head {margin:10px 15px 75px;}
+.form-head .left , .form-head .right {width:255px;}
+.form-head .right {text-align:right;padding-top:5px;}
+.form-head h2 {font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold;font-size:30px;line-height:30px;}
+
+/* form */
+.form .form-row {margin-bottom:15px;}
+.form .form-row .col-1 {float:left;width:170px;font-size:15px;text-align:right;padding:10px 10px 0 0;color:#434343;}
+.form .form-row .col-2 {float:left;width:216px;}
+.form .form-row .col-3 {float:left;width:150px;font-size:18px;font-weight:bold;padding:10px;color:#717171;}
+.form .form-row .col-23 {float:left;width:366px;}
+
+.form .input-text-normal {background:image-url('signup_input_normal.gif') top left no-repeat;width:196px;height:24px;border:0 none;padding:8px 10px;font-size:24px;color:#717171;line-height:24px;}
+.form .input-text-focus {background:image-url('signup_input_focus.gif') top left no-repeat;width:196px;height:24px;border:0 none;padding:8px 10px;font-size:24px;color:#717171;line-height:24px;}
+.form .signup-btn {background:image-url('signup_btn.gif') center center no-repeat;width:184px;height:40px;text-indent:-9999px;border:0px none;_font-size:0px;_text-indent:0px;_text-align:right;_color:#e0e0e0;background-position:0px 0px;outline:none;}
+.form .signup-btn:hover {background-position:0 -40px ;} 
+.form .signup-btn:active {background-position:0 -80px ;outline:none;} 
+
+.form .hint {color:#a6acb3;font-family:Tahoma;font-size:10px;display:block;}
+
+
+.txt-info {
+  color: #666666;
+  font-size: 12px;
+}
+
+.txt-good {
+  color: green;
+  font-size: 12px;
+}
+
+.txt-error {
+  color: #801B1B;
+  font-size: 12px;
+  font-weight: bold;
+}
+

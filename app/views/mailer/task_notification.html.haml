@@ -1,0 +1,200 @@
+%table{:bgcolor => "#f0f0f0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+  %tr
+    %td{:colspan => "2"}
+      %img{:height => "30", :src => "#{root_url}/images/transparent.gif", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "#{root_url}/images/transparent.gif", :width => "16"}/
+    %td
+      %table{:bgcolor => "#494949", :cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %a{:href => "#{root_url}"}
+              %img{:border => "0", :height => "46", :src => "#{root_url}/images/logo2.png", :width => "132"}/
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#eff2dd", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td
+                  %img{:height => "36", :src => "#{root_url}/images/ico1.gif", :width => "44"}/
+                %td{:width => "432"}
+                  %font{:color => "#595a58", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                    %strong
+                      #{@task.assigner.formatted_name} Assigned New #{@task.task_list.title.titleize} Task for You
+                %td{:width => "48"}
+                  %font{:color => "#999999", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "1", :style => "font-size: 11px;"}
+                    - if @task.private_task
+                      Private
+                    - else 
+                      Public
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td{:colspan => "4"}
+                  %img{:height => "15", :src => "#{root_url}/images/transparent.gif", :width => "1"}/
+              %tr
+                %td
+                  %img{:height => "15", :src => "#{root_url}/images/transparent.gif", :width => "14"}/
+                %td{:valign => "top", :width => "70"}
+                  %table{:bgcolor => "#cacaca", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "1"}/
+                      %td{:width => "68"}
+                        %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "2"}/
+                            %td{:bgcolor => "#cae3e2"}
+                              %img{:alt => "portrait", :border => "0", :height => "64", :src => "#{profile_avatar_url(@task.assigner.user_info.id, :thumb)}", :style => "display: block;", :title => "#{@task.assigner.formatted_name}", :width => "64"}/
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "2"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                      %td
+                        %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "1"}/
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "12"}/
+                %td{:valign => "top", :width => "423"}
+                  %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td
+                        %font{:color => "#999999", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                          From:
+                          %strong
+                            - path = "profile=#{@task.assigner.user_info.id}"
+                            %a{:href => "#{external_action_url(path)}", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"} #{@task.assigner.formatted_name}
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "6", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %font{:color => "#494949", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                          %a{:href => "#{external_action_url('for_me')}", :style=>"color:black;text-decoration:none;"}
+                            #{@task.description}
+                          %a{:href => "#{external_action_url('for_me')}", :style=>"color:#39c;font-size:13px;"}
+                            view...
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "37", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                          %tr
+                            %td
+                              %font{:color => "#494949", :face => "Arial, Helvetica, sans-serif", :size => "1", :style => "font-size: 12px;"} answer direct with one of the following:
+                            %td
+                              %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "6"}/
+                            %td{:bgcolor => "#c5d163"}
+                              %a{:href => "#{external_registered_user_action_url('registered_action', @task.assignee.id, @task.id, 'will')}", :style => "color:#000000;"}
+                                %img{:alt => " I Will", :border => "0", :height => "24", :src => "#{root_url}/images/btn-i-will.gif", :style => "display: block;", :title => "I Will", :width => "63"}/
+                            %td
+                              %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "3"}/
+                            %td{:bgcolor => "#cae3e2"}
+                              %a{:href => "#{external_registered_user_action_url('registered_action', @task.assignee.id, @task.id, 'did')}", :style => "color:#000000;"}
+                                %img{:alt => " I Did", :border => "0", :height => "24", :src => "#{root_url}/images/btn-i-did.gif", :style => "display: block;", :title => "I Did", :width => "63"}/
+                            %td
+                              %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "3"}/
+                            %td{:bgcolor => "#f4ccbe"}
+                              %a{:href => "#{external_registered_user_action_url('registered_action', @task.assignee.id, @task.id, 'cant')}", :style => "color:#000000;"}
+                                %img{:alt => " I Can't", :border => "0", :height => "24", :src => "#{root_url}/images/btn-i-cant.gif", :style => "display: block;", :title => "I Can't", :width => "69"}/
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "7", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td{:align => "right", :width => "418"}
+                        - unless @user.friendship_exists_with? @task.assigner
+                          %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "1", :style => "font-size: 11px;"}
+                            = "If you don’t know #{@task.assigner.name} or you think this is spam"
+                            %a{:href => "#{external_action_url('show_spam_report')}"}
+                              %font{:color => "#3399cc"} click Here
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "9", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "10"}/
+          %td
+            %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "2"}/
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "2", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "#{root_url}/images/transparent.gif", :width => "16"}/
+    %td
+      %table{:cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "8", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+        %tr
+          %td{:align => "center"}
+            %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"} Cheeve.it is a global task managment solution that will change the way you manage your life.
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "6", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+        %tr
+          %td
+            %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td
+                  %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "75"}/
+                %td
+                  %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td{:bgcolor => "#c8c8c8", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "4", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                          %tr{:align => "center"}
+                            %td
+                              %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "1"}/
+                            %td
+                              %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                                %font{:color => "#3399cc", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 11px;"} sign up now for free
+                            %td{:valign => "bottom"}
+                              %img{:height => "17", :src => "#{root_url}/images/separator.gif", :width => "16"}/
+                            %td
+                              %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                                %font{:color => "#3399cc", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 11px;"} follow us on Twitter
+                            %td
+                              %img{:height => "17", :src => "#{root_url}/images/separator.gif", :width => "16"}/
+                            %td
+                              %a{:href => "http://cheeve.it", :style => "text-decoration: none;"}
+                                %font{:color => "#3399cc", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 11px;"} Like us on Facebook
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "5", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td{:bgcolor => "#c8c8c8", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "#{root_url}/images/transparent.gif", :width => "80"}/
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "39", :hspace => "0", :src => "#{root_url}/images/transparent.gif", :vspace => "0", :width => "1"}/

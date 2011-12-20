@@ -1,0 +1,3 @@
+City.new(:country_id => "96", :name => "New Amsterdam", :aliases => "New Amsterdam,New Amsterdam", :latitude => "6.25", :longitude => "-57.51667").save
+City.new(:country_id => "96", :name => "Linden", :aliases => "Linden,ÐÐ¸Ð½Ð´ÐµÐ½,Linden", :latitude => "6", :longitude => "-58.3").save
+City.new(:country_id => "96", :name => "Georgetown", :aliases => "Demerara,Dzhordzhtaun,Dzordztaunas,DÅ¾ordÅ¾taunas,Georgetown,Georgtauno,GeorgtaÅ­no,Tzortztaoun,jojitaun,jwrj tawn,jwrj twghn,qiao zhi dun,Î¤Î¶Î¿ÏÏÎ¶ÏÎ¬Î¿ÏÎ½,ÐÐ¶Ð¾ÑÐ´Ð¶ÑÐ°ÑÐ½,×'××¨×'××××,Ø¬ÙØ±Ø¬ ØªØ§ÙÙ,Ø¬ÙØ±Ø¬ ØªÙØºÙ,Ø¬ÙØ±Ø¬âØªØ§Ù,Ø¬ÙØ±Ø¬âØªØ§ÙÙ,áá­áá³áá,ã¸ã§ã¼ã¸ã¿ã¦ã³,ä¹æ²»æ¦,ì¡°ì§íì´,Georgetown", :latitude => "6.80448", :longitude => "-58.15527").save

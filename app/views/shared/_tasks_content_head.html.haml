@@ -1,0 +1,23 @@
+%div.col-1
+  %div#show_me_select.show-me-text show me
+  %div.show-me
+    %form#form.jqtransform{:name=>"form1", :method=>"post", :action=>""}
+      %select
+        %option{:value=>"pending"} Pending
+        %option{:value=>"every"} All
+        %option{:value=>"waiting"} Waiting
+        %option{:value=>"will"} Will
+        %option{:value=>"did"} Did
+        %option{:value=>"cant"} Can't
+        %option{:value=>"cancelled"} Cancelled
+  - if current_user
+    %input#filter_tags{:type=>'hidden', :value=>"#{@filter_tags.join(',')},"}
+  - else
+    %input#filter_tags{:type=>'hidden', :value=>""}
+  %div#filter-tags-wrapper
+    - if @filter_tags.length > 0
+      %span.show-me-text{:style=>"padding-left: 5px;"} tagged 
+      - @filter_tags.each do |t|
+        %span.tag-word-frame{'data-tag'=>"#{t}"}><
+          #{t}
+          %a.delete-tag.hand-pointer><

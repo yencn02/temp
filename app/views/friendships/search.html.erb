@@ -1,0 +1,41 @@
+<div class="people" style="margin-top:20px;">
+  <%- @users.each do |friend| -%>
+    <div class="people-item" data-uid="<%= friend.id %>">
+      <div class="img">
+        <img src="/images/sample_people_img.jpg" alt="<%=h friend.formatted_name %>" />
+      </div>
+      
+      <div class="details">
+        <div class="name">
+          <a href="#"><%=h friend.formatted_name %></a>
+        </div>
+        
+        <div class="info">
+          Egypt<br />
+          <%= pluralize(friend.pending_tasks, "Pending Task") %>      
+        </div>
+        
+        <div class="action">
+          <div class="title">
+            <input type="button" value="Request Friendship" class="selector"/>
+          </div>        
+        </div>
+        
+      </div>
+      
+      <div class="clear"></div>
+      
+    </div>
+    
+    <div class="h-sep"></div>
+  <%- end -%>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	$j(document).ready(function() {	  
+	  $j(".people-item .action input").each(function() {
+	    var uid = $j(this).closest(".people-item").metadata().uid;
+	    $j(this).colorbox({href: "/friendships/" + uid + "/invited"})
+	  });
+	});
+</script>

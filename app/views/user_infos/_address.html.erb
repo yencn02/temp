@@ -1,0 +1,201 @@
+<div onload class="address-container" data="<%=data%>">
+    <script>
+        // By Mohamed Magdy
+        // GMaps intailization
+        var clicked_map;
+				var pos;
+        // maps
+        var town_map;
+        var home_map;
+        var work_map;
+        var university_map;
+        
+        $j(document).ready(function(){
+            var mapDiv = document.getElementById('map_<%=data%>');
+            var map = new google.maps.Map(mapDiv, {
+                center: new google.maps.LatLng(geoip_latitude(), geoip_longitude()),
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            
+            // adjust the marker position
+            // TODO replace geoip_latitude(), geoip_longitude() with the user's position if available 
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(geoip_latitude(), geoip_longitude()),
+                draggable: true
+            });
+            
+            if("<%=data%>" == 'town'){
+              town_map = map;
+            }
+            else if("<%=data%>" == 'home'){
+              home_map = map;
+            }
+            else if("<%=data%>" == 'work'){
+              work_map = map;
+            }
+            else if("<%=data%>" == 'university'){
+              university_map = map;
+            }
+
+            // when draging the marker event finishs
+            google.maps.event.addListener(marker, 'dragend', function(){
+                locatePosition(marker.getPosition());
+            });
+             
+            // When the map clicked the id of the map is stored in clicked_map variable
+            google.maps.event.addDomListener(document.getElementById('map_<%=data%>'), 'click', clicked_map_event);
+            
+            function clicked_map_event(){
+                clicked_map = '<%=data%>';
+            }
+        });
+        
+         // By Mohamed Magdy
+        // Building a fancy show and hide div
+        var flip = 1;
+        $j(document).ready(function(){
+            $j("#hide_and_show_<%=data%>").click(function(){
+                $j("#map_<%=data%>").toggle("slide", {
+                    direction: "up"
+                }, 500);
+                if (flip++ % 2 == 1) {
+                    $j("#hide_and_show_<%=data%>").html("Hide Google Maps");
+                }
+                else {
+                    $j("#hide_and_show_<%=data%>").html("Show Google Maps");
+                }
+            });
+            
+          $j("#hide_and_show_<%=data%>").click(function() {
+              var map_name = $j(this).attr('id').split("_");
+              if(map_name[3] == 'town'){
+                var center = town_map.getCenter(); 
+                google.maps.event.trigger(town_map, 'resize');
+                town_map.setCenter(center); 
+              }
+              else if(map_name[3] == 'home'){
+                var center = home_map.getCenter();
+                google.maps.event.trigger(home_map, 'resize');
+                home_map.setCenter(center); 
+              }
+              else if(map_name[3] == 'work'){
+                var center = work_map.getCenter();
+                google.maps.event.trigger(work_map, 'resize');
+                work_map.setCenter(center); 
+              }
+              else if(map_name[3] == 'university'){
+                var center = university_map.getCenter();
+                google.maps.event.trigger(university_map, 'resize');
+                university_map.setCenter(center);
+              }
+          });
+        });
+        
+        var geocoder = new google.maps.Geocoder();
+        // By Mohamed Magdy
+        /*
+         * This method longtiutde and latitude and update the html
+         * with the data obtained from geocoding
+         */
+        function locatePosition(lnglat){
+            geocoder.geocode({
+                latLng: lnglat
+            }, function(responses){
+                /*
+                 * responses contains all the possible values
+                 * but we will use the first as it's the closest
+                 */
+                if (responses && responses.length > 0) {
+                    addressesLocator(responses[0]);
+                }
+            });
+        }
+        
+        // By Mohamed Magdy
+        /*
+         * This method returns the name of the country, city and st. address given
+         * the geolocation
+         */
+        function addressesLocator(loc){
+            // location info such as country name, city, st address, postal code...
+            var location_info = loc.address_components;
+            
+            //Location required data
+            var country_long_name;
+            var country_short_name;
+            var city_long_name;
+            var city_short_name;
+            var st_address = "";
+            
+            // Looping over the data to reach the country, city and st address names
+            var i = 0;
+            for (i = 0; i < location_info.length; i++) {
+                if (location_info[i].types[0] == "country") {
+                    country_long_name = location_info[i].long_name;
+                    country_short_name = location_info[i].short_name;
+                }
+                else  if (location_info[i].types[0] == "administrative_area_level_1") {
+                        city_long_name = location_info[i].long_name;
+                        city_short_name = location_info[i].short_name;
+                }
+                else  if (location_info[i].types[0] == "route") {
+                            st_address += location_info[i].long_name;
+                }
+                else if (location_info[i].types[0] == "street_number") {
+                                st_address = location_info[i].long_name;
+                }
+            }
+            
+            $j("#users_" + clicked_map).val(country_short_name);
+            $j('#users_' + clicked_map).attr('value', country_short_name);
+            $j("#users_" + clicked_map).attr("selected","selected");
+            //city
+            $j("#" + clicked_map + "_city").val(city_long_name);
+            // street address
+            $j("#address-street-1-" + clicked_map).val(st_address); 
+        }
+        
+      $j("#<%=data%>_city").autocomplete("<%= auto_complete_city_path %>", {
+      cacheLength: 1,
+      formatItem: function(row) {
+        //sending the country iso2 name to the controller
+        var item = $j("<div />").append(
+          $j("<span />").attr({'class': 'cityname'}).text(row[0]),
+          "<br />"
+        );
+        return item.html();
+      },
+      minLength: 0,
+      selectFirst: true,
+      select: function(event, ui) {
+       if(event.keyCode == 13) {
+          window.open(ui.item.url);
+       }
+      }
+     });
+    
+     // By Mohamed Magdy
+     // This method is used to send the country name of the user to the controller
+     $j("#<%=data%>_city").keyup(function () {
+        $j.get("<%= country_name_path %>", { country: $j('#users_<%=data%> option:selected').text()});
+     }).keyup();
+    </script> 
+  <span id="country"><%= select(:users, data, @countries.collect { |c| [ c.name, c.iso2 ] })%></span>
+  <br/>
+  <br/>
+  <span>City <%= text_field data ,:city ,:id => "#{data}_city", :class => "short-text-field", :value => @city[data] %></span>
+  <br/>
+  <br/>
+  St.1 <%= text_field data ,:st_1 ,:id => "address-street-1-#{data}", :class => "short-text-field" %>
+  <br/>
+  <br/>
+  St.2 <%= text_field data ,:st_2 ,:id => "address-street-2-#{data}", :class => "short-text-field" %>
+  <br/>
+  <br/>
+  <div id="map_<%=data%>" style="width: 400px; height: 300px; float: right; display: none;">
+  </div>
+  <br/>
+  <a class="profile-maps-link" id="hide_and_show_<%=data%>">Show Google Maps</a>
+</div>

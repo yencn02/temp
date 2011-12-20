@@ -1,0 +1,1 @@
+City.new(:country_id => "106", :name => "Douglas", :aliases => "Daglas,Daglasas,Doolish,Douglas,Douglas, Isle of Man,Dubh Lios,Duglas,Port Douglas,dagurasu shi,ÐÐ°Ð³Ð»Ð°Ñ,ÐÑÐ³Ð»Ð°Ñ,ãã°ã©ã¹å¸,Douglas", :latitude => "54.15", :longitude => "-4.48333").save

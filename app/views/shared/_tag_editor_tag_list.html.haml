@@ -1,0 +1,5 @@
+- taggable.tag_list.each do |tag|
+  %span.tag-word-frame{'data-tag'=>"#{tag}"}><
+    #{tag}
+    = link_to_remote '',:url => "#{remove_tag_from_task_url(taggable, :tag=>"#{tag}")}", :html=>{:class=>"delete-tag"}
+%br

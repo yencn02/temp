@@ -1,0 +1,1 @@
+City.new(:country_id => "157", :name => "Male", :aliases => "Maale,Male,MalÃ©,MalÄ,ma lei,ma lu,male,malle,mare,ÎÎ±Î»Î­,ÐÐ°Ð»Ðµ,××××,ÞÞ§ÞÞ¬,à¤®à¤¾à¤²à¥,à¦®à¦¾à¦²à§,à®®à®¾à®²à¯,à¸¡à¸²à¹à¸¥,à¸¡à¸²à¹à¸¥à¹,ãã¬,çªå¾,é¦¬ç´¯,ë§ë ,Male", :latitude => "4.1748", :longitude => "73.50888").save

@@ -1,0 +1,46 @@
+<%if @user.id == current_user.id %>
+<span style="float:right;"><br /><a class="profile-edit-link" id="addresses-edit-link">Edit</a></span>
+<%end%>
+<h4>Address:</h4>
+<div class="info-group">
+  <%unless user.user_info.address('town').nil?%>
+  <div class="row">
+    <div class="col-1">Town:</div>
+    <div class="col-2">
+      <%=user.user_info.address_as_string('town')%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.address_as_string('home').nil? or user.user_info.address_as_string('home').blank?%>
+  <div class="row">
+    <div class="col-1">Home:</div>
+    <div class="col-2">
+      <%=user.user_info.address_as_string('home')%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.address_as_string('work').nil? or user.user_info.address_as_string('work').blank?%>
+  <div class="row">
+    <div class="col-1">Work:</div>
+    <div class="col-2">
+      <%=user.user_info.address_as_string('work')%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.address_as_string('university').nil? or user.user_info.address_as_string('university').blank?%>
+  <div class="row">
+    <div class="col-1">University:</div>
+    <div class="col-2">
+      <%=user.user_info.address_as_string('university')%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+</div>
+
+<script type="text/javascript">
+  addressShowEvents();
+</script>

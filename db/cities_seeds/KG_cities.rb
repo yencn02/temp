@@ -1,0 +1,21 @@
+City.new(:country_id => "118", :name => "Sulyukta", :aliases => "Seluka,Selukta,Suluktu,Sulyukta,SÃ¼lÃ¼ktÃ¼,Sulyukta", :latitude => "39.93028", :longitude => "69.56972").save
+City.new(:country_id => "118", :name => "Isfana", :aliases => "Isfana,Isfina,Isfana", :latitude => "39.83333", :longitude => "69.51667").save
+City.new(:country_id => "118", :name => "Balykchy", :aliases => "Balykchi,Balykchy,Issyk-Kul',Issyk-Kulâ,Rybach'e,Rybach'ye,Rybachâe,Rybachâye,Ysyk-Kol,Ysyk-KÃ¶l,ÐÐ°Ð»ÑÐºÑÐ¸,Balykchy", :latitude => "42.46111", :longitude => "76.18028").save
+City.new(:country_id => "118", :name => "Tokmok", :aliases => "Tokmak,Tokmok,Ð¢Ð¾ÐºÐ¼Ð¾Ðº,Tokmok", :latitude => "42.84139", :longitude => "75.28833").save
+City.new(:country_id => "118", :name => "Tash-Kumyr", :aliases => "Naryn,Tash-Komur,Tash-Kumyr,Tash-KÃ¶mÃ¼r,Tashkumor,TashkumÃ¶r,Ð¢Ð°Ñ-ÐÑÐ¼ÑÑ,Tash-Kumyr", :latitude => "41.34583", :longitude => "72.21").save
+City.new(:country_id => "118", :name => "Talas", :aliases => "Dmitriyevka,Dmitriyevskoye,Talas,Talass,Ð¢Ð°Ð»Ð°Ñ,Talas", :latitude => "42.52222", :longitude => "72.24194").save
+City.new(:country_id => "118", :name => "Pokrovka", :aliases => "Kyzyl-Suu,Leninskoye,Nov Pokrovka,Novo-Pokrovskoye,Pokrovka,Pokrovka", :latitude => "42.34083", :longitude => "77.99806").save
+City.new(:country_id => "118", :name => "Uzkend", :aliases => "Ozgon,Uzgen,Uzkend,ÃzgÃ¶n,Ð£Ð·Ð³ÐµÐ½,Uzkend", :latitude => "40.76667", :longitude => "73.3").save
+City.new(:country_id => "118", :name => "Osh", :aliases => "O'sh,Och,Os,Osch,Osh,Osj,Osz,OÅ,OÅ¡,ao shen,oshi,shhr awsh,ÐÑ,×××©,Ø´ÙØ± Ø§ÙØ´,ãªã·,å¥§ä»,Osh", :latitude => "40.52944", :longitude => "72.79").save
+City.new(:country_id => "118", :name => "Naryn", :aliases => "Naron,Naryn,ÐÐ°ÑÑÐ½,Naryn", :latitude => "41.43", :longitude => "76").save
+City.new(:country_id => "118", :name => "Kyzyl-Kyya", :aliases => "Kizol-Kiva,Kizyl-Kiya,KizÃ¶l-Kiva,Kyzyl-Kija,Kyzyl-Kiya,Kyzyl-Kyya,Kzyl-Kiya,ÐÑÐ·ÑÐ»-ÐÐ¸Ñ,Kyzyl-Kyya", :latitude => "40.25389", :longitude => "72.12278").save
+City.new(:country_id => "118", :name => "Kara-Su", :aliases => "Kara-Su,Kara-Suu,ÐÐ°ÑÐ°-Ð¡ÑÑ,Kara-Su", :latitude => "40.7", :longitude => "72.86667").save
+City.new(:country_id => "118", :name => "Karakol", :aliases => "Karakol,KarakoÅ,Prjeval'sk,Prjevalâsk,Przheval'sk,Przhevalâsk,ÐÐ°ÑÐ°ÐºÐ¾Ð»,Karakol", :latitude => "42.48333", :longitude => "78.4").save
+City.new(:country_id => "118", :name => "Kara-Balta", :aliases => "Imeni Mikoyana,Kara-Balta,Kara-Balty,Karabalto,KarabaltÃ¶,ÐÐ°ÑÐ°-ÐÐ°Ð»ÑÐ°,Kara-Balta", :latitude => "42.82611", :longitude => "73.84417").save
+City.new(:country_id => "118", :name => "Kant", :aliases => "Kant,ÐÐ°Ð½Ñ,Kant", :latitude => "42.8875", :longitude => "74.84722").save
+City.new(:country_id => "118", :name => "Jalal-Abad", :aliases => "Dschalalabat,Dzalal-Abad,Dzalalabad,Dzalalabat,Dzhalal Abad,Dzhalal-Abad,Dzjalal-Abad,DÅ¼alalabad,DÅ¾alal-Abad,DÅ¾alalabat,Jalal-Abad,ÐÐ¶Ð°Ð»Ð°Ð» ÐÐ±Ð°Ð´,ÐÐ¶Ð°Ð»Ð°Ð»-ÐÐ±Ð°Ð´,Jalal-Abad", :latitude => "40.93333", :longitude => "73").save
+City.new(:country_id => "118", :name => "Cholpon-Ata", :aliases => "Chalpan-Ata,Cholpon-Ata,Stanovishche Chalpan-Ata,Ð§Ð¾Ð»Ð¿Ð¾Ð½-ÐÑÐ°,Cholpon-Ata", :latitude => "42.65639", :longitude => "77.08222").save
+City.new(:country_id => "118", :name => "Bishkek", :aliases => "Bichkek,Bischkek,Bishkek,Bisjkek,Biskek,Biskekas,Biskeko,Biszkek,Bixkek,BiÅkeko,BiÅkek,BiÅ¡kek,BiÅ¡kekas,Frunze,Mpiskek,Pishkek,Pishpek,bi shen kai ke,bishukeku,bisyukekeu,bshkyk,byshkk,bysqq,ÎÏÎ¹ÏÎºÎ­Îº,ÐÐ¸ÑÐºÐµÐº,Ô²Õ«Õ·Õ¯Õ¥Õ¯,×××©×§×§,Ø¨Ø´ÙÙÙ,Ø¨ÛØ´Ú©Ú©,á¢á½á¬á­,ãã·ã¥ã±ã¯,æ¯ä»å¯å,ë¹ìì¼í¬,Bishkek", :latitude => "42.87", :longitude => "74.59").save
+City.new(:country_id => "118", :name => "Bazar-Kurgan", :aliases => "Bazar,Bazar-Kurgan,ÐÐ°Ð·Ð°Ñ-ÐÑÑÐ³Ð°Ð½,Bazar-Kurgan", :latitude => "41.03333", :longitude => "72.75").save
+City.new(:country_id => "118", :name => "At-Bashy", :aliases => "At-Bashi,At-Bashy,At-Bashy", :latitude => "41.16972", :longitude => "75.81028").save
+City.new(:country_id => "118", :name => "Toktogul", :aliases => "Toktogul,Toktogul", :latitude => "41.90333", :longitude => "72.94556").save

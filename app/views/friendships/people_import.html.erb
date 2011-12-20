@@ -1,0 +1,30 @@
+<div class="people" style="margin-top:20px;">
+  <%- @contacts.each do |contact| -%>
+    <div class="people-item">
+      <div class="img">
+        <img src="/images/sample_people_img.jpg" />
+      </div>
+      
+      <div class="details">
+        <div class="name">
+          <a href="#"><%=h contact[0] %></a>
+        </div>
+        <div class="email">
+          <a href="#"><%=h contact[1] %></a>
+        </div>
+        
+        <div class="action">
+          <div class="title">
+            <input type="button" value="Request Friendship" class="selector"/>
+          </div>        
+        </div>
+        
+      </div>
+      
+      <div class="clear"></div>
+      
+    </div>
+    
+    <div class="h-sep"></div>
+  <%- end -%>
+</div>

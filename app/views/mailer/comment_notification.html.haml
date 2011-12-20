@@ -1,0 +1,152 @@
+%table{:bgcolor => "#f0f0f0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+  %tr
+    %td{:colspan => "2"}
+      %img{:height => "30", :src => "transparent.gif", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "transparent.gif", :width => "16"}/
+    %td
+      %table{:bgcolor => "#494949", :cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %a{:href => "http://cheeve.it"}
+              %img{:border => "0", :height => "46", :src => "logo.png", :width => "132"}/
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#eff2dd", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td
+                  %img{:height => "36", :src => "ico2.gif", :width => "44"}/
+                %td{:width => "432"}
+                  %font{:color => "#595a58", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                    %strong
+                      - path = "profile=#{@comment.user.user_info.id}"
+                      %a{:href => "#{external_action_url(path)}", :style => "color: #3399cc; text-decoration: none;"}
+                        #{@comment.user.formatted_name}
+                      commented on a task for you.
+                %td{:width => "48"}
+                  %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+          %td{:width => "524"}
+            %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+              %tr
+                %td{:colspan => "4"}
+                  %img{:height => "15", :src => "transparent.gif", :width => "1"}/
+              %tr
+                %td
+                  %img{:height => "15", :src => "transparent.gif", :width => "14"}/
+                %td{:valign => "top", :width => "70"}
+                  %table{:bgcolor => "#cacaca", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %img{:height => "1", :src => "transparent.gif", :width => "1"}/
+                      %td{:width => "68"}
+                        %table{:bgcolor => "#ffffff", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "2"}/
+                            %td{:bgcolor => "#cae3e2"}
+                              %img{:alt => "portrait", :border => "0", :height => "64", :src => "img1.jpg", :style => "display: block;", :title => "Rami Khalil", :width => "64"}/
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "1", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "2"}/
+                          %tr
+                            %td{:style => "line-height:0; font-size:0;"}
+                              %img{:height => "2", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                      %td
+                        %img{:height => "1", :src => "transparent.gif", :width => "1"}
+                    %tr
+                      %td{:colspan => "3", :style => "line-height:0; font-size:0;"}
+                        %img{:height => "1", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "transparent.gif", :width => "12"}/
+                %td{:valign => "top", :width => "423"}
+                  %table{:cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %tr
+                      %td
+                        %font{:color => "#999999", :face => "Tahoma, Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 14px;"}
+                          %strong
+                            - path = "profile=#{@comment.user.user_info.id}"
+                            %a{:href => "#{external_action_url(path)}", :style => "text-decoration: none;"}
+                              %font{:color => "#3399cc"}
+                                #{@comment.user.formatted_name}
+                          Wrote:
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "6", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %font{:color => "#333333", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+                          “ #{@comment.comment} ”
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "10", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td
+                        %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+                          - if @comment.commentable.to_user_id == @user.id
+                            %a{:href => "#{external_action_url('for_me')}"}
+                              %font{:color => "#3399cc"} View
+                          - else
+                            %a{:href => "#{external_action_url('from_me')}"}
+                              %font{:color => "#3399cc"} View
+                          the full comments threed , or replay this mail to add comment.
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "55", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                    %tr
+                      %td{:width => "418"}
+                        - unless @comment.user.friendship_exists_with? @user
+                          %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "1", :style => "font-size: 11px;"}
+                            = "If you don’t know #{@user.name} or you think this is spam"
+                            %a{:href => "#{external_action_url('show_spam_report')}"}
+                              %font{:color => "#3399cc"} click Here
+                    %tr
+                      %td{:style => "line-height:0; font-size:0;"}
+                        %img{:height => "9", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+                %td
+                  %img{:height => "1", :src => "transparent.gif", :width => "10"}/
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "2"}/
+        %tr
+          %td{:style => "line-height:0; font-size:0;"}
+            %img{:height => "2", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+  %tr
+    %td
+      %img{:alt => "image description", :height => "1", :src => "transparent.gif", :width => "16"}/
+    %td
+      %table{:cellpadding => "0", :cellspacing => "0", :width => "528"}
+        %tr
+          %td{:colspan => "2", :style => "line-height:0; font-size:0;"}
+            %img{:height => "8", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/
+        %tr
+          %td
+            %img{:height => "1", :src => "transparent.gif", :width => "14"}/
+          %td
+            %font{:color => "#6b6b6b", :face => "Arial, Helvetica, sans-serif", :size => "2", :style => "font-size: 12px;"}
+              The message was sent to ramikh81@yahoo.com. If you don't want to receive these emails
+              %br
+                %br
+                  from Cheeve in the future, please follow the link below to unsubscribe.
+                  %br
+                    %br
+                      %a{:href => "http://www.cheeve.com/o.php?k=984c34&u=619106716&mid=", :style => "text-decoration: none;"}
+                        %font{:color => "#6b6b6b"} http://www.cheeve.com/o.php?k=984c34&u=619106716&mid=
+        %tr
+          %td{:colspan => "2", :style => "line-height:0; font-size:0;"}
+            %img{:height => "20", :hspace => "0", :src => "transparent.gif", :vspace => "0", :width => "1"}/

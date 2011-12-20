@@ -1,0 +1,38 @@
+City.new(:country_id => "61", :name => "Villa Bisono", :aliases => "Bisono,BisonÃ³,Jose E. Bisono,Jose Elias Bisono,JosÃ© E. BisonÃ³,JosÃ© EliÃ¡s BisonÃ³,Villa Bisono,Villa BisonÃ³,Villa BisonÃ³", :latitude => "19.56378", :longitude => "-70.87582").save
+City.new(:country_id => "61", :name => "Villa Altagracia", :aliases => "Vil'ja-Al'tagrasija,Villa Altagracia,ÐÐ¸Ð»ÑÑ-ÐÐ»ÑÑÐ°Ð³ÑÐ°ÑÐ¸Ñ,Villa Altagracia", :latitude => "18.66667", :longitude => "-70.16667").save
+City.new(:country_id => "61", :name => "Tamboril", :aliases => "Pena,PeÃ±a,Tamboril,Tamboril", :latitude => "19.48538", :longitude => "-70.61104").save
+City.new(:country_id => "61", :name => "Santo Domingo", :aliases => "Ciudad Trujillo,Saint Domingue,Santa Domingo,Santo Domingo,Santo Domingo City,Santo Domingo de Guzman,Santo Domingo de GuzmÃ¡n,Santo Ntomin'nko,Santo-Domingo,Î£Î¬Î½ÏÎ¿ ÎÏÎ¿Î¼Î¯Î½Î³ÎºÎ¿,Ð¡Ð°Ð½ÑÐ¾-ÐÐ¾Ð¼Ð¸Ð½Ð³Ð¾,Santo Domingo", :latitude => "18.50012", :longitude => "-69.98857").save
+City.new(:country_id => "61", :name => "Santiago de los Caballeros", :aliases => "Sant'jago-de-los-Kabal'eros,Santiago,Santiago de los Caballeros,Ð¡Ð°Ð½ÑÑÑÐ³Ð¾-Ð´Ðµ-Ð»Ð¾Ñ-ÐÐ°Ð±Ð°Ð»ÑÐµÑÐ¾Ñ,Santiago de los Caballeros", :latitude => "19.45", :longitude => "-70.7").save
+City.new(:country_id => "61", :name => "Santa Cruz de El Seibo", :aliases => "El Seibo,Santa Cruz de El Seibo,Santa Cruz del Seibo,Santa Cruz del Seybo,Seibo,Seybo,Santa Cruz de El Seibo", :latitude => "18.76559", :longitude => "-69.03886").save
+City.new(:country_id => "61", :name => "Santa Cruz de Barahona", :aliases => "Barahona,Santa Cruz de Barahona,Santa-Krus-de-Baraona,Ð¡Ð°Ð½ÑÐ°-ÐÑÑÑ-Ð´Ðµ-ÐÐ°ÑÐ°Ð¾Ð½Ð°,Santa Cruz de Barahona", :latitude => "18.20854", :longitude => "-71.10077").save
+City.new(:country_id => "61", :name => "San Pedro de Macoris", :aliases => "San Pedro Macoris,San Pedro de Macoris,San Pedro de MacorÃ­s,San Pedro de MacorÃ­s", :latitude => "18.46156", :longitude => "-69.29718").save
+City.new(:country_id => "61", :name => "San Juan de la Maguana", :aliases => "San Juan,San Juan de la Maguana,San Juan de la Maguana", :latitude => "18.8", :longitude => "-71.23333").save
+City.new(:country_id => "61", :name => "San Jose de Ocoa", :aliases => ",San JosÃ© de Ocoa", :latitude => "18.55", :longitude => "-70.5").save
+City.new(:country_id => "61", :name => "San Francisco de Macoris", :aliases => "San Francisco de Macoris,San Francisco de MacorÃ­s,San Francisco de MacorÃ­s", :latitude => "19.29518", :longitude => "-70.25543").save
+City.new(:country_id => "61", :name => "San Fernando de Monte Cristi", :aliases => "Monte Cristi,Monte Cristy,Monte-Christi,San Fernando de Monte Cristi,San Fernando de Monte Cristi", :latitude => "19.86667", :longitude => "-71.65").save
+City.new(:country_id => "61", :name => "Puerto Plata", :aliases => "Port Plata,Puerto Plata,San Felipe de Puerto Plata,Puerto Plata", :latitude => "19.8", :longitude => "-70.68333").save
+City.new(:country_id => "61", :name => "Salvaleon de Higuey", :aliases => "Higueey,Higuey,HigÃ¼ey,Salvaleon de Higueey,SalvaleÃ³n de HigÃ¼ey,SalvaleÃ³n de HigÃ¼ey", :latitude => "18.61501", :longitude => "-68.70798").save
+City.new(:country_id => "61", :name => "Sabaneta", :aliases => "Sabaneta,San Ignacio de Sabaneta,Santiago Rodriguez,Santiago RodrÃ­guez,Sabaneta", :latitude => "19.47793", :longitude => "-71.34125").save
+City.new(:country_id => "61", :name => "Sabana Grande de Boya", :aliases => "Sabana Grande,Sabana Grande Boya,Sabana Grande BoyÃ¡,Sabana Grande de Boya,Sabana Grande de BoyÃ¡,Villa de Sabana Grande de Boya,Villa de Sabana Grande de BoyÃ¡,Sabana Grande de BoyÃ¡", :latitude => "18.95", :longitude => "-69.8").save
+City.new(:country_id => "61", :name => "Quisqueya", :aliases => "Ingenio Quisquella,Quisqueya,Quisqueya", :latitude => "18.55542", :longitude => "-69.40814").save
+City.new(:country_id => "61", :name => "Punta Cana", :aliases => "Punta Kana,ÐÑÐ½ÑÐ° ÐÐ°Ð½Ð°,Punta Cana", :latitude => "18.58182", :longitude => "-68.40431").save
+City.new(:country_id => "61", :name => "Neiba", :aliases => "Neiba,Neyba,Neiba", :latitude => "18.48138", :longitude => "-71.41965").save
+City.new(:country_id => "61", :name => "Nagua", :aliases => "Ciudad de Nagua,Julia Molina,Nagua,Villa Julia Molina,callejon a,ÐÐ°Ð³ÑÐ°,Nagua", :latitude => "19.3832", :longitude => "-69.8474").save
+City.new(:country_id => "61", :name => "Monte Plata", :aliases => "Monte Plata,San Antonio de Monte Plata,ÐÐ¾Ð½ÑÐµ ÐÐ»Ð°ÑÐ°,Monte Plata", :latitude => "18.807", :longitude => "-69.78399").save
+City.new(:country_id => "61", :name => "Moca", :aliases => ",Moca", :latitude => "19.39352", :longitude => "-70.52598").save
+City.new(:country_id => "61", :name => "Mao", :aliases => "Mao,Valverde,ÐÐ°Ð¾,Mao", :latitude => "19.55186", :longitude => "-71.07813").save
+City.new(:country_id => "61", :name => "Las Matas de Farfan", :aliases => "Las Matas,Las Matas de Farfan,Las Matas de FarfÃ¡n,Las-Matas-de-Farfan,Matas de Farfan,ÐÐ°Ñ-ÐÐ°ÑÐ°Ñ-Ð´Ðµ-Ð¤Ð°ÑÑÐ°Ð½,Las Matas de FarfÃ¡n", :latitude => "18.87361", :longitude => "-71.52139").save
+City.new(:country_id => "61", :name => "La Romana", :aliases => "La Romana,La-Romana,Romana,ÐÐ°-Ð Ð¾Ð¼Ð°Ð½Ð°,La Romana", :latitude => "18.42734", :longitude => "-68.97285").save
+City.new(:country_id => "61", :name => "Jarabacoa", :aliases => "Jarabacoa,Kharabakoa,Ð¥Ð°ÑÐ°Ð±Ð°ÐºÐ¾Ð°,Jarabacoa", :latitude => "19.11667", :longitude => "-70.63333").save
+City.new(:country_id => "61", :name => "Hato Mayor del Rey", :aliases => "Hato Mayor,Hato Mayor del Rey,Hato Mayor del Rey", :latitude => "18.76278", :longitude => "-69.25681").save
+City.new(:country_id => "61", :name => "Esperanza", :aliases => ",Esperanza", :latitude => "19.5847", :longitude => "-70.98489").save
+City.new(:country_id => "61", :name => "Dajabon", :aliases => ",DajabÃ³n", :latitude => "19.54878", :longitude => "-71.70829").save
+City.new(:country_id => "61", :name => "Cotui", :aliases => "Cotui,Cotuy,CotuÃ­,CotuÃ­", :latitude => "19.05272", :longitude => "-70.14939").save
+City.new(:country_id => "61", :name => "Constanza", :aliases => "Constanza,Costanza,Konstancija,Villa de Constanza,ÐÐ¾Ð½ÑÑÐ°Ð½ÑÐ¸Ñ,Constanza", :latitude => "18.91667", :longitude => "-70.75").save
+City.new(:country_id => "61", :name => "Concepcion de La Vega", :aliases => "Concepcion de La Vega,Concepcion de la Vega,ConcepciÃ³n de La Vega,ConcepciÃ³n de la Vega,La Vega,ConcepciÃ³n de La Vega", :latitude => "19.22207", :longitude => "-70.52956").save
+City.new(:country_id => "61", :name => "Bonao", :aliases => "Banao,Bonao,Monsenor Nouel,MonseÃ±or Nouel,ÐÐ¾Ð½Ð°Ð¾,Bonao", :latitude => "18.93687", :longitude => "-70.40923").save
+City.new(:country_id => "61", :name => "San Cristobal", :aliases => "Benemerita de San Cristobal,BenemÃ©rita de San CristÃ³bal,San Cristobal,San CristÃ³bal,San CristÃ³bal", :latitude => "18.41667", :longitude => "-70.1").save
+City.new(:country_id => "61", :name => "Bayaguana", :aliases => "Bayaguana,San Juan Bautista de Bayaguana,San Juan de Bayaguana,Bayaguana", :latitude => "18.75639", :longitude => "-69.63616").save
+City.new(:country_id => "61", :name => "Bani", :aliases => "Ban,Bani,Banti,BanÃ­,ÐÐ°Ð½,BanÃ­", :latitude => "18.28333", :longitude => "-70.33333").save
+City.new(:country_id => "61", :name => "Bajos de Haina", :aliases => "Bajos de Haina,Bajos de Jaina,Bajos de Haina", :latitude => "18.41667", :longitude => "-70.03333").save
+City.new(:country_id => "61", :name => "Azua de Compostela", :aliases => "Asua-de-Kompostela,Azua,Azua de Compostela,Compostela de Azua,ÐÑÑÐ°-Ð´Ðµ-ÐÐ¾Ð¼Ð¿Ð¾ÑÑÐµÐ»Ð°,Azua de Compostela", :latitude => "18.45319", :longitude => "-70.7349").save

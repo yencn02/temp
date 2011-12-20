@@ -1,0 +1,27 @@
+City.new(:country_id => "104", :name => "Loch Garman", :aliases => "Loch Garman,Wexford,Loch Garman", :latitude => "52.33417", :longitude => "-6.4575").save
+City.new(:country_id => "104", :name => "Port Lairge", :aliases => "Port Lairge,Port LÃ¡irge,Uoterford,Waterford,Waterford city,u~otafodo,Ð£Ð¾ÑÐµÑÑÐ¾ÑÐ´,ã¦ã©ã¼ã¿ã¼ãã©ã¼ã,Port LÃ¡irge", :latitude => "52.25833", :longitude => "-7.11194").save
+City.new(:country_id => "104", :name => "Tra Li", :aliases => "Tra Li,Tralee,TrÃ¡ LÃ­,TrÃ¡ LÃ­", :latitude => "52.27042", :longitude => "-9.70264").save
+City.new(:country_id => "104", :name => "Tallaght", :aliases => "Tallaght,Tallaght", :latitude => "53.2859", :longitude => "-6.37344").save
+City.new(:country_id => "104", :name => "Swords", :aliases => "Sord,Swords,Swords", :latitude => "53.45972", :longitude => "-6.21806").save
+City.new(:country_id => "104", :name => "Sligeach", :aliases => "Slajgou,Sligeach,Sligo,suraigo,Ð¡Ð»Ð°Ð¹Ð³Ð¾Ñ,ã¹ã©ã¤ã´,Sligeach", :latitude => "54.26969", :longitude => "-8.46943").save
+City.new(:country_id => "104", :name => "Droichead Nua", :aliases => "Droichead Nua,Droichead Nuadh,Newbridge,Droichead Nua", :latitude => "53.18194", :longitude => "-6.79667").save
+City.new(:country_id => "104", :name => "An Uaimh", :aliases => "Navan,An Uaimh", :latitude => "53.65278", :longitude => "-6.68139").save
+City.new(:country_id => "104", :name => "An Nas", :aliases => "Naas,An NÃ¡s", :latitude => "53.21583", :longitude => "-6.66694").save
+City.new(:country_id => "104", :name => "An Muileann gCearr", :aliases => "An Muileann gCearr,Mullingar,An Muileann gCearr", :latitude => "53.53333", :longitude => "-7.35").save
+City.new(:country_id => "104", :name => "Limerick", :aliases => "Limereick,Limerick,Limerick - Luimneach,Limerick city,Limerik,Limerika,Limerikas,Luimneach,lymryq,rimurikku,ÐÐ¸Ð¼ÐµÑÐ¸Ðº,××××¨××§,ãªã ãªãã¯,Limerick", :latitude => "52.66472", :longitude => "-8.62306").save
+City.new(:country_id => "104", :name => "Letterkenny", :aliases => "Leitir Ceanainn,Letterkenny,Letterkenny", :latitude => "54.95", :longitude => "-7.73333").save
+City.new(:country_id => "104", :name => "Leixlip", :aliases => "Leim an Bhradain,Leixlip,LÃ©im an BhradÃ¡in,Leixlip", :latitude => "53.36583", :longitude => "-6.49556").save
+City.new(:country_id => "104", :name => "Cill Chainnigh", :aliases => "Cill Chainnigh,Kilkenni,Kilkenny,Kilkenny city,kirukeni,ÐÐ¸Ð»ÐºÐµÐ½Ð½Ð¸,ã­ã«ã±ãã¼,Cill Chainnigh", :latitude => "52.65417", :longitude => "-7.25222").save
+City.new(:country_id => "104", :name => "Galway", :aliases => "Gaillimh,Galway,Galway - Gaillimh,Galway city,Goluehj,Goluej,Golveja,ge er wei,goruu~ei,ÐÐ¾Ð»ÑÐµÐ¹,ÐÐ¾Ð»ÑÑÐ¹,ã´ã¼ã«ã¦ã§ã¤,æå°é¦,Galway", :latitude => "53.27194", :longitude => "-9.04889").save
+City.new(:country_id => "104", :name => "Inis", :aliases => "Enis,Ennis,Inis,ÐÐ½Ð¸Ñ,Inis", :latitude => "52.84361", :longitude => "-8.98639").save
+City.new(:country_id => "104", :name => "Dun Laoghaire", :aliases => "Dan Liri,Dun Laoghaire,Dunleary,DÃºn Laoghaire,Kingstown,ÐÐ°Ð½ ÐÐ¸ÑÐ¸,DÃºn Laoghaire", :latitude => "53.29395", :longitude => "-6.13586").save
+City.new(:country_id => "104", :name => "Dun Dealgan", :aliases => "D'ndok,Dun Dealgan,Dundalk,DÃºn Dealgan,ÐÑÐ½Ð´Ð¾Ðº,DÃºn Dealgan", :latitude => "54", :longitude => "-6.41667").save
+City.new(:country_id => "104", :name => "Dublin", :aliases => "Baile Atha Cliath,Baile Ãtha Cliath,Ciuda de Dublin,CiudÃ¡ de DublÃ­n,Dablin,Doublino,Dublin,Dublin - Baile Atha Cliath,Dublin city,Dublina,Dublinas,Dublini,Dublino,Dublinu,DublÃ­n,DublÃ­n - Baile Ãtha Cliath,DublÃ®n,Dulenn,Dulyn,Dulynn,Dyflinn,Eblana,dablin,dablina,daburin,dbln,dblyn,deobeullin,dou bai lin,dublini,dwblyn,taplin,ÎÎ¿ÏÎ²Î»Î¯Î½Î¿,ÐÐ°Ð±Ð»Ð¸Ð½,ÐÑÐ±Ð»Ð¸Ð½,ÐÑÐ±Ð»ÑÐ½,ÐÑÐ±Ð»Ð¸Ð½,×××××,Ø¯Ø¨ÙÙ,Ø¯ÙØ¨ÙÛÙ,Ø¯ÛØ¨ÙÙÙ,ÚØ¨ÙÙ,ÜÜÜ Ü¢,à¤¡à¤¬à¥à¤²à¤¿à¤¨,à®à®ªà¯à®²à®¿à®©à¯,à¸à¸±à¸à¸¥à¸´à¸,áá£ááááá,á°á¥áá,ãããªã³,é½ææ,ëë¸ë¦°,Dublin", :latitude => "53.34399", :longitude => "-6.26719").save
+City.new(:country_id => "104", :name => "Drogheda", :aliases => "Drogheda,Drogheda - Droichead Atha,Drogheda - Droichead Ãtha,Droichead Atha,Droichead Ãtha,Droida,ÐÑÐ¾Ð¸Ð´Ð°,Drogheda", :latitude => "53.71889", :longitude => "-6.34778").save
+City.new(:country_id => "104", :name => "Cork", :aliases => "Corcaigh,Cork,Cork - Corcaigh,Cork city,Kork,Korka,Korkas,Korkig,ke ke,koku,kwrk,qwrq,ÐÐ¾ÑÐº,×§××¨×§,ÙÙØ±Ù,ã³ã¼ã¯,ç§å,Cork", :latitude => "51.89797", :longitude => "-8.47061").save
+City.new(:country_id => "104", :name => "Clonmel", :aliases => "Cluain Meala,Clonmel", :latitude => "52.355", :longitude => "-7.70389").save
+City.new(:country_id => "104", :name => "Celbridge", :aliases => "Celbridge,Cill Droichid,Celbridge", :latitude => "53.33861", :longitude => "-6.54361").save
+City.new(:country_id => "104", :name => "Ceatharlach", :aliases => "Carlow,Ceatharlach", :latitude => "52.84083", :longitude => "-6.92611").save
+City.new(:country_id => "104", :name => "Bray", :aliases => "Bre,Brej,Bri Chualann,BrÃ©,ÐÑÐµÐ¹,Bray", :latitude => "53.20278", :longitude => "-6.09833").save
+City.new(:country_id => "104", :name => "Blackrock", :aliases => "Blackrock,Carraig Dubh,Blackrock", :latitude => "53.3015", :longitude => "-6.1778").save
+City.new(:country_id => "104", :name => "Baile Atha Luain", :aliases => "Athlone,Baile Ãtha Luain", :latitude => "53.43333", :longitude => "-7.95").save

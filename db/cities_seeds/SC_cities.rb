@@ -1,0 +1,1 @@
+City.new(:country_id => "197", :name => "Victoria", :aliases => "Biktoria,Mahe,MahÃ©,Port Victoria,Victoria,VictÃ²ria,Viktoria,Viktorija,bigtolia,vu~ikutoria,ÎÎ¹ÎºÏÏÏÎ¹Î±,ÐÐ¸ÐºÑÐ¾ÑÐ¸Ñ,ÙÚ©Ù¹ÙØ±ÛØ§,áªá­á¶áªá«á¥ á²á¸ááµ,ã´ã£ã¯ããªã¢,ë¹í ë¦¬ì,Victoria", :latitude => "-4.61667", :longitude => "55.45").save

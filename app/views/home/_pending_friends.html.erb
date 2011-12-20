@@ -1,0 +1,62 @@
+<% if @pending_friends.size > 0 %>
+	<a onclick="document.getElementById('my_requests').toggle();">You have <%= @pending_friends.size %> pending Friends, click to show.</a>
+	<div class="people" id="my_requests" style="margin-top:20px; display:none;">
+	<div id='notice'></div>
+	<div class='banner'>
+	    Select All
+	</div>
+	<% form_remote_tag :url => '/accept_all' do -%>
+	    <% @pending_friends.each do |friend| %>
+	    <div class="people-item" data-uid="<%= friend.id %>" id="user_<%= friend.id %>">
+		    <input name="<%= '[checked][' + friend.id.to_s + ']' %>" id="<%= friend.id %>" type="checkbox"/>
+	        <div class="img">
+	            <img src="/images/sample_people_img.jpg" alt="<%=h friend.formatted_name %>" />
+	        </div>
+	        <div class="details">
+	            <div class="name">
+	                <a href="#"><%=h friend.formatted_name %></a>
+	            </div>
+	            <div class="info">
+	                Egypt
+	                <br/>
+	                <%= pluralize(friend.pending_tasks, "Pending Task") %>
+	            </div>
+	            <div class="action">
+	                <div class="action-dropdown">
+	                    <span class="hd"></span>
+	                    <div class="bg">
+	                        <a href="#">Lists to share</a>
+	                        <div class="list">
+	                            <ul>
+	                                <%- @user_task_lists.each do |task_list| -%>
+	                                <li>
+	                                    <input name="<%= '[friend][' + friend.id.to_s + ']' + '[' +task_list.id.to_s + ']'%>" data-id="<%= task_list.id %>" type="checkbox"/><%=h task_list.title %>
+	                                </li>
+									<%- end -%>
+	                            </ul>accepted
+	                        </div>
+	                    </div><span class="ft"></span>
+						<%=link_to_remote "Deny", :url => {:controller => "friendships" , :action => "deny", :id => friend.id }, :method => :put %>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="clear">
+	        </div>
+	    </div>
+	    <div class="h-sep">
+	    </div>
+	    <%- end -%>
+	    <div>
+	        <%= submit_tag 'Accept Selected' %>
+	    </div>
+	    <% end -%>
+	</div>
+	<br/>
+	<script type="text/javascript" charset="utf-8">
+	    $j(document).ready(function(){
+	        $j('#tab-2').trigger('click');
+	    });
+	</script>
+<%else%>
+	You do not have any new Freinds Requests
+<% end%>

@@ -1,0 +1,1 @@
+City.new(:country_id => "75", :name => "Torshavn", :aliases => "Havn,THorshoefn,Tarskhavn,Thorshavn,Torshamn,Torshavn,Torshavnas,Torskhavn,TÃ³rshavn,toleuseuhaun,tosuhaun,ÃÃ³rshÃ¶fn,Ð¢Ð°ÑÑÑÐ°Ð²Ð½,Ð¢Ð¾ÑÑÑÐ°Ð²Ð½,×××¨×¡××××,ãã¼ã¹ãã¦ã³,í ë¥´ì¤íì´,TÃ³rshavn", :latitude => "62.00973", :longitude => "-6.77164").save

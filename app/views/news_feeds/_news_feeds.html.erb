@@ -1,0 +1,39 @@
+<div class="inner-container" 'data-page'= "my_hives" >
+  <div id="news-feeds-wrapper">
+    <%form_remote_for(:news_feed, :html => {:url => news_feeds_path, :method=>:post}) do |f|%>
+    <div class="news-feeds-share">
+      <div class="share-header">
+        <input id="news-feed-type-status" type="radio" name="news_feed[feed_type]" value="Status" checked="checked"/><label for="news-feed-type-status">Status</label>
+        <input id="news-feed-type-question" type="radio" name="news_feed[feed_type]" value="Question" /><label for="news-feed-type-question">Question</label>
+        <input id="news-feed-type-link" type="radio" name="news_feed[feed_type]" value="Link" /><label for="news-feed-type-link">Link</label>
+      </div>
+      <div class="share-body">
+        <%=f.text_field 'content'%>
+      </div>
+      <div class="share-footer">
+        <%=f.submit 'Share'%>
+        <div style="float: right;">
+          <select id="privacy" name="news_feed[privacy]">
+            <option value="-2">Evenyone</option>
+            <option value="-1">All connections</option>
+            <%current_user.task_lists.each do |list|%>
+            <option <%="value='#{list.id}'"%>><%="#{list.title}"%></option>
+            <%end%>
+          </select>
+        </div>
+      </div>
+    </div>
+    <%end%>
+    <div class="news-feeds-content">
+      <%@news_feeds.each do |news_feed|%>
+        <%=news_feed_tag(:news_feed => news_feed)%>
+        <div class='dotted-line'></div>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  addTaskActionEvents();
+  newsFeedsOnReady();
+</script>

@@ -1,0 +1,36 @@
+(function($) {
+  showContentLoading();
+  $j('#main-and-right').css('height', 'auto');
+  
+  currentPageName = "my_hives";
+  existingPage = $("#main-tasks .inner-container").attr("data-page");
+  if(currentPageName != existingPage)
+    $("#main-tasks .inner-container").remove();
+  
+  $("#show_me_select").find("img").hide();
+  $("#toolbar").removeClass('jqtransformdone');
+  $("#toolbar").html("<%= escape_javascript(render("news_feeds_content_head"))%>");
+  $("#toolbar select").val("<%=@filter_type%>");
+  $("#toolbar").jqTransform();
+  
+  if("0" == "<%=@filter_scope.nil? ? "0" : @filter_scope%>"){
+    if(!$j("#my-connections").hasClass('news-feeds-scope-on')){
+      $j("#my-connections").addClass('news-feeds-scope-on');
+      $j("#arround-me").removeClass('news-feeds-scope-on');
+    }
+  } else {
+    if(!$j("#arround-me").hasClass('news-feeds-scope-on')){
+      $j("#arround-me").addClass('news-feeds-scope-on');
+      $j("#my-connections").removeClass('news-feeds-scope-on');
+    } 
+  }
+  $("#main-tasks").html("<%= escape_javascript(render("news_feeds")) %>");
+  $("#main-tasks .task-unit").jqTransform();
+  $(".news-feeds-share .share-footer div").jqTransform();
+  addZIndexCorrectionToItemSelect("#main-tasks .share-footer");
+  addZIndexCorrectionToTasksMenuSelect();
+  
+  $j("#tab-area").attr('data-busy', "");
+  
+  enableTabs();
+})(jQuery);

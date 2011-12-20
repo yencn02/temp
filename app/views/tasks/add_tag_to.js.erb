@@ -1,0 +1,2 @@
+replaceEditorTagList(<%=@task.id%>, "<%= escape_javascript(render("shared/tag_editor_tag_list", :taggable => @task)) %>", "<%=@task.tag_list.join(',')%>");
+createRightSideTags("<%=@tags%>");

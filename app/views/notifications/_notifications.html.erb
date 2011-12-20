@@ -1,0 +1,50 @@
+<%=javascript_include_tag "jquery-ui-1.8.9.custom.min"%>
+<div class="inner-container" 'data-page'="notifications" >
+  <div id="notifications-content-wrapper">
+    <%- if  @all_notifications.count > 0 -%>
+      <% notification = @all_notifications.first %>
+      <div class="notifications-section-header"><%= get_friendly_day notification.created_at %></div>
+      <div class="notification-wrapper">
+        <%=notification_tag({:notification => notification, :events => "onclick='showHideNotificationContent(#{notification.id});'"})%>
+        <br />
+        <%=notification_content_tag(:notification => notification)%>
+      </div>
+      <% (1...@all_notifications.length).each do |i| %>
+        <% notification = @all_notifications[i] %>
+        <% prev = @all_notifications[i -1] %>
+        <% if prev.created_at.day > notification.created_at.day  %>
+          <div class="notifications-section-header" style='margin-top: 10px;'><%= get_friendly_day notification.created_at %></div>
+        <% else %>
+        <div class='dotted-line'></div>
+        <% end %>
+        <div class="notification-wrapper">
+          <%=notification_tag({:notification => notification, :events => "onclick='showHideNotificationContent(#{notification.id});'"})%>
+          <br />
+          <%=notification_content_tag(:notification => notification)%>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  jQuery('.task-unit').each(function(){
+    initTaskEvents(jQuery(this));
+  });
+  
+  //hand-fix to the task menu being shown in notificaions page
+  jQuery('.task-unit .task-menu form div div span').each(function(){
+    jQuery(this).css("width", "68");
+  });
+  
+  //addTaskActionEvents();
+  addTaskActionEvents();
+  addZIndexCorrectionToTasksMenuSelect();
+  
+  unis = '<%="#{@all_unvisited_notifications_ids}"%>';
+  unis = unis.split(',');
+  for(i = 0; i < unis.length; i++){
+    element = jQuery(".notification-text."+unis[i]);
+    element.effect("highlight", {color: '#c4ed19'}, 5000);
+  }
+</script>

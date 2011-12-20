@@ -1,0 +1,14 @@
+%div.admin-menu-wrapepr
+  %span.admin-menu
+    %ul
+      - if task.pending?
+        %li.send-reminder Send Reminder
+        %li.mark-done Mark it Done
+        %li.cancel Cancel this Task
+        %li.cancel-reassign Cancel and Reassign
+      - elsif task.did?
+        %li.reassign-to-assignee{:title => "Reassign to  #{task.assignee.formatted_name}"}
+        %li.reassign-to-other Reassign to other
+      - else #cant or cancelled
+        %li.reassign-to-other Reassign to other
+        %li.reassign-to-yourself Reassign to yourself

@@ -1,0 +1,42 @@
+(function($) {
+  setTimeout(function(){
+    showContentLoading();
+    $j('#main-and-right').css('height', 'auto');
+   
+    currentPageName = "notifications";
+    existingPage = $("#main-tasks .inner-container").attr("data-page");
+    if(existingPage != undefined && currentPageName != existingPage)
+      $("#main-tasks .inner-container").remove();
+   
+    $('#notifications-tab').show();
+    $unvisited_notifications_count = 0;
+    updateNotificationsCountDisplay();
+    $("#show_me_select").find("img").hide();
+    $("#toolbar").removeClass('jqtransformdone');
+    $("#toolbar").html("");
+    
+    $('#main-tasks #page-loading-container').before("<%= escape_javascript(render("notifications")) %>");
+    $('form.jqtransform').jqTransform();
+    addZIndexCorrectionToTasksMenuSelect();
+    
+    $j("#tab-area").attr('data-busy', "");
+    
+    totalPages = parseInt("<%= @all_notifications.total_pages %>");
+    currentPage = parseInt("<%= @all_notifications.current_page %>");
+    $totalPages = totalPages;
+    $currentPage = currentPage;
+    
+    if(totalPages > currentPage){
+      checkScroll();
+      showContentLoading();
+    } else {
+      hideContentLoading();
+    }
+    
+    $j('#main-and-right').css('height', 'auto');
+    
+    $totalPages = totalPages;
+    
+    enableTabs();
+  }, 1000);
+})(jQuery);

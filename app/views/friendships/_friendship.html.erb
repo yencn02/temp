@@ -1,0 +1,50 @@
+<div class="people-item">
+  <div class="delete">
+    <a href="#">delete</a>
+  </div>
+  
+  <div class="img">
+    <img src="/images/sample_people_img.jpg" alt="<%=h friend.formatted_name %>" />
+  </div>
+  
+  <div class="details">
+    <div class="name">
+      <a href="#"><%=h friend.formatted_name %></a>
+    </div>
+    
+    <div class="info">
+      Egypt<br />
+      <%= pluralize(friend.pending_tasks, "Pending Task") %>      
+    </div>
+    
+    <div class="action" data-id="<%= friend.id %>">
+      <div class="title">Permission to access</div>
+      
+      <div class="action-dropdown">
+        <span class="hd"></span>
+        <div class="bg">
+          <a href="#"><%= pluralize(user.task_lists_granted_for_friend_count(friend), "List") %></a>
+          
+          <div class="list">
+            <ul>
+              <%- user_task_lists.each do |task_list| -%>
+              <li>
+                <input data-id="<%= task_list.id %>" type="checkbox" <%= 'checked="checked"' if task_list.editor?(friend) %> />
+                <%=h task_list.title %>
+              </li>
+              <%- end -%>              
+            </ul>
+          </div>         
+        </div>
+        <span class="ft"></span>
+      </div>
+           
+    </div>
+    
+  </div>
+  
+  <div class="clear"></div>
+  
+</div>
+
+<div class="h-sep"></div>

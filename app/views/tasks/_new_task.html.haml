@@ -1,0 +1,203 @@
+%div.new-task-wrapper.small
+  %div.new-task-wrapper-content
+    %span.new-task-icon
+
+    = form_for(Task.new, :html => {:id => "new_task_form", :class=>"jqtransform", :onsubmit=>"$j('#task_submit').attr('disabled','disabled');"}) do |f|      
+      %div.form
+        = f.text_area :description, :id => "new_task_txt", :class=>'small', :value=>'Add New Task . . .'
+        %input{:type=>'hidden', :value=>'false', :id=>'is_reassign', :name=>"is_reassign"}
+        %input{:type=>'hidden', :value=>'false', :id=>'with_cancel', :name=>"with_cancel"}
+        %input{:type=>'hidden', :value=> '-1', :id=>'clone_task', :name=>"clone_task"}
+        %div#new-task-tip.tip-right{:style=>"bottom: 158px;left:458px;"} Write your task here
+        %div.hidden-elements-container
+          %div.new-task-to
+            %input#task_to_2{:type=>'hidden', :name=>'task[to_user_id]'}
+            %input#task_to_email{:type=>'hidden', :name=>'task[to_user_email]'}
+            = f.text_field :to_user_name, :class=>'task-to', :id=>"task_to_user_name"
+            %label To
+            %div#to-user-tip.tip-right{:style=>"bottom: -6px;left:458px;"} Type a username or an email
+          %div.new-task-as
+            = f.select(:task_list_id, options_from_collection_for_select(current_user.task_lists, 'id', 'title'), {}, :id => "task_as", :class=>"as")
+            %label As
+            %div#task-as-tip.tip-left{:style=>"bottom: -22px;left:-180px;"} Select a task list
+          %div.as-and-tag 
+            %div.line
+              %ul#mytags
+            %label Tags
+            %div#mytags-tip.tip-right{:style=>"top: -15px;left:248px;"} Add tags
+          %div.privacy-and-submit
+            = image_tag "load-white-16.gif", :class => "new-task-loading"
+            = f.check_box :private_task
+            %label{:for=>"task_private_task"} Private 
+            = f.submit '', :class => 'no-style'
+            %div#private-tip.tip-left{:style=>"bottom: -9px;left:-185px;"} Is this task private?
+          %div.close-container
+            %a.close.hand-pointer Close
+
+%div#acinfo_template{:style=>'display:none;'}
+  %div.acinfo
+    %div.acimg
+      %img#acimg_tag{:style=>'width: 100%;'}
+    %div.acdetails
+      %span#name.acname 
+      %span#pending.acpending 
+      %br
+      %span#email.acinfo 
+
+- current_user_task_lists = current_user.task_lists
+- task_list_options_for_current_user = task_lists_options_for_select(current_user_task_lists) 
+
+:javascript
+
+  $j('.new-task-to input').focus(function(event){
+    if($j('.to-user-box').length > 0){
+      $j('.to-user-box').addClass('to-user-box-focused');
+    }
+  });
+  
+  $j('.new-task-to input').focusout(function(event){
+    if($j('.to-user-box').length > 0){
+      $j('.to-user-box').removeClass('to-user-box-focused');
+    }
+  });
+  
+  taskToUserBoxClicked = function(event){
+    $j('.new-task-to input').focus();
+  };
+    
+  function createUserInfoRow(row) {
+    newRow = $j('#acinfo_template').clone();
+    newRow.find('#acimg_tag').attr('src', row[2]);
+    newRow.find('#name').text(row[0]);
+    newRow.find('#pending').text(row[3] + " pending tasks");
+    newRow.find('#email').text(row[1]);
+    return newRow.html();
+  };
+  
+  function createUserToBoxAndAppendToInput(item){
+      box = $j('<div />').addClass('to-user-box').append(createUserInfoRow(item));
+      $j('.new-task-to').append(box);
+      // handle key down
+      keydownHandler = function(event){
+        if( event.keyCode == 9      // tab key
+            || event.keyCode == 16  // shift key
+            || event.keyCode == 13) // enter key
+          return;
+          
+        $j('.to-user-box').remove();
+        updateInputValue($j('#task-to-user-name'),
+        								 $j("#task_to_2").attr('data-uname'));
+        $j('.to-user-box').unbind('keydown', keydownHandler);
+      };
+     
+      $j('.to-user-box').click(taskToUserBoxClicked);
+      $j('.new-task-to input').bind('keydown', keydownHandler);
+      // clear the input text upon adding the new box
+      updateInputValue($j('#task_to_user_name'), '');
+      updateInputValue($j("#task_to_email"), item[1]);
+  }
+  
+  function updateInputValue(elem, newValue){
+  	if(elem[0]){
+      elem.val(newValue);
+      //TODO: extract in a library
+      // force the elem.data('lastValue') to be updated so that, 'textchange' event will work correctly
+      $j.event.special.textchange.triggerIfChanged(elem);
+    }
+  }  
+  
+  function setDefaultUser(){
+    // create the user box in To User
+    rowData = #{auto_complete_row_data_to_javascript_array current_user};
+	
+    userName = '#{current_user.name}';
+    userID = 'yourself';	    
+  
+    updateAssigneeInput(rowData, userName, userID);
+  }
+
+  function updateAssigneeInput(rowData, userName, userID){
+  	updateInputValue($j("#task_to_user_name"), userName);
+	
+    $j("#task_to_user_name").addClass("completed");
+        
+    $j("#task_to_2").attr('data-uname', userName);     
+    $j("#task_to_user_name").removeClass('new-task-text-error');
+	
+    // create the colored box
+    createUserToBoxAndAppendToInput(rowData);
+  
+    // must be set after creating the box, because creating the box 
+    // (specifically changin the task_to_user_name), will change it.      
+    updateInputValue($j("#task_to_2"), userID);
+  } 
+  
+  $j(document).ready(function($) {
+    $('#task_tag_list').parent().css('height', '50px !important');
+    $("#task_submit").attr('disabled', 'disabled');
+    $('#new_task_txt').focus(function() {
+      $('#task_submit').removeClass('button');
+      if($("#task_to_user_name").val() == "" && $(".to-user-box").length == 0)
+        setDefaultUser();
+        
+      $('.new-task-wrapper').animate({height: 250});
+      if($(".new-task-wrapper").hasClass("small"))
+        updateInputValue($('#new_task_txt'), "");
+      $(".new-task-wrapper").removeClass("small");
+      $("#new_task_txt").removeClass("small");
+      $(".new-task-wrapper .hidden-elements-container").show();
+    });
+    
+    //TODO: Already done in application.js, why done here again
+    $("#task_to_user_name").focusout(function(){
+      if($("#task_to_user_name").length > 0){
+        searchText = $(this).val().toLowerCase();
+        toUserValid = isToUserValid(searchText);
+        
+        if (toUserValid)
+          $("#task_to_user_name").removeClass('new-task-text-error');               
+        else
+          $("#task_to_user_name").addClass('new-task-text-error');
+      }
+      enableNewTaskFormSubmit();    
+    });
+    
+    tagsArray = "#{@tags}".split(',');
+    $("#mytags").tagit({
+      availableTags: tagsArray
+    });
+    
+    var ac = $("#task_to_user_name").autocomplete('#{auto_complete_user_friends_path}', {
+      width: '420px',
+      cacheLength: 1,
+      formatItem: createUserInfoRow,
+      minLength: 0,
+      selectFirst: true,
+      select: function(event, ui) {
+       if(event.keyCode == 13) {
+          window.open(ui.item.url);
+       }
+      }
+     });
+    
+    $('#task_to_user_name').bind('textchange', function (event, previousText) {
+      if ($.trim($('#task_to_user_name').val()) != $.trim(previousText)) {
+        newText = $.trim($('#task_to_user_name').val());
+        $("#task_to_user_name").removeClass("completed");
+
+        updateInputValue($("#task_to_2"), 'other');
+        $("#task_to_2").attr('data-uname', newText);
+      }
+    });
+    
+    ac.bind("result", function(e, item) {
+    	rowData = item;
+    
+    	userName = $("#task_to_user_name").val();
+    	userID = item[4];
+    	
+    	updateAssigneeInput(rowData, userName, userID);
+
+      $j('.new-task-to input').focus();                     
+    });           
+  });

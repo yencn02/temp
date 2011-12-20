@@ -1,0 +1,1 @@
+City.new(:country_id => "221", :name => "Dili", :aliases => "Delhi,Dilhi,Dili,Dilis,Dilli,Dilly,Dilo,Dily,DÃ­li,Nova Dili,di li,dilli,diri,dyly,ÐÐ¸Ð»Ð¸,××××,ãã£ãª,å¸å,ëë¦¬,Dili", :latitude => "-8.55861", :longitude => "125.57361").save

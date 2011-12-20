@@ -1,0 +1,22 @@
+(function($) {
+<%- if flash[:error] -%>
+  $("#waiting_page_email").tipTip({
+    content: "<%= escape_javascript(flash[:error]) %>",
+    keepAlive: true,
+    activation: "manual"
+  });        
+  
+  $('#waiting_page_email').data('active_tiptip')();  
+<%- else -%>
+  if($('#waiting_page_email').data('deactive_tiptip')) {
+    $('#waiting_page_email').data('deactive_tiptip')();
+  }
+  
+  $('.form').removeClass('form').addClass('form-success');
+  $('#new_waiting_page').remove();
+  $('.form-in').hide();
+  $('.form-in').html("<%= escape_javascript(render(:partial => 'thank_you')) %>");
+  $('.form-in').fadeIn(1000);
+  
+<%- end -%>
+})(jQuery);  

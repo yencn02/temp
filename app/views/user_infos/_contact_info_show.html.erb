@@ -1,0 +1,76 @@
+<%if user.id == current_user.id %>
+<span style="float:right;"><br /><a class="profile-edit-link" id="contact-info-edit-link">Edit</a></span>
+<%end%>
+<h4>Contact Info:</h4>
+<div class="info-group">
+  <%unless user.user_info.emails.nil? or user.user_info.emails.length == 0%>
+  <div class="row">
+   <div class="col-1">Email(s):</div>
+    <div class="col-2">
+      <%user.user_info.emails.each do |email|%>
+      <a <%="href='mailto:#{email.email}'"%> ><%="#{email.email}"%></a><br />
+      <%end%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.phone.nil? or user.user_info.phone.blank?%>
+  <div class="row">
+    <div class="col-1">Tel:</div>
+    <div class="col-2">
+      <%=user.user_info.phone%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.mobile.nil? or user.user_info.mobile.blank?%>
+  <div class="row">
+    <div class="col-1">Mobile:</div>
+    <div class="col-2">
+      <%=user.user_info.mobile%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.pobox.nil? or user.user_info.pobox.blank?%>
+  <div class="row">
+    <div class="col-1">P.O.Box:</div>
+    <div class="col-2">
+      <%=user.user_info.pobox%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.website.nil? or user.user_info.website.blank?%>
+  <div class="row">
+    <div class="col-1">Website:</div>
+    <div class="col-2">
+      <a <%="href='http://#{user.user_info.website}'"%>><%=user.user_info.website%></a>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.twitter_account.nil? or user.user_info.twitter_account.blank?%>
+  <div class="row">
+    <div class="col-1">Twitter:</div>
+    <div class="col-2">
+      <%=user.user_info.twitter_account%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+  <%unless user.user_info.facebook_account.nil? or user.user_info.facebook_account.blank?%>
+  <div class="row">
+    <div class="col-1">Facebook:</div>
+    <div class="col-2">
+      <%=user.user_info.facebook_account%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <%end%>
+</div>
+
+<script type="text/javascript">
+  contactInfoShowEvents();
+</script>
+

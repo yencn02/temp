@@ -1,0 +1,36 @@
+%div#user-info
+  - if current_user.user_info
+    %div#user-info-pic
+      = image_tag profile_avatar_path(user.user_info.id, :thumb), :size => "60x60", :alt => "#{user.formatted_name}" 
+    %div#user-info-data
+      - if current_user.unregistered
+        %a.username{:style=>"color: #666;"} Unregistered User
+        %span.etaskadress.tipsy{:title=>"#{current_user.email}"} #{current_user.email.chomp}
+      - else
+        %a.username.hand-pointer{:href => "#{profile_url(current_user.user_info.id)}"}
+        %span.etaskadress.tipsy{:title=>"#{current_user.cheeve_it_mail}"}
+        %br
+        %span.location #{current_user.user_info.home_country.titleize}
+    %div.state
+      %div.state-half-top-left Pending
+      %div.state-half-top-right Total
+      %div.state-half-left
+        %div.in
+          %div.count #{current_user.pending_tasks_for_me_count}
+          %div.text in
+        %div.out
+          %div.count #{current_user.pending_tasks_from_me_count}
+          %div.text out
+      %div.state-half-right
+        %div.in
+          %div.count #{current_user.total_tasks_for_me_count}
+          %div.text in
+        %div.out
+          %div.count #{current_user.total_tasks_from_me_count}
+          %div.text out
+  - if current_user.unregistered
+    %div#complete-registration-wrapper
+      %input.no-style.register-button.hand-pointer{:type=>"button"}
+      %pre —————  or  —————
+      %span Already have an account 
+      %a.login{:href=>new_user_session_url} login

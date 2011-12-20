@@ -1,0 +1,24 @@
+City.new(:country_id => "219", :name => "Yovan", :aliases => "Yavan,Yovan,Yovon,Yovan", :latitude => "38.31306", :longitude => "69.04306").save
+City.new(:country_id => "219", :name => "Vose'", :aliases => "Aral,Imeni Vose,Kal Khaz,Kolkhozabad,Paytok,Vose',Voseâ,Voseâ", :latitude => "37.8025", :longitude => "69.64417").save
+City.new(:country_id => "219", :name => "Vakhsh", :aliases => "Vakhsh,Vakhshstroi,Vakhshstroy,Vakhsh", :latitude => "37.71083", :longitude => "68.83111").save
+City.new(:country_id => "219", :name => "Istaravshan", :aliases => "Bundzhikat,Istaravshan,Ura-Tyube,Uroteppa,Å¬roteppa,ÐÑÑÐ°ÑÐ°Ð²ÑÐ°Ð½,Istaravshan", :latitude => "39.91083", :longitude => "69.00639").save
+City.new(:country_id => "219", :name => "Tursunzoda", :aliases => "Regar,Tursunzade,Tursunzoda,Ð¢ÑÑÑÑÐ½Ð·Ð°Ð´Ðµ,Tursunzoda", :latitude => "38.51083", :longitude => "68.23028").save
+City.new(:country_id => "219", :name => "Qurghonteppa", :aliases => "Kurgan Tjube,Kurgan-Tyube,Qurghan Tyube,QurghÄn Tyube,ÐÑÑÐ³Ð°Ð½ Ð¢ÑÐ±Ðµ,QÅ­rghonteppa", :latitude => "37.83639", :longitude => "68.78028").save
+City.new(:country_id => "219", :name => "Panjakent", :aliases => "Panjakent,Panjkent,Pendshikent,Pendzhakent,Pendzhikent,Penjikent,ÐÐµÐ½Ð´Ð¶Ð¸ÐºÐµÐ½Ñ,Panjakent", :latitude => "39.50306", :longitude => "67.615").save
+City.new(:country_id => "219", :name => "Farkhor", :aliases => "Farkhor,Parkbar,Parkhar,Ð¤Ð°ÑÑÐ¾Ñ,Farkhor", :latitude => "37.49222", :longitude => "69.40167").save
+City.new(:country_id => "219", :name => "Kofarnihon", :aliases => "Kofarnihon,Kofarnikhon,Kofarnikhona,Ordhonikidzeabad,Ordzhonikidzeabad,Orjonikidzeabad,Orjonikidzeobod,Yangi-Bazar,ÐÐ¾ÑÐ°ÑÐ½Ð¸ÑÐ¾Ð½Ð°,Kofarnihon", :latitude => "38.55306", :longitude => "69.01972").save
+City.new(:country_id => "219", :name => "Norak", :aliases => "Norak,Nurek,Norak", :latitude => "38.38833", :longitude => "69.325").save
+City.new(:country_id => "219", :name => "Kulob", :aliases => "Kulab,Kuljab,Kulob,Kulyab,KÅ­lob,ÐÑÐ»ÑÐ±,KÅ­lob", :latitude => "37.90917", :longitude => "69.78194").save
+City.new(:country_id => "219", :name => "Kolkhozobod", :aliases => "Kaganovichabad,Kaganowtschab,Kolkhozabad,Kolkhozobod,Tugalan,Tugolan,Kolkhozobod", :latitude => "37.58944", :longitude => "68.66083").save
+City.new(:country_id => "219", :name => "Khorugh", :aliases => "Khorog,Khorugh,Ð¥Ð¾ÑÐ¾Ð³,Ð¥Ð¾ÑÑÒ,Khorugh", :latitude => "37.49167", :longitude => "71.55583").save
+City.new(:country_id => "219", :name => "Ishkashim", :aliases => "Ishkashim,Ishkashim Post,IshkÄshÄ«m Post,Nud,Nuda,ÐÑÐºÐ°ÑÐ¸Ð¼,Ishkashim", :latitude => "36.72722", :longitude => "71.61167").save
+City.new(:country_id => "219", :name => "Hisor", :aliases => "Gissar,Hisor,Khisor,Staryy Gissar,ÐÐ¸ÑÑÐ°Ñ,Hisor", :latitude => "38.52472", :longitude => "68.55139").save
+City.new(:country_id => "219", :name => "Dushanbe", :aliases => "Djuschambe,Doesjanbe,Douchanbe,DouchanbÃ©,Dusanbe,Dusanbeo,Duschanbe,Dushambe,Dushanbe,Dusjanbe,Duszanbe,DuÅanbeo,DuÅanbe,DuÅ¡anbe,DuÅ¡anbÄ,DuÅ¡hanbe,Dyushambe,DÃ¼ÅÉnbÉ,Jushambe,Ntousanmpe,Stalinabad,do~ushanbe,du shang bie,dusyanbe,dwshnbh,dwsnbh,ÎÏÎ¿ÏÏÎ¬Î½Î¼ÏÎµ,ÐÑÑÐ°Ð½Ð±Ðµ,×××©× ××,Ø¯ÙØ´ÙØ¨Ù,á±á»áá¤,ãã¥ã·ã£ã³ã,æå°å«,ëì¨ë² ,Dushanbe", :latitude => "38.53575", :longitude => "68.77905").save
+City.new(:country_id => "219", :name => "Danghara", :aliases => "Dangar,Dangara,Danghara,ÐÐ°Ð½Ð³Ð°ÑÐ°,Danghara", :latitude => "38.09639", :longitude => "69.33556").save
+City.new(:country_id => "219", :name => "Chubek", :aliases => "Chubek,Moskovskiy,Chubek", :latitude => "37.61278", :longitude => "69.70611").save
+City.new(:country_id => "219", :name => "Boshkengash", :aliases => "Bashkyngash,Boshkengash,Boshkengosh,Boshkengash", :latitude => "38.46472", :longitude => "68.80361").save
+City.new(:country_id => "219", :name => "Proletarsk", :aliases => "Dragomirovo,Jabar Rasulov,Jabbor Rasulov,Proletarsk,Proletarsk", :latitude => "40.16861", :longitude => "69.50833").save
+City.new(:country_id => "219", :name => "Khujand", :aliases => "Chodzjand,Chudschand,Chudzandas,Chudzjand,ChudÅ¾andas,Hodjent,Hudzand,HudÅ¾and,Khodjent,Khodyent,Khodzhent,Khojend,Khudzhand,Khujand,Khuzhant,Kojend,Leninabad,Leninobod,Ursaten,Xo'jand,hojendo,khjnd,ku zhan,Ð¥Ð¾Ð´Ð¶ÐµÐ½Ñ,Ð¥ÑÐ´Ð¶Ð°Ð½Ð´,Ð¥ÑÐ¶Ð°Ð½Ñ,Ð¥ÑÒ·Ð°Ð½Ð´,Ø®Ø¬ÙØ¯,ãã¸ã§ã³ã,è¦ç,Khujand", :latitude => "40.28", :longitude => "69.63167").save
+City.new(:country_id => "219", :name => "Konibodom", :aliases => "Kanibadam,Konibodom,ÐÐ°Ð½Ð¸Ð±Ð°Ð´Ð°Ð¼,Konibodom", :latitude => "40.28333", :longitude => "70.41667").save
+City.new(:country_id => "219", :name => "Isfara", :aliases => "Isfara,ÐÑÑÐ°ÑÐ°,Isfara", :latitude => "40.11667", :longitude => "70.63333").save
+City.new(:country_id => "219", :name => "Chkalovsk", :aliases => ",Chkalovsk", :latitude => "40.23861", :longitude => "69.69667").save

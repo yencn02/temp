@@ -1,0 +1,1 @@
+City.new(:country_id => "60", :name => "Roseau", :aliases => "Charlotte Town,Roseau,Rozo,lojo,luo suo,rozo,rwsw,Î¡Î¿Î¶Ï,×¨××¡××,Ø±ÙØ³Ù,á®á,ã­ã¾ã¼,ç¾ç´¢,ë¡ì¡°,Roseau", :latitude => "15.30174", :longitude => "-61.38808").save

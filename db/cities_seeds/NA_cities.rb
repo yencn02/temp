@@ -1,0 +1,13 @@
+City.new(:country_id => "162", :name => "Katima Mulilo", :aliases => "Katima Molilo,Katima Mulilo,Katima-Mulilo,ÐÐ°ÑÑÐ¼Ð°-ÐÑÐ»ÑÐ»Ð¾,×§××××× ××××××,Katima Mulilo", :latitude => "-17.5", :longitude => "24.26667").save
+City.new(:country_id => "162", :name => "Windhoek", :aliases => "Gouintchouk,Vindhuk,Vindhukas,Vindkhuk,Windhoek,Windhuk,binteuhukeu,u~intofukku,wen de he ke,wyndhwk,wyndhwq,ÎÎ¿ÏÎ¯Î½ÏÏÎ¿ÏÎº,ÐÐ¸Ð½Ð´ÑÑÐº,ÕÕ«Õ¶Õ¤Õ°Õ¸ÖÕ¯,××× ××××§,ÙÙÙØ¯ÙÙÙ,ÙÛÙØ¯ÙÙÚ©,áááµáá­,ã¦ã£ã³ãããã¯,æ¸©å¾åå,ë¹í¸íí¬,Windhoek", :latitude => "-22.55941", :longitude => "17.08323").save
+City.new(:country_id => "162", :name => "Swakopmund", :aliases => "Svakopmund,Swakopmund,suwakopumunto,Ð¡Ð²Ð°ÐºÐ¾Ð¿Ð¼ÑÐ½Ð´,ã¹ã¯ã³ãã ã³ã,Swakopmund", :latitude => "-22.68333", :longitude => "14.53333").save
+City.new(:country_id => "162", :name => "Rundu", :aliases => "Rundu,Runtu,Ð ÑÐ½Ð´Ñ,Rundu", :latitude => "-17.93333", :longitude => "19.76667").save
+City.new(:country_id => "162", :name => "Rehoboth", :aliases => "Rehoboth,Rekhobot,Ð ÐµÑÐ¾Ð±Ð¾Ñ,Rehoboth", :latitude => "-23.31667", :longitude => "17.08333").save
+City.new(:country_id => "162", :name => "Otjiwarongo", :aliases => "Ot'ivarongo,Otiwarongo,ÐÑÑÐ¸Ð²Ð°ÑÐ¾Ð½Ð³Ð¾,Otjiwarongo", :latitude => "-20.46369", :longitude => "16.64772").save
+City.new(:country_id => "162", :name => "Oshakati", :aliases => "Okatana,Oshakati,ÐÑÐ°ÐºÐ°ÑÐ¸,Oshakati", :latitude => "-17.78333", :longitude => "15.68333").save
+City.new(:country_id => "162", :name => "Okahandja", :aliases => "Okahandja,Okahanja,Okahandja", :latitude => "-21.98333", :longitude => "16.91667").save
+City.new(:country_id => "162", :name => "Luderitz", :aliases => "Ljuderic,Luderitz,Luederitz,LÃ¼deritz,ÐÑÐ´ÐµÑÐ¸Ñ,LÃ¼deritz", :latitude => "-26.64806", :longitude => "15.15944").save
+City.new(:country_id => "162", :name => "Keetmanshoop", :aliases => "Keetmanshoop,Keetmanshoop", :latitude => "-26.58333", :longitude => "18.13333").save
+City.new(:country_id => "162", :name => "Grootfontein", :aliases => "Grootfontein,Groutfontein,Grootfontein", :latitude => "-19.56667", :longitude => "18.11667").save
+City.new(:country_id => "162", :name => "Gobabis", :aliases => "Gobabis,Gobabis", :latitude => "-22.45", :longitude => "18.96667").save
+City.new(:country_id => "162", :name => "Walvis Bay", :aliases => "Valvis Bej,Volfis-Bej,Walfisch-Bucht-Niederland,Walfischbucht,Walvis Bay,Walvisbaai,u~orubisubei,ÐÐ°Ð»Ð²Ð¸Ñ ÐÐµÑ,ÐÐ¾Ð»ÑÑÑ-ÐÐµÐ¹,ã¦ã©ã«ãã¹ãã¤,Walvis Bay", :latitude => "-22.9575", :longitude => "14.50528").save

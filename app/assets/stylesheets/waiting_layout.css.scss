@@ -1,0 +1,48 @@
+/* -------------------------------  layout rules  --------------------------------- */
+body {background:#ecefc9;font-family:Tahoma, Arial, Helvetica, sans-serif;font-size:12px;}
+
+/* -------------------------------  layout classes  --------------------------------- */
+/* overall */
+.wrapper-in {margin:0 	auto;width:892px;position:relative;}
+.logo {position:absolute;top:17px;left:37px;}
+.splash {background:image-url('waiting_image.gif') center 40px no-repeat;height:503px;}
+.footer {background:image-url('waiting_footer.gif') top center no-repeat;height:61px;}
+
+/* form */
+.form{background:image-url('waiting_form_page.gif') top center no-repeat;height:108px;}
+.form-in {padding:16px 63px;_padding:0; position:relative;}
+.form-input {left:238px;position:absolute;top:16px;}
+.form-input input {background:image-url('waiting_form_input.gif') top left no-repeat;width:399px;height:27px;border:0px none; font-size:25px;color:#8e8d8d;padding:18px 16px;line-height:25px;} 
+.form-input .input-text-focus {background:image-url('waiting_form_input_focus.gif') top left no-repeat;} 
+.form-btn {left:669px;position:absolute;top:16px;_top:17px;}
+.form-btn input {background:#fff image-url('waiting_form_btn.gif') top left no-repeat;width:160px;height:62px;border:0px none; text-indent:-9999px;_text-indent:0px;_font-size:0px;_text-align:right;_color:#eae482;}
+
+
+.form-success {
+  background:image-url('waiting_form_success.gif') top center no-repeat;height:108px;
+}
+
+#thank-you {
+  text-align: center;
+  background-color: #e0e4b4;
+  padding: 10px;
+  margin: 0px 150px;
+  /*border: 2px solid white;*/
+}
+
+#thank-you h3 {
+  color:#696969;
+  font-family:"Georgia","Times New Roman",Times,serif;
+  font-size:20px;
+  font-style:italic;
+  font-weight:normal;
+  line-height:26px;
+}
+
+#thank-you p {
+  color:#696969;
+  font-family:"Gill Sans MT","Gill Sans","MS Gill Sans","Century Gothic","Tahoma",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  font-weight:normal;
+  line-height:24px;
+}

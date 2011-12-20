@@ -1,0 +1,1 @@
+City.new(:country_id => "236", :name => "Vatican City", :aliases => "Citta del Vaticano,CittÃ  del Vaticano,Ciudad del Vaticano,Vatican,Vaticano,Vatikan,Vatikanstaden,ÐÐ°ÑÐ¸ÐºÐ°Ð½,Vatican City", :latitude => "41.90236", :longitude => "12.45332").save

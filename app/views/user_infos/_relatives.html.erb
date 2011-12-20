@@ -1,0 +1,10 @@
+<%@user.user_info.relatives_infos.each do |r|%>
+<div class="relative-container" <%="data='#{r.id}'"%> >
+  <div class="delete-relative x-div" style="float:left;">x</div>
+  | <span><%=r.user.formatted_name%></span>
+</div>
+<br />
+<%end%>
+
+<input id="add-new-relative-text" class="add-new-relative-text" type="text" style="width:190px;"/>
+<input class="save-button-small" type="button" value="Add"/>

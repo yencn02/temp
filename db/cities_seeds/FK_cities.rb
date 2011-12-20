@@ -1,0 +1,1 @@
+City.new(:country_id => "73", :name => "Stanley", :aliases => "Port Stanley,Port Stenli,Puerto Archentinas/Stenlis,Puerto Argentino/Stanley,Stanley,Stanley Harbour,Stenlis,stnly,sutanre,sutanri,ÐÐ¾ÑÑ Ð¡ÑÐµÐ½Ð»Ð¸,×¡×× ××,ã¹ã¿ã³ãªã¼,ã¹ã¿ã³ã¬ã¼,Stanley", :latitude => "-51.7", :longitude => "-57.85").save

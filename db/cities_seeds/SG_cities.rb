@@ -1,0 +1,1 @@
+City.new(:country_id => "200", :name => "Singapore", :aliases => "Singapore,Singapore City,Singapour,Singapur,Singapura,Sinkapoure,Tumasik,singkh por,Î£Î¹Î³ÎºÎ±ÏÎ¿ÏÏÎ·,Ð¡Ð¸Ð½Ð³Ð°Ð¿ÑÑ,à¸ªà¸´à¸à¸à¹à¹à¸à¸£,Singapore", :latitude => "1.28967", :longitude => "103.85007").save

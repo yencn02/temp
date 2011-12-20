@@ -1,0 +1,103 @@
+!!! XML
+!!!
+%html{:xmlns=>"http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{'http-equiv'=>"Content-Type", :content=>"text/html; charset=utf-8"}
+    = csrf_meta_tag
+    %title Cheeve.it | Home
+    
+    -# CSS
+    = stylesheet_link_tag "main", "home", "task", "jqtransform", "style", "tageditor"
+    = stylesheet_link_tag "reset", "layout", "home_layout", "colorbox", "jquery.autocomplete", "lightbox_layout", "profile_layout", "people_layout", "modifications", "list_layout"
+    = stylesheet_link_tag "jquery.jscrollpane", "jquery.ui.autocomplete.custom", "styledButton"
+    
+    -# Scripts
+    = javascript_include_tag "jquery-1.5.1"
+    = javascript_include_tag "dropdown"
+    = javascript_include_tag "jquery.styledButton", "jquery.bgiframe", "jquery.ajaxQueue", "jquery.autocomplete.js", "jquery.form", "jquery.metadata", "jquery.colorbox", "jquery.tipsy", "jquery.timers", "jquery.scrollTo-min"
+    = javascript_include_tag "jquery.jscrollpane", "jquery.mousewheel", "jquery.textchange", "jquery-ui-1.8.9.custom.min"
+    = javascript_include_tag "jquery.ui.core.min", "jquery.ui.widget.min", "jquery.ui.position.min"
+    = javascript_include_tag "jquery.jqtransform.patched", "jquery-ui-1.8.core-and-interactions.min", "tag-it"
+    = javascript_include_tag "jquery.ba-outside-events"
+    
+    = javascript_include_tag "application"
+    = javascript_include_tag "prototype", "common", "home_common", "people_common", "task", "endless_page"
+    
+    = javascript_include_tag "shortcut"
+    = javascript_include_tag "list_common"
+    = javascript_include_tag 'news_feeds_commons'
+    
+    = javascript_include_tag 'prototype', :juggernaut
+    = javascript_include_tag 'juggernaut/swfobject'
+               
+    - javascript_head_block do
+      var jug = new Juggernaut;
+      jug.subscribe("channel1", function(data){ console.log("Got data: " + data); });               
+  
+    - javascript_head_block do
+      var $unvisited_notifications_count = "#{@all_unvisited_notifications_count}"
+      var $unregisteredUser = false
+    	 
+    = yield :head
+    
+  %body
+  %div#wrapper
+    %div#header
+      %div#navigation-bar
+        %div#navigation-content
+          %a#logo{:href => root_url}
+          %ol.global-navigation
+            %li.message
+              %span.message-icon
+              %span.notification-count 0
+              %a{:href=>"#"}
+            %li.notification
+              %span.notification-icon.notifications-off
+              %span.notification-count 0
+              %a{:href=>"#"}
+            %li.home{:class => select_header_link("home")}
+              %a{:href => root_url} Home
+            %li.profile{:class => select_header_link("profile")}
+              %a{:href => profile_url(current_user.user_info)} profile
+            %li.people{:class => select_header_link("people")}
+              %a{:href => friendships_url} people
+            %div.search-holder
+              %input.search{:name => "search", :placeholder => "search", :type =>	 "text"}
+          %dl#sample.drop-down
+            %dt 
+              %a.hand-pointer
+                %span Account
+            %dd
+              %ul
+                %li
+                  %a.hand-pointer
+                    Setting
+                    %img.flag
+                    %span.value BR
+                %li
+                  %a.hand-pointer
+                    Help
+                    %img.flag
+                    %span.value FR
+                %li
+                  %a.hand-pointer
+                    Tools
+                    %img.flag
+                    %span.value DE
+                %li
+                  %a{:href => destroy_user_session_path}
+                    Signout
+                    %img.flag
+                    %span.value IN
+
+    = render "tasks/new_task"
+
+    = render "shared/flash_messages"
+
+    %div#inner-wrapper
+      = yield
+
+    %div#footer
+      %span.image-text Cheeve | Insighd Inc. | © 2011 All Rights Reserved. | @cheeve.it        
+
+    = yield :defer_scripts

@@ -1,0 +1,1 @@
+City.new(:country_id => "13", :name => "Pago Pago", :aliases => "Pago Pago,Pagopago,pa ko pa ko,pagopago,ÐÐ°Ð³Ð¾ ÐÐ°Ð³Ð¾,ÐÐ°Ð³Ð¾Ð¿Ð°Ð³Ð¾,à¸à¸²à¹à¸à¸à¸²à¹à¸,ãã´ãã´,Pago Pago", :latitude => "-14.27806", :longitude => "-170.7025").save

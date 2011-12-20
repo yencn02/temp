@@ -1,0 +1,33 @@
+City.new(:country_id => "169", :name => "Trondheim", :aliases => "Nidaros,THrandheimur,Trondheim,Trondhjem,Trondkhajm,Trondkhejm,Tronheimas,Tronkhajm,Tronkhejm,Trontchaim,toronhaimu,toronheimu,troneim,trwndhyym,ÃrÃ¡ndheimur,Î¤ÏÎ¿Î½ÏÏÎ±Î¹Î¼,Î¤ÏÏÎ½ÏÏÎ±Î¹Î¼,Î¤ÏÏÎ½ÏÏÎ±ÏÎ¼,Ð¢ÑÐ¾Ð½Ð´ÑÐ°Ð¹Ð¼,Ð¢ÑÐ¾Ð½Ð´ÑÐ°ÑÐ¼,Ð¢ÑÐ¾Ð½Ð´ÑÐµÐ¹Ð¼,Ð¢ÑÐ¾Ð½ÑÐ°Ð¹Ð¼,Ð¢ÑÐ¾Ð½ÑÐµÐ¹Ð¼,××¨×× ×××××,ãã­ã³ãã¤ã ,ãã­ã³ãã¤ã ,Trondheim", :latitude => "63.43049", :longitude => "10.39506").save
+City.new(:country_id => "169", :name => "Tromso", :aliases => "Romsa,Tromse,Tromsjo,Tromso,Tromsoe kommun,Tromssa,TromsÃ¶ kommun,TromsÃ¸,TromsÄ,teulomsoe,toromuse,trwmsw,Ð¢ÑÐ¾Ð¼ÑÑ,××¨×××¡×,ãã­ã ã»,í¸ë¡¬ì ,TromsÃ¸", :latitude => "69.6489", :longitude => "18.95508").save
+City.new(:country_id => "169", :name => "Tonsberg", :aliases => "Tonsberg,TÃ¸nsberg,teng si bei ge,æ»æ¯è´æ ¼,TÃ¸nsberg", :latitude => "59.26754", :longitude => "10.40762").save
+City.new(:country_id => "169", :name => "Steinkjer", :aliases => "Steinkjer,Stenkjaer,Steinkjer", :latitude => "64.01487", :longitude => "11.49537").save
+City.new(:country_id => "169", :name => "Stavanger", :aliases => "Stafangur,Stavanger,Stavangera,Stavenger,sutavu~angeru,Ð¡ÑÐ°Ð²Ð°Ð½Ð³ÐµÑ,ã¹ã¿ã´ã¡ã³ã²ã«,Stavanger", :latitude => "58.97005", :longitude => "5.73332").save
+City.new(:country_id => "169", :name => "Skien", :aliases => "Skien,Skien", :latitude => "59.20962", :longitude => "9.60897").save
+City.new(:country_id => "169", :name => "Sarpsborg", :aliases => "Sarpsborg,Ð¡Ð°ÑÐ¿ÑÐ±Ð¾ÑÐ³,Sarpsborg", :latitude => "59.28391", :longitude => "11.10962").save
+City.new(:country_id => "169", :name => "Sandnes", :aliases => "Sandnes,Sandnes kommun,Sandnes", :latitude => "58.85244", :longitude => "5.73521").save
+City.new(:country_id => "169", :name => "Sandefjord", :aliases => "Sandefjord,Sandefjord", :latitude => "59.13118", :longitude => "10.21665").save
+City.new(:country_id => "169", :name => "Porsgrunn", :aliases => "Porsgrund,Porsgrunn,Pushgrjon,ÐÐ¾ÑÑÐ³ÑÑÐ½Ð½,ÐÑÑÐ³ÑÑÐ½,Porsgrunn", :latitude => "59.14054", :longitude => "9.6561").save
+City.new(:country_id => "169", :name => "Oslo", :aliases => "Asloa,Christiania (historical),Kristiania (historical),Osla,Oslas,Oslo,Oslu,OslÃ³,ao si lu,aslw,awslw,osalo,oseullo,oslo,osuro,xxslo,Ãslo,ÃslÃ³,ÎÏÎ»Î¿,ÐÑÐ»Ð°,ÐÑÐ»Ð¾,ÕÕ½Õ¬Õ¸,×××¡××,Ø£ÙØ³ÙÙ,Ø§Ø³ÙÙ,ÜÜÜ£Ü Ü,à¤à¤¸à¥à¤²à¥,à¦à¦¸à¦²à§,à¸­à¸­à¸ªà¹à¸¥,áá¡áá,á¦áµá,ãªã¹ã­,å¥¥æ¯é,ì¤ì¬ë¡,Oslo", :latitude => "59.91273", :longitude => "10.74609").save
+City.new(:country_id => "169", :name => "Moss", :aliases => "Moss,ÐÐ¾ÑÑ,Moss", :latitude => "59.43403", :longitude => "10.65771").save
+City.new(:country_id => "169", :name => "Molde", :aliases => "Molde,mo er de,ÐÐ¾Ð»Ð´Ðµ,è«å°å¾·,Molde", :latitude => "62.73752", :longitude => "7.15912").save
+City.new(:country_id => "169", :name => "Mo i Rana", :aliases => "Mo,Mo i Rana,Mo i Rana", :latitude => "66.31278", :longitude => "14.14278").save
+City.new(:country_id => "169", :name => "Lillehammer", :aliases => "Lillehammer,Lillekhammer,rirehanmeru,ÐÐ¸Ð»Ð»ÐµÑÐ°Ð¼Ð¼ÐµÑ,×××××××¨,ãªã¬ãã³ã¡ã«,Lillehammer", :latitude => "61.11514", :longitude => "10.46628").save
+City.new(:country_id => "169", :name => "Larvik", :aliases => "Larvik,Larvik kommun,ÐÐ°ÑÐ²Ð¸Ðº,Larvik", :latitude => "59.05328", :longitude => "10.03517").save
+City.new(:country_id => "169", :name => "Kristiansund", :aliases => "Kristiansund,Kristiansund Nord,Kristiansund kommun,Kristiansund", :latitude => "63.11045", :longitude => "7.72795").save
+City.new(:country_id => "169", :name => "Kristiansand", :aliases => "Christiansand,Krisjansanna,KrisjÄnsanna,Kristiansand,Kristiansand Sor,Kristiansand SÃ¸r,ke li si di an sang,ÐÑÐ¸ÑÑÐ¸Ð°Ð½ÑÐ°Ð½Ð´,××¨××¡×××× ×¡× ×,åéæ¯èå®æ¡,Kristiansand", :latitude => "58.14671", :longitude => "7.9956").save
+City.new(:country_id => "169", :name => "Kongsberg", :aliases => "Kongsberg,Kongsberg kommun,ÐÐ¾Ð½Ð³ÑÐ±ÐµÑÐ³,Kongsberg", :latitude => "59.66858", :longitude => "9.65017").save
+City.new(:country_id => "169", :name => "Horten", :aliases => "Horten,Khorten,Ð¥Ð¾ÑÑÐµÐ½,Horten", :latitude => "59.41721", :longitude => "10.48343").save
+City.new(:country_id => "169", :name => "Haugesund", :aliases => "Haugesund,Haugesund kommun,Khaugezund,Ð¥Ð°ÑÐ³ÐµÐ·ÑÐ½Ð´,Haugesund", :latitude => "59.41378", :longitude => "5.268").save
+City.new(:country_id => "169", :name => "Harstad", :aliases => "Harsta,Harstad,HÃ¡rÅ¡tÃ¡,Kharstad,Ð¥Ð°ÑÑÑÐ°Ð´,Harstad", :latitude => "68.79833", :longitude => "16.54165").save
+City.new(:country_id => "169", :name => "Hamar", :aliases => "Hamar,Khamar,ha ma er,Ð¥Ð°Ð¼Ð°Ñ,åé©¬å°,Hamar", :latitude => "60.7945", :longitude => "11.06798").save
+City.new(:country_id => "169", :name => "Halden", :aliases => "Fredrikshald,Halden,Khalden,Ð¥Ð°Ð»Ð´ÐµÐ½,Halden", :latitude => "59.12478", :longitude => "11.38754").save
+City.new(:country_id => "169", :name => "Gjovik", :aliases => "Gjovik,Gjovik kommun,GjÃ¸vik,GjÃ¸vik kommun,GjÃ¸vik", :latitude => "60.79574", :longitude => "10.69155").save
+City.new(:country_id => "169", :name => "Fredrikstad", :aliases => "Frederikstad,Fredrikstad,furedorikusuta,Ð¤ÑÐµÐ´ÑÐ¸ÐºÑÑÐ°Ð´,ãã¬ããªã¯ã¹ã¿,Fredrikstad", :latitude => "59.2181", :longitude => "10.9298").save
+City.new(:country_id => "169", :name => "Drammen", :aliases => "Drammen,ÐÑÐ°Ð¼Ð¼ÐµÐ½,Drammen", :latitude => "59.74389", :longitude => "10.20449").save
+City.new(:country_id => "169", :name => "Bodo", :aliases => "Bodo,Bodoe,BodÃ¶,BodÃ¸,Bude,BudÄ,ÐÐ¾Ð´Ð¾,BodÃ¸", :latitude => "67.28", :longitude => "14.40501").save
+City.new(:country_id => "169", :name => "Bergen", :aliases => "Berga,Bergen,Bergena,Bergenas,Bjoergvin,BjÃ¶rgvin,bei er gen,berugen,brgn,ÐÐµÑÐ³ÐµÐ½,××¨××,ãã«ã²ã³,åç¾æ ¹,Bergen", :latitude => "60.39299", :longitude => "5.32415").save
+City.new(:country_id => "169", :name => "Arendal", :aliases => "Arendal,Arendal kommun,Arendal',ÐÑÐµÐ½Ð´Ð°Ð»Ñ,Arendal", :latitude => "58.46151", :longitude => "8.77253").save
+City.new(:country_id => "169", :name => "Alesund", :aliases => "Aalesund,Alasund,Alesund,Estrecio Anguilla,Olesunn,alesunda,Ãlasund,Ãlesund,ÐÐ»ÐµÑÑÐ½Ð½,à¦à¦²à§à¦¸à§à¦¨à§à¦¡,Ãlesund", :latitude => "62.47225", :longitude => "6.15492").save
+City.new(:country_id => "169", :name => "Askoy", :aliases => "Askoy,Askoy kommun,AskÃ¸y,AskÃ¸y kommun,asakaya,à¦à¦¸à¦à¦¾à¦¯à¦¼,AskÃ¸y", :latitude => "60.4", :longitude => "5.18333").save
+City.new(:country_id => "169", :name => "Ytrebygda", :aliases => ",Ytrebygda", :latitude => "60.30504", :longitude => "5.28236").save

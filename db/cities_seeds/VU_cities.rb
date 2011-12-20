@@ -1,0 +1,1 @@
+City.new(:country_id => "242", :name => "Port-Vila", :aliases => "Bila,Fila,Port Fila,Port Vila,Port-Vila,Vila,poteubilla,potobira,pwrt wylh,wei la gang,ÎÎ¯Î»Î±,ÐÐ¾ÑÑ ÐÐ¸Ð»Ð°,ÐÐ¾ÑÑ-ÐÐ¸Ð»Ð°,×¤××¨× ××××,áá­áµ áªá,ãã¼ããã©,ç¶­ææ¸¯,í¬í¸ë¹ë¼,Port-Vila", :latitude => "-17.73381", :longitude => "168.32188").save

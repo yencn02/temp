@@ -1,0 +1,2 @@
+City.new(:country_id => "209", :name => "Paramaribo", :aliases => "Paramaribas,Paramaribo,Paramarimpo,baramarybw,pa la ma li bo,palamalibo,paramaribo,paramarybw,prmrybw,Î Î±ÏÎ±Î¼Î±ÏÎ¯Î¼ÏÎ¿,ÐÐ°ÑÐ°Ð¼Ð°ÑÐ¸Ð±Ð¾,×¤×¨××¨×××,Ø¨Ø§Ø±Ø§ÙØ§Ø±ÙØ¨Ù,Ù¾Ø§Ø±Ø§ÙØ§Ø±ÛØ¨Ù,áá«ááªá¦,ãã©ããªã,å¸æé©¬éå,íë¼ë§ë¦¬ë³´,Paramaribo", :latitude => "5.86638", :longitude => "-55.16682").save
+City.new(:country_id => "209", :name => "Lelydorp", :aliases => "Lelydorp,Lelydorp", :latitude => "5.7", :longitude => "-55.23333").save

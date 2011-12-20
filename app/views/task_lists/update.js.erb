@@ -1,0 +1,12 @@
+<%- if flash[:error] -%>
+alert("<%= flash.delete(:error) %>");
+<%- else -%>
+(function($) {
+  var tl = $("<%= escape_javascript(render("task_list", :t => @task_list, :selected => @task_list_selected)) %>").html();
+  var li = $("#task_list_<%= @task_list.id %>").html(tl);
+  addSideTabEvents.apply(li);
+  updateTaskListsSelect("<%= task_lists_options_for_select(current_user.task_lists) %>");
+  
+  colorboxClose();
+})(jQuery);
+<%- end -%>

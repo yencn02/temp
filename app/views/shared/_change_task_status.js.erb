@@ -1,0 +1,43 @@
+(function($) {
+  replaceTask(<%= @task.id %>, "<%= escape_javascript(render("shared/task", :task => @task, :task_lists => current_user.task_lists)) %>")
+  disableTaskActionButtons('<%= @task.id %>');
+  <%- unless @isundo || !@render_undo_msg -%>
+  taskNotice(<%= @task.id %>, {msg: "<%= changed_task_status_msg(@task) %>",
+    onUndo: function() {
+      removeTaskNotice(<%= @task.id %>);
+      
+      $.post('/tasks/<%= @task.id %>/status', // TODO: use routes generated from routes.rb 
+             {
+               status: "<%= @old_status.name %>", 
+               undo: true,
+               assigner_action: <%= @assigner_action %>,
+               save: false
+             });
+    },
+    onClosed: function() {
+      enableTaskActionButtons('<%= @task.id %>');
+      <%- if !@notifications && remove_task_with_status?(@filters[:status], @task.status.name) -%>
+      removeTask(<%= @task.id %>);
+      createRightSideTags("<%=@tags%>");
+      <%- end -%>
+
+      $.post("<%= status_task_path @task.id %>", 
+             {
+               status: "<%= @task.status.name %>",
+               assigner_action: <%= @assigner_action %>,
+               save: true
+             });
+    },
+    counter: true
+  });
+  <%- else -%>
+    enableTaskActionButtons('<%= @task.id %>');
+  <%- end -%>
+
+  <%if @for_me%>
+  replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");
+  <%end%>  
+  $("#in_tasks_count").replaceWith("<%= escape_javascript(render("home/in_tasks_count", :user => current_user)) %>");
+  
+  addStyleToCurretTaskState(<%=@task.id%>);
+})(jQuery);

@@ -1,0 +1,36 @@
+- javascript_head_block do
+  var $current_page = "home";
+  var $all_friends_images = "#{@all_friends_images}";
+  var $after_load_accept_friendship = "#{@after_load_accept_friendship}";
+  var $after_load_accept_friend_id = "#{@after_load_accept_friend_id}";
+  var $currentPage = 1;
+  var $totalPages = 1;
+  var $redirectAfterLoad = "#{@external_action}";
+
+= render 'tab_lists'
+      
+= render "task_lists/task_lists"
+
+%div#main-and-right
+  %div#toolbar
+    = render 'shared/tasks_content_head'
+
+  %div#main-tasks
+    %div#page-loading-container
+      %img#page-loading{:src=>'/images/load36.gif'}
+  
+  %div#right-side
+    = render 'user_info', :user => current_user
+    %div.tag-display
+      %div.tag-title Tags
+      %div.tag-content
+    %div.requests
+      %div.requests-title Requests
+      %div.requests-content
+        %div.requests-icon
+        %a.requests-link.hand-pointer 5 Connection Requests
+
+:javascript
+  createRightSideTags("#{@tags}");
+  
+- session[:external_action] = nil

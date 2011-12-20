@@ -1,0 +1,2 @@
+City.new(:country_id => "121", :name => "Moutsamoudou", :aliases => "Matsamudu,Moutsamoudou,Mutsamudu,Moutsamoudou", :latitude => "-12.16278", :longitude => "44.39639").save
+City.new(:country_id => "121", :name => "Moroni", :aliases => "Moroni,Moronis,mo luo ni,moloni,moroni,mwrwny,ÎÎ¿ÏÎ¿Î½Î¯,ÐÐ¾ÑÐ¾Ð½Ð¸,×××¨×× ×,ÙÙØ±ÙÙÙ,áá®á,ã¢ã­ã,è«æ´å°¼,ëª¨ë¡ë,Moroni", :latitude => "-11.70216", :longitude => "43.25506").save

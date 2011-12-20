@@ -1,0 +1,1 @@
+City.new(:country_id => "-1", :name => "Willemstad", :aliases => "Vilemstad,Willemstad,billemseutadeu,u~iremusutaddo,wei lian si ta de,ÐÐ¸Ð»ÐµÐ¼ÑÑÐ°Ð´,×××××¡×××,ã¦ã£ã¬ã ã¹ã¿ãã,å¨å»æ¯å¡å¾·,ë¹ë ì¤íë,Willemstad", :latitude => "12.1084", :longitude => "-68.93354").save

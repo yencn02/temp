@@ -1,0 +1,2 @@
+module WaitingPageHelper
+end

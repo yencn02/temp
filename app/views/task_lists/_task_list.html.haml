@@ -1,0 +1,9 @@
+%li#task_list{:id=>t.id, 'data-id'=>t.id, :class => selected && "selected"}
+  %div.list-bkg
+  %span.icon
+    =image_tag("list_icons/#{t.icon_name}")
+  %span.count #{current_user.pending_tasks_in_list(t)}   
+  %span.text{'data-title' => (h t.title)} #{h t.title}
+  %a.link.hand-pointer
+  %span.edit.tipsy{:title=>"Click here to edit this list"}
+    %a.edit-link.hand-pointer{:href=>"#{edit_task_list_path(t.id)}"}

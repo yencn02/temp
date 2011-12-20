@@ -1,0 +1,74 @@
+<% form_remote_for user.user_info, :html=>{:id=>"basic_info_form",:onsubmit=>"prepareHiddenFields();", :multipart => true} do |f| -%>
+<input type="hidden" name="section" value="basic_info"/>
+<h4>Basic Info:</h4>
+<div id="basic-info-info-group" class="info-group">
+  <div class="row">
+    <div class="col-1">Sex:</div>
+    <div class="col-2">
+      <%=f.hidden_field 'sex'%>
+      <%=combo_tag({:name=>"sex-combo", 
+                    :default=>{:value=>'true', :label=>'Select Sex'}, 
+                    :options=>[{:value=>true, :label=>"Male"},
+                               {:value=>false, :label=>"Female"}]
+                   })%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Birthday:</div>
+    <div class="col-2">
+      <%=f.hidden_field 'birthday'%>
+      <%=date_tag%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Position:</div>
+    <div class="col-2">
+      <%=f.text_area 'position', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Study:</div>
+    <div class="col-2">
+      <%=f.text_area 'study', :class=>'long-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Home town:</div>
+    <div class="col-2">
+      <%=f.text_area 'home_town', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Relatives:</div>
+    <div id="relatives-container" class="col-2">
+      <input id="all_relatives" name="all_relatives" type="hidden" />
+      <%=render :partial => 'relatives', :user => @user%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Hobbies:</div>
+    <div class="col-2">
+      <%=f.text_area 'hobbies', :class=>'long-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>  
+  <div class="row">
+    <div style="display:block;">
+      <div class="action-buttons">
+        <%= f.submit 'Save', :class=>"save-button selector"%>
+        <%=button_to_custom({:caption=>"Discard", :url=>'/profile/show_section/basic_info', :confirm_msg => "Are you sure?" ,:style_class => "cancel-button selector", :method => 'get', :ajax => true})%>                    
+      </div>
+      <br />
+    </div>
+  </div>   
+</div>
+<%end%>
+<script type="text/javascript">
+  basicInfoEditEvents();
+</script>

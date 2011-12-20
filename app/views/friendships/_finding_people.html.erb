@@ -1,0 +1,85 @@
+<br/>
+<div id='cheevers'>
+    <%if @cheevers.count > 0 %>
+    Cheeve found <%= @cheevers.count %>cheevers in your Gmail contacts. 
+    , Let's add <%= "him" if @cheevers.count == 1 %><%= "them" if @cheevers.count > 1 %> to the Hive<a id='select_all_cheevers' onclick="javascript:selectAllCheevers();">Select All</a>
+    <div class="people" style="margin-top:20px;">
+        <% form_remote_tag :url => '/invite_all' do -%>
+        <% @cheevers.each do |friend| %>
+        <input class="cheever" name="<%= '[checked][' + friend.id.to_s + ']' %>" id="<%= friend.id %>" type="checkbox"/>
+        <div class="people-item" data-uid="<%= friend.id %>">
+            <div class="img">
+                <img src="/images/sample_people_img.jpg" alt="<%=h friend.formatted_name %>" />
+            </div>
+            <div class="details">
+                <div class="name">
+                    <a href="#"><%=h friend.formatted_name %></a>
+                </div>
+                <div class="info">
+                    Egypt
+                    <br/>
+                    <%= pluralize(friend.pending_tasks, "Pending Task") %>
+                </div>
+                <div class="action">
+                    <div class="action-dropdown">
+                        <span class="hd"></span>
+                        <div class="bg">
+                            <a href="#">Your Tasks' Lists</a>
+                            <div class="list">
+                                <ul>
+                                    <%- @user_task_lists.each do |task_list| -%>
+                                    <li>
+                                        <input name="<%= '[friend][' + friend.id.to_s + ']' + '[' +task_list.id.to_s + ']'%>" data-id="<%= task_list.id %>" type="checkbox"/><%=h task_list.title %>
+                                    </li><%- end -%>
+                                </ul>
+                            </div>
+                        </div><span class="ft"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="h-sep">
+        </div>
+        <%- end -%>
+        <div>
+            <%= submit_tag 'Invite Selected' %>
+        </div>
+        <% end -%>
+        <%end %>
+    </div>
+</div>
+<br/>
+<div id ='contacts' class="people" style="margin-top:20px;
+    <% if @cheevers.size > 0 %>
+ display:none;
+    <% end %>
+    "><a id='select_all_contacts'onclick="javascript:selectAllContacts();"> Select All</a>
+    <%if @contacts.count > 0 %>
+    <% form_remote_tag :url => '/invite_non_cheevers' do -%>
+    <%- @contacts.each do |contact| -%>
+    <div class="people-item">
+        <div class="details">
+            <input class="contact" name="<%= '[contacts_checked][' + contact.id.to_s + ']' %>" id="<%= contact.id %>" type="checkbox" autocomplete='off'/>
+            <div class="email">
+                <a href="#"><%=h contact.email.titleize %></a>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="h-sep">
+    </div>
+    <%- end -%>
+    <div>
+        <%= submit_tag 'Invite Selected' %>
+    </div>
+    <% end -%>
+    <%- end -%>
+</div>
+<script type="text/javascript" charset="utf-8">
+    $j(document).ready(function(){
+        $j('#tab-2').trigger('click');
+    });
+</script>

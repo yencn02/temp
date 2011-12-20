@@ -1,0 +1,1 @@
+City.new(:country_id => "126", :name => "George Town", :aliases => "George Town,Georgetown,jojitaun,qiao zhi dun,×'××¨×' ××××,ã¸ã§ã¼ã¸ã¿ã¦ã³,å¬æ²»æ¦,George Town", :latitude => "19.28692", :longitude => "-81.36706").save

@@ -1,0 +1,874 @@
+#inner-wrapper form.jqtransformdone label{
+	margin-top:4px;
+	margin-right: 8px;
+	display: block;
+	float:left;
+}
+#inner-wrapper form.jqtransformdone div.rowElem{
+	padding:4px 0px;
+}
+
+/* -------------
+ * Selects
+ * ------------- */
+.show-me .jqTransformSelectWrapper {
+	width:100px !important ;
+	position:relative;
+	height: 25px;
+	background-color:#eff2dd;
+	float:left;
+	border:solid 1px #d3d8be;
+	
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	border-radius:3px;
+	behavior: url(../ie-css3.htc);
+	
+	z-index:1000000;
+}
+
+.show-me .jqTransformSelectWrapper div span {
+	
+	font-size: 14px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 31px;
+	line-height: 15px;
+	padding: 5px 0 0 7px;
+	overflow: hidden;
+	cursor:pointer;
+	color:#666;
+	z-index:10000;
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.show-me .jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	top:-3px;
+	width: 31px;
+	height: 31px;
+	background:image-url('arrow-down.gif') no-repeat center center;
+}
+
+.show-me .jqTransformSelectWrapper ul {
+	position: absolute;
+	width: 98px!important;
+	top: 26px;
+	left: 0px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #CCC;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.show-me .jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.show-me .jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.show-me .jqTransformSelectWrapper ul a:hover,.show-me  .jqTransformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+
+.task-body .jqTransformSelectWrapper {
+	width:68px !important ;
+	position:relative;
+	height: 18px;
+	background-color:#fff;
+	float:left;
+	border:solid 1px #fff;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+/*	z-index: 200000 !important;*/
+}
+
+.task-unit:hover .task-body .jqTransformSelectWrapper {
+	width:68px !important ;
+	position:relative;
+	height: 18px;
+	background-color:#eff2dd;
+	float:left;
+	border:solid 1px #d3d8be;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+}
+
+.task-unit .task-body .jqTransformSelectWrapper:hover {
+	width:68px !important ;
+	position:relative;
+	height: 18px;
+	background-color:#e1e4d0;
+	float:left;
+	border:solid 1px #d3d8be;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+}
+
+.task-body .jqTransformSelectWrapper div span {
+	
+	font-size: 11px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 31px;
+	line-height: 15px;
+	
+	padding: 2px 0 0 7px;
+	overflow: hidden;
+	cursor:pointer;
+	color:#666;
+
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.task-body .jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	top:0px;
+	width: 18px;
+	height: 18px;
+	background:image-url('arrow-down.gif') no-repeat center center;
+}
+
+.task-body .jqTransformSelectWrapper ul {
+	position: absolute;
+	width: 68px!important;
+	top: 19px;
+	left: -1px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #CCC;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	
+	
+}
+
+.task-body .jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+	z-index:1000 !important;
+}
+
+.task-body .jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.task-body .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.jqTransformHidden {display: none;}
+
+/* -------------
+ * new Task Area CSS
+ * ------------- */
+
+.new-task-wrapper{
+	position:relative;
+	width:100%;
+	height: 250px;
+	margin:0px auto !important;
+	padding:10px 0px 10px 0px !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	background-color: #333;background-image: image-url('task_bkg.gif');color:#fff;font-size:16px;
+	font-size: 14px !important;
+	color: black;
+	z-index: 100;
+}
+
+.new-task-wrapper .hidden-elements-container{
+  display: none;
+}
+
+.new-task-wrapper-content{position: absolute; margin: auto; left: 0; right: 0; width: 500px;}
+
+.new-task-wrapper .new-task-icon{
+	display:block;
+	position:absolute;
+	background-color:#CCC;
+	background:image-url('new-task-icon.gif') no-repeat center center;
+	width:30px;
+	height:31px;
+	top:2px;
+	left:-40px;
+}
+
+.new-task-wrapper form.jqtransformdone label{
+	display: block;
+	position:absolute;
+	text-align:center;
+	vertical-align:middle;
+	top:6px;
+	left:11px;
+	float:left;
+	border-right:#a6a6a6 2px solid;
+	padding-top:6px;
+	padding-right:9px;
+	height:26px;
+	z-index:1000;
+	color:#a6a6a6;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.new-task-wrapper form.jqtransformdone .as-and-tag label{
+	display: block;
+	position:absolute;
+	text-align:center;
+	vertical-align:middle;
+	top:6px;
+	left:8px;
+	float:left;
+	border-right:#a6a6a6 2px solid;
+	color:#a6a6a6;
+	padding-top:6px;
+	padding-right:5px;
+	height:26px;
+	z-index:1000;
+}
+
+.new-task-wrapper form.jqtransformdone .privacy-and-submit label{
+	display: block;
+	position:absolute;
+	text-align:center;
+	vertical-align:middle;
+	border:0px;
+	top:0px;
+	left:25px;
+	float:left;
+	color:#fff;
+	padding-top:0px;
+	padding-right:5px;
+	height:26px;
+	z-index:1;
+}
+
+.new-task-wrapper form.jqtransformdone div{
+	position:relative;
+	padding:0px;
+	width:auto;
+	float:left;
+	margin:0px ;
+	clear:none;
+}
+
+.new-task-wrapper form.jqtransformdone div.as-and-tag {
+	padding:0px 0px;
+	width:auto;
+	float:left;
+	margin:0 0px 0px 10px;
+	clear:none;
+	background:none;
+}
+
+*+ html .new-task-wrapper form.jqtransformdone div.as-and-tag {
+	
+	padding:0px 0px;
+	width:210px;
+	float:left;
+	margin:0 0px 0px 10px;
+	clear:none;
+	background:none;
+	
+}
+
+*+ html .newtaskwrapper form.jqtransformdone div.asandtag {
+	padding:0px 0px;
+	width:210px;
+	float:left;
+	margin:0 0px 0px 10px;
+	clear:none;
+	background:none;
+}
+/* -------------
+ * Buttons
+ * ------------- */
+.new-task-wrapper .privacy-and-submit {
+	float:left;
+  width:466px!important ;
+	margin:10px 0px 0px 0px !important;
+}
+
+.new-task-wrapper .privacy-and-submit .jqTransformButton {
+	float:right !important ;
+}
+
+.new-task-wrapper button.jqTransformButton {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline:none !important;
+}
+
+*:first-child+html .new-task-wrapper button.jqTransformButton[type]{color:transparent;
+} /* IE7 */
+
+.new-task-wrapper button.jqTransformButton span span {
+	background: transparent image-url('assign-btn.png') no-repeat top left;
+	color: #333;
+	padding:0px;
+	display: block;
+	text-decoration: none;
+	height: 45px !important ;
+	width:117px;
+	float:right !important;
+	outline:none !important;
+}
+	
+.new-task-wrapper	button.jqTransformButton:focus span span {
+	background: transparent image-url('assign-btn.png') no-repeat left -45px !important;
+}
+
+.new-task-wrapper #task_submit[disabled] span span{
+  background: transparent image-url('assign-btn.png') no-repeat left -90px !important;
+}
+
+/*hover*/
+.new-task-wrapper button.jqTransformButton_hover span span { background-position: left -45px ; }
+
+/*clicked*/
+.new-task-wrapper button.jqTransformButton_click span span { background-position: left -45px ; }
+
+/* IE 6 */
+* html .new-task-wrapper button.jqTransformButton {height: 45px !important ;
+	width:118px;color:transparent; }
+* .new-task-wrapper button.jqTransformButton span span {height: 45px !important ;
+	width:118px;color:transparent; }
+/* IE 7 */
+*+ html .new-task-wrapper button.jqTransformButton { height: 45px !important ;
+	width:118px;color:transparent; }
+*+ .new-task-wrapper button.jqTransformButton span span { height: 45px !important ;
+	width:118px;color:transparent; }
+
+/* -------------
+ * Inputs
+ * ------------- */
+.new-task-wrapper .jqTransformInputWrapper {
+	height: 60px;
+  padding: 0px;	
+	float:left !important;
+	overflow:hidden;
+	width:100% !important ;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformInputWrapper {
+	height: 60px;
+  padding: 0px;	
+  margin:0px;
+	float:left !important;
+	overflow:hidden;
+	width:255px !important ;
+}
+
+.new-task-wrapper .jqTransformInputInner {
+	padding: 0px;
+	margin: 0px;
+  height:55px;
+  float:left !important;
+	overflow:hidden;
+	width:100% !important;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformInputInner {
+	padding: 0px;
+	margin: 0px;
+  height:55px !important;
+  float:left !important;
+}
+
+.new-task-wrapper .jqTransformInputInner div {
+	height: 55px !important;
+	margin:0px 0px;
+	background:none;
+	float:left;
+	padding:5px 0px;
+	width:100%;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformInputInner div {
+	position: relative;
+	overflow: hidden;
+	margin: 0px ;
+	height:55px ;
+}
+
+.new-task-wrapper .jqTransformInputInner div input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px ;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 50px!important ;
+	margin:0px;
+	float:left;
+	overflow:hidden;
+	width:415px!important ;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+
+	-webkit-box-shadow: 0px 1px 5px #333;
+	-moz-box-shadow: 0px 1px 5px #333;
+	box-shadow: 0px 1px 5px #333;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformInputInner div  input    {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 55px;
+	margin:0px;
+	float:left;
+	border:0px solid #0F0;
+	overflow:hidden;
+	width:199px !important;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+}
+
+/*  IE6 */
+* html .new-task-wrapper .as-and-tag  .jqTransformInputInner div input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 50px;
+	margin:0px;
+	float:left;
+  border:0px solid #0F0;
+	overflow:hidden;
+	width:199px !important;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+}
+
+/* Ie7 */
+*+ html .new-task-wrapper .as-and-tag .jqTransformInputInner div input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 50px;
+	margin:0px;
+	float:left;
+  border:0px solid #0F0;
+	overflow:hidden;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+	width:199px !important;
+}
+
+/*  IE6 */
+* html .new-task-wrapper .jqTransformInputInner div input {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px ;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 50px;
+	margin:0px;
+	float:left;
+  
+  -webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+	overflow:hidden;
+	width:415px!important ;
+}
+
+/* Ie7 */
+*+ html .new-task-wrapper .jqTransformInputInner div input {
+font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height: 28px;
+	vertical-align: middle;
+	height: 44px ;
+	color:#404040;	
+	border: none;
+	padding: 0px 0px 0px 50px;
+	margin:0px;
+	float:left;
+	
+  -webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+	overflow:hidden;
+	width:415px!important ;
+}
+
+/*focus*/
+
+.new-task-wrapper .jqTransformInputWrapper_focus div.jqTransformInputInner div input{ background:#fff8b0;outline:none;}
+.new-task-wrapper .as-and-tag .jqTransformInputWrapper_focus div.jqTransformInputInner div input{ background:#fff8b0;outline:none;}
+
+.new-task-wrapper .jqTransformSafari .jqTransformInputInner div {
+	position: relative;
+	overflow: hidden;
+	margin:0px 0px;
+	width:465px !important;
+	height:45px;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformSafari .jqTransformInputInner div {
+	position: relative;
+	overflow: hidden;
+	margin:0px 0px;
+	width:270px;
+	height:45px;
+}
+
+/*-----the text field---*/
+.new-task-wrapper .jqTransformSafari .jqTransformInputInner div input {
+	background-color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 44px; 
+	padding:0px 0px 0px 44px;
+	margin:0px;
+}
+
+.new-task-wrapper .as-and-tag .jqTransformSafari .jqTransformInputInner div input {
+	background-color: #fff;
+	position: absolute;
+	height: 44px; 
+	padding: 0px 0px 0px 50px;
+	margin:0px;
+}
+
+/* -------------
+ * Textarea
+ * ------------- */
+.new-task-wrapper table.jqTransformTextarea td#jqTransformTextarea-mm textarea{
+	font-size: 16px;
+	font-size: 14px;
+	height: 60px;
+	line-height: 16px;
+	float:left;
+	background-color:#fff;
+	padding:5px;
+	overflow:hidden;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+	-webkit-box-shadow: 0px 1px 5px #333;
+	-moz-box-shadow: 0px 1px 5px #333;
+	box-shadow: 0px 1px 5px #333;		
+}
+
+.new-task-wrapper.small textarea{
+	font-size: 16px !important;
+	font-weight: bold;
+	color: #BBBBBB;
+	padding-top: 8px !important;
+	padding-bottom: 2px !important;
+}
+
+.new-task-wrapper.small{
+	height:41px;
+}
+.new-task-wrapper textarea.small{height:26px!important;}
+
+.new-task-wrapper table.jqTransformTextarea td{
+  font-size: 1px;
+  line-height: 1px;
+  margin: 0;
+  padding: 0;
+  float:left;
+  background-color:none;
+}
+
+.new-task-wrapper a.close {
+  color: white;
+  float: right !important;
+}
+
+.new-task-wrapper table.jqTransformTextarea{
+	background-color:none;
+}
+.new-task-wrapper table.jqTransformTextarea tr{
+  background-color:none;
+  margin-bottom:10px;
+}
+.new-task-wrapper table.jqTransformTextarea textarea{
+	width:455px;
+	margin-bottom:0px;
+	height:70px;
+	padding: 5px;
+	border: 0;
+	float:left;
+	background-color:none;
+}
+
+.new-task-wrapper table.jqTransformTextarea textarea:focus{
+  background:#fff8b0 !important;
+  outline:none;
+}
+
+.new-task-wrapper table.jqTransformTextarea td#jqTransformTextarea-mm{
+	margin:0px 0px 14px 0px;
+	background-color:none;
+}
+
+.new-task-wrapper .jqTransformTextarea .jqTransformSafariTextarea div {
+	overflow: hidden;
+	height:70px !important ;
+	width:100% !important ;
+	top:0px;
+	left:0px;
+	padding:0px;
+	margin:0px;
+	resize:none;
+	float:left;
+}
+
+.new-task-wrapper table.jqTransformTextarea .jqTransformSafariTextarea textarea{
+	background: #fff;
+	top:0px;
+	left:px;
+	padding:5px;
+	resize:none;
+	float:left;
+	margin:0px;
+	width:449px !important;
+}
+	
+/* -------------
+ * Checkboxes
+ * ------------- */
+.new-task-wrapper span.jqTransformCheckboxWrapper{
+	display:block;float:left;
+	margin-top:0px;
+}
+
+.new-task-wrapper a.jqTransformCheckbox {
+	background:image-url('privacy-check.png'); 
+	background-position: 0px 0px;
+	vertical-align: middle;
+	height: 20px;
+	width: 20px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+.new-task-wrapper a.jqTransformCheckbox:focus {
+	background:image-url('privacy-check.png');
+	background-position: 0px 60px;
+	height: 20px;
+	width: 20px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+.new-task-wrapper a.jqTransformChecked { 
+	background-position: 0px 40px !important;
+}
+
+.new-task-wrapper a.jqTransformChecked:focus { 
+	background-position: 0px 20px	 !important;
+}
+/* -------------
+ * Selects
+ * ------------- */
+
+.new-task-wrapper .jqTransformSelectWrapper {
+	width:200px !important ;
+	height: 44px;
+  	float:left;
+	float:left;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper div span {
+	position:relative;
+	font-size: 14px;
+	float: left;
+	white-space: nowrap;
+	height: 34px;
+	line-height: 15px;
+	width:155px !important;
+	padding: 13px 0 0 50px;
+	overflow: hidden;
+	cursor:pointer;
+	z-index:100;
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.new-task-wrapper .jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top:0px;
+	width: 190px;
+	height: 44px;
+	padding:0px 5px;
+	background:image-url('arrow-down.gif') no-repeat ;
+  
+	background-color:#fff;
+	background-position:180px 18px;
+	
+  -webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+
+	-moz-box-shadow: 0px 1px 5px #333;
+	-webkit-box-shadow: 0px 1px 5px #333;
+	box-shadow: 0px 1px 5px #333;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper:hover a.jqTransformSelectOpen, .new-task-wrapper .jqTransformSelectWrapper a.jqTransformSelectOpen:focus {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top:0px;
+	width: 190px;
+	height: 44px;
+	padding:0px 5px;
+	background:image-url('arrow-down.gif') no-repeat ;
+	
+	-webkit-border-radius:7px;
+	-moz-border-radius:7px;
+	-khtml-border-radius:7px;
+	border-radius:7px;
+	behavior: url(../ie-css3.htc);
+	
+	background-color:#fff8b0;
+	background-position:180px 18px;
+	outline:none;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper ul {
+	position: absolute;
+	width: 200px!important;
+	top: 45px;
+	left: 0px;
+	list-style: none;
+	background-color: #FFF;
+	border: solid 1px #CCC;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 5px;
+	text-decoration: none;
+	color:#333;
+	background-color: #FFF;
+	font-size: 12px;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper ul a.selected {
+	background: #EDEDED;
+	color: #333;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper ul a:focus, .new-task-wrapper .jqTransformSelectWrapper ul a.selected:focus {
+	background: #fff8b0;
+	color: 0;
+}
+
+.new-task-wrapper .jqTransformSelectWrapper ul a:hover, .new-task-wrapper .jqTransformSelectWrapper ul a.selected:hover {
+	background:#3582c4;
+	color: #fff;
+}
+

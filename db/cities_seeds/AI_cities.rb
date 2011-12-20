@@ -1,0 +1,1 @@
+City.new(:country_id => "5", :name => "The Valley", :aliases => "De Balei,The Valley,Valley,Valli,bare,deobaelli,ÎÎµ ÎÎ¬Î»ÎµÏ,ÐÐ°Ð»Ð»Ð¸,××××,ãã¬ã¼,ëë°¸ë¦¬,The Valley", :latitude => "18.21704", :longitude => "-63.05783").save

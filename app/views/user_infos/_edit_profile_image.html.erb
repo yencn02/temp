@@ -1,0 +1,20 @@
+<div style="width:300px;height:200px;background-color:#fff;text-align: center;padding:5px;">
+  <div id="upload-image-container" style="width:100%;height:100px;">
+    <img src="" width="100px" height="100px"/>
+  </div>
+  <% form_for @user.user_info, :html=>{:id=>"avatar_form",:target=>"upload_frame", :multipart => true} do |f| -%>
+    <input type="hidden" name="section" value="profile_image" />
+    <%=f.file_field :avatar, :size=>'10px;'%>
+    <div class="action-buttons">
+      <%= f.submit 'Save', :class=>"save-button selector", :onclick=>"jQuery.colorbox.close();"%>
+      <input type="button" class="cancel-button selector" value="Discard" onclick="jQuery.colorbox.close();"/>
+    </div>
+  <%end%>
+</div>
+
+<script type="text/javascript">
+  $j = jQuery
+  $j('#cboxOverlay').addClass('background-transparent-overlay');
+  formString = "<%=generate_flying_form_for_file({:url => profile_upload_temp_image_url, :file_element_id => "user_info_avatar"})%>";
+  addProfileImageEvent(formString);
+</script>

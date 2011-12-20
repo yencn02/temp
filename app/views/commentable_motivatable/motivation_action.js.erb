@@ -1,0 +1,5 @@
+updateMotivationDisplay('<%="#{@motivatable.class.to_s}"%>', 
+                        '<%="#{@motivatable.id}"%>', 
+                        '<%=@motivatable.likes_count%>', 
+                        '<%=@new_motivation_action%>',
+                        "<%=escape_javascript(render('commentable_motivatable/motivation_line', :commentable => @motivatable))%>");

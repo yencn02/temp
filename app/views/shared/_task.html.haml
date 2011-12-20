@@ -1,0 +1,108 @@
+%div.task-unit{:class=>task.status.name, 'data-status'=>"'#{task.status.name}'", 'data-id'=>task.id, 'data-type'=>"'Task'", 'data-from'=>task.assigner.id, 'data-virgin'=>'true', 'data-privacy'=>"#{task.private_task}"}
+  %div.task-label
+  %div.border
+    %div.task-body
+      %div.sender-photo
+        - if (@for_me or (@notifications and me?(task.assignee))) and !task.assigner.unregistered
+          = image_tag(profile_avatar_path(task.assigner.user_info.id, :thumb), :size => "64x64", :alt => "#{task.assigner.formatted_name}")
+        - elsif @from_me or (@notifications and me?(task.assigner)) and !task.assignee.unregistered
+          = image_tag(profile_avatar_path(task.assignee.user_info.id, :thumb), :size => "64x64", :alt => "#{task.assignee.formatted_name}")
+        - else
+          = image_tag("email-avatar-large.png", :size => "64x64", :alt => "#{task.assignee.formatted_name}")
+      %div.task-content
+        - if @for_me or (@notifications and me?(task.assignee) )
+          %div.assigner-name
+            %span
+              From:
+            %a.name{:href=>"/profile/#{task.assigner.user_info.id}"}
+              #{task.assigner.formatted_name}
+              = "(you)" if me?(task.assigner)
+        - else
+          %div.assignee-name
+            %span
+              To:
+            %a.name{:href=>"/profile/#{task.assignee.user_info.id}"}
+              #{task.assignee.formatted_name}
+              = "(you)" if me?(task.assignee)
+        %div.reminder-container{:title=>"Last Reminder: #{get_user_friendly_time(task.last_reminder_at)}"}
+          %img.reminder-img{:src => '/images/reminder.png'}
+          %span.reminder-count #{task.reminders}
+        %div.discription
+          %input{:type=>'hidden', :value=>"#{task.description}"}
+            %div{:style=>"display:inline;"}
+      - if @for_me or (@notifications and me?(task.assignee) )
+        %div.task-menu
+          %span.tipsy.locked{:title => "Private - Click to turn public"}
+            %a.lock{:onclick=>"togglePrivacy(this);"}
+          %span.tipsy.unlocked{:title => "Public - Click to turn private"}
+            %a.unlock{:onclick=>"togglePrivacy(this);"}
+          %form.jqtransform{:name=>"form2", :method=>"post", :action=>""}
+            %select#select{:name=>"select"}
+              = options_from_collection_for_select(current_user.task_lists, 'id', 'title', task.task_list.id)
+      - else
+        %div.task-menu-blocked
+          - if task.private_task
+            %span.locked{:title => "Private"}
+              %a.lock
+          - else
+            %span.unlocked{:title => "Public"}
+              %a.unlock
+          %span.task-list-title{:title => "#{task.task_list.title}"}
+      %div
+        %div.task-footer
+          - if me? task.assignee
+            %div.task-buttons
+              %input.iwill-button{:name=>"i-will", :type=>"button"}
+              %input.idid-button{:name=>"i-did", :type=>"button"}
+              %input.icant-button{:name=>"i-cant", :type=>"button"}
+          - elsif me? task.assigner
+            = render "shared/task_admin_menu", :task => task
+          - if me?(task.assignee) && !me?(task.assigner)
+            %div.task-buttons-spam-actions
+              = image_tag "load16.gif", :class => "task-spam-loading", :size => "18x18"
+              %div.spam-buttons-container
+                %div.i-dont-know-image
+                %a.i-dont-know-link.hand-pointer
+                  I Don't know this person
+                %div.i-know-image
+                %a.i-know-link.hand-pointer
+                  I know this person
+          %div.footer-inner
+            %div.task-date #{get_user_friendly_time(task.created_at)}
+            %span.dot ·
+            %div.comment-and-motivate{:class=> (task.likes.count == 0 and task.comments.count == 0) && "hide"}
+              %span.comment-icon
+              %span.comment-count #{task.comments.count}
+              %span.motivate-icon
+              %span.motivate-count #{task.likes_count}
+              %a.comment-view.hand-pointer
+            %a.notes.hand-pointer note 
+            %span.dot ·
+            - unless (me?(task.assignee))
+              %a.motivate.hand-pointer
+                = task.liked_by_user?(current_user) ? "unmotivate" : "motivate"
+              %span.dot ·
+            - if me?(task.assigner) or me?(task.assignee)    
+              %span.tag-icon
+              %a.tags.hand-pointer tags
+              - task.tag_list.each do |t|
+                %span.tag-item{'data-tag'=>"#{t}"} #{t}
+              = render "shared/tag_editor", :taggable => task
+      = render("commentable_motivatable/comments", :commentable => task)
+
+- javascript 'task.js'
+      
+:javascript
+  task = $j('.task-unit[data-id="#{task.id}"]');
+  is_private = "#{task.private_task}";
+  user_marked_as_spam = "#{current_user.user_marked_as_spam?(task.assigner)}";
+  show_spam = "#{current_user.user_spam_state_normal?(task.assigner)}";
+  change_spam_state_to_spam_url = "#{change_spam_state_path(:reportee_id => task.assigner.id, :state => 'true')}"
+  change_spam_state_to_not_spam_url = "#{change_spam_state_path(:reportee_id => task.assigner.id, :state => 'false')}"
+  initTask(task, is_private, show_spam, user_marked_as_spam, change_spam_state_to_spam_url, change_spam_state_to_not_spam_url);
+  
+  if("#{task.reminders == 0}" == "true")
+    task.find(".reminder-container").hide();
+    
+  if("#{@from_me}" == "true")
+    styleActionButton(task);

@@ -1,0 +1,38 @@
+<div class="light-box">
+  <div class="title">
+     <h3>Friendship Request</h3>
+  </div>
+  <div class="sub-title">                 
+      <h4><%=h @friend.formatted_name %> (<%= pluralize(@friend.pending_tasks, "Pending Task") %>)</h4>
+  </div>  
+  
+  <div class="tools">
+    <div class="filter">
+      <a href="#" class="current"><span class="end"><span class="start">Grant access to</span></span></a>
+    </div>
+    <div class="clear"></div>
+  </div>    
+    
+  <div class="people-list-scroll">    
+    <%- form_for :friendship, :url => invite_friendship_path(@friend) do |f| -%>
+      <%- @user_task_lists.each do |tl| -%>
+      <%= check_box_tag "permission_to_access[]", tl.id %> <%=h tl.title %><br />
+      <%- end -%>
+    <%- end -%>
+  </div>
+  <div class="action">
+    <input type="button" value="Request" class="lightbox-submit" />
+    <input type="button" value="Cancel"  class="lightbox-cancel" />
+  </div>  
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  $j(document).ready(function() {    
+    $j(".lightbox-submit").click(function() {
+      var form = $j(".light-box form");
+      $j.post(form.attr("action"), form.serialize());
+    });
+    
+    $j(".lightbox-cancel").click($j.colorbox.close);
+  });
+</script>

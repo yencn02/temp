@@ -1,0 +1,75 @@
+<% form_remote_for user.user_info, :html=>{:id=>"contact_info_form",:onsubmit=>"if(validateEmails()){prepareHiddenFields();}else{return false;}", :multipart => true} do |f| -%>
+<input type="hidden" name="section" value="contact_info"/>
+<h4>Contact Info:</h4>
+<div class="contact-info-info-group" class="info-group">
+  <div class="row">
+   <div class="col-1">Email(s):</div>
+    <div id="emails-container" class="col-2">
+      <%f.fields_for :emails do |ef|%>
+      <%=ef.text_field :email, :class=>'email-text-field'%>
+      <%unless ef.object.new_record?%>
+      <%=ef.check_box '_delete'%>
+      <%=ef.label '_delete', 'Remove'%>
+      <br />
+      <%end%>
+      <br />
+      <%end%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Tel:</div>
+    <div class="col-2">
+      <%=f.text_area 'phone', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Mobile:</div>
+    <div class="col-2">
+      <%=f.text_area 'mobile', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">P.O.Box:</div>
+    <div class="col-2">
+      <%=f.text_area 'pobox', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">website:</div>
+    <div class="col-2">
+      <%=f.text_area 'website', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Twitter:</div>
+    <div class="col-2">
+      <%=f.text_area 'twitter_account', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div class="col-1">Facebook:</div>
+    <div class="col-2">
+      <%=f.text_area 'facebook_account', :class=>'short-text-field'%>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="row">
+    <div>
+      <div class="action-buttons">
+        <%= f.submit 'Save', :class=>"save-button selector"%>
+        <%=button_to_custom({:caption=>"Discard", :url=>'/profile/show_section/contact_info', :confirm_msg => "Are you sure?" ,:style_class => "cancel-button selector", :method => 'get', :ajax => true})%>                    
+      </div>
+    </div>  
+  </div>
+</div>
+<%end%>
+
+<script text="text/javascript">
+  contactInfoEditEvents();
+</script>

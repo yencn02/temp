@@ -1,0 +1,19 @@
+<div class="actions">
+  <div class="task-icons">
+    <%- if false -%>
+    <a href="#" title="icon description goes here"><img src="/images/task_details_ico1.gif" alt="map" /></a>
+    <a href="#" title="icon description goes here"><img src="/images/task_details_ico2.gif" alt="attachment" /></a>
+    <%- end -%>
+  </div>
+
+  <div class="task-item-select">
+    <select class="selector">
+      <%= options_from_collection_for_select(task_lists, 'id', 'title', task.task_list.id)%>
+    </select>
+  </div>
+  <div class="task-buttons">
+    <input type="button" value="I Will" class="btn-will selector" <%= disable_if task.will? %> />
+    <input type="button" value="I Did" class="btn-did selector" <%= disable_if task.did? %> />
+    <input type="button" value="I Can’t" class="btn-cant selector" <%= disable_if task.cant? %> />
+  </div>
+</div>

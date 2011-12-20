@@ -1,0 +1,49 @@
+(function($) {
+  if (selectedTabList() == "<%="#{@filters[:tasks]}"%>"){
+    showContentLoading();
+    $("#show_me_select").find("img").hide();
+    $("#toolbar").removeClass('jqtransformdone');
+    $("#toolbar").html("<%= escape_javascript(render("shared/tasks_content_head"))%>");
+    $('.show-me select').val("<%="#{@filters[:status]}"%>");
+    $("#toolbar").jqTransform();
+    showMeSelectEvents();
+                           
+    currentPageName = "<%= "#{session[:filters][:tasks]}" %>";
+    existingPage = $("#main-tasks .inner-container").attr("data-page");
+    if(currentPageName != existingPage)
+      $("#main-tasks .inner-container").remove();
+    
+    $('#main-tasks #page-loading-container').before("<%= escape_javascript(render("for_me")) %>");
+      
+    $('#side-tabs').hide();
+    <%- if @for_me -%>
+    replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");
+    <%- else -%>
+    $('#side-tabs').hide();
+    <%- end -%>
+    
+    createRightSideTags('<%=@tags%>');
+    
+    $('form.jqtransform').jqTransform();
+    addTaskActionEvents();
+    addZIndexCorrectionToTasksMenuSelect();
+    
+    $j("#tab-area").attr('data-busy', "");
+    
+    totalPages = parseInt("<%= @tasks.total_pages %>");
+    currentPage = parseInt("<%= @tasks.current_page %>");
+    $totalPages = totalPages;
+    $currentPage = currentPage;
+    
+    if(totalPages > currentPage){
+      checkScroll();
+      showContentLoading();
+    } else {
+      hideContentLoading();
+    }
+    
+    $j('#main-and-right').css('height', 'auto');
+    
+    enableTabs();
+  }
+})(jQuery);

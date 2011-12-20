@@ -1,0 +1,77 @@
+﻿/* lightbox layout */
+
+/* backgrounds */
+.list-box {width:457px;margin:0 auto;}
+.list-box .title {background:image-url('list_window_top_bg.png') top center no-repeat;height:32px;padding-top:11px;}
+.list-box .sub-title {background:image-url('list_window_icon_bg.png') top center no-repeat;height:35px;padding-top:10px;}
+.list-box .tools {background:image-url('list_window_search_bg.png') top center no-repeat;}
+.list-box .people-list-scroll {background:image-url('list_window_list_bg.png') top center repeat-y;}
+.list-box .action {background:image-url('list_window_btm_bg.png') bottom center repeat-y;}
+
+.list-box .title label {color:#516064;line-height:24px;padding:0px 20px;font-size:16px;background:image-url('edit_list_arrow.gif') right center no-repeat;}
+.list-box .title a{color:#516064;padding:3px 5px;font-size:16px;font-weight:bold;}
+.list-box .title a:hover{background:#eff2dd;text-decoration:none;cursor:text;}
+.list-box .title .list-title {color:#516064;padding:3px 5px;font-size:16px;font-weight:bold;}
+.list-box .title .inline-edit-form {display:none;width:350px;float:right;}
+.list-box .title .inline-edit-form .input-text-normal {background:#f4f6e7;border:1px solid #cfd4b8;width:111px;padding:2px;}
+.list-box .title .inline-edit-form .input-text-focus {background:#f4f6e7;border:1px solid #999e80;width:111px;padding:2px;}
+.list-box .title .inline-edit-form .save {background:image-url('list_edit_save.jpg') center center no-repeat;color:#fff;border:0px none;padding:0 5px 2px 5px;margin:0 0px 0 4px;width:48px;height:21px;}
+.list-box .title .inline-edit-form .cancel {background:image-url('list_edit_cancel.jpg') center center no-repeat;color:#516064;border:0px none;padding:0 5px 2px 5px;margin:0;width:48px;height:21px;}
+.list-box .title .new-list-txt.input-text-normal {background:#f4f6e7;border:1px solid #cfd4b8;width:111px;padding:2px;margin:0 10px;}
+.list-box .title .new-list-txt.input-text-focus {background:#f4f6e7;border:1px solid #999e80;width:111px;padding:2px;margin:0 10px;}
+
+.list-box .sub-title {position:relative;}
+.list-box .sub-title h4 {padding:8px 10px;font-size:14px;color:#516064;}
+.list-box .sub-title label {color:#516064;line-height:24px;padding:0px 0 0 20px;font-size:16px;}
+.list-box .icon-list {width:340px;position:absolute;top:5px;right:0;}
+.list-box .icon-list a {display:block;}
+.list-box .icon-list .icon-main {width:56px;height:35px;position:relative;z-index:1000;}
+.list-box .icon-list .icon-main a {padding:2px;}
+.list-box .icon-list .icon-main a img {margin:0 4px;}
+.list-box .icon-list-closed .icon-main {background:image-url('icon_list_closed.jpg') top left no-repeat;}
+.list-box .icon-list-open .icon-main {background:image-url('icon_list_open.jpg') top left no-repeat;}
+.list-box .icon-list-closed .icon-dropdown {display:none;}
+.list-box .icon-list-open .icon-dropdown {display:block;}
+.list-box .icon-dropdown {width:196px;margin-top:-1px;position:relative;z-index:500;}
+.list-box .icon-dropdown-head {border:1px solid #d3d8be;border-bottom:0px none;background:#F4F6E7;}
+.list-box .icon-dropdown li {float:left;width:48px;height:40px;text-align:center;}
+.list-box .icon-dropdown li a{display:block;text-align:center;margin:9px 6px 9px 1px;}
+.list-box .icon-dropdown-foot {background:image-url('icon_list_foot_dd.png') top left no-repeat;width:196px;height:5px;display:block;clear:both;}
+
+.list-box .tools {padding:5px 12px 4px;height:30px;overflow:hidden;}
+.list-box .tools .filter {float:left;padding:7px;}
+.list-box .tools .search {float:right;}
+.list-box .tools .search-box .search-text {padding:6px 7px 6px 30px;height:16px;margin:1px !important;}
+.list-box .tools .filter a{ margin:0 10px 0 0;color:#516064;font-weight:bold;}
+.list-box .tools .filter a.current{margin:0 10px 0 0;}
+.list-box .tools .filter a.current .start {background:image-url('filter_link_start.jpg') top left no-repeat;padding:5px 0px 6px 8px;}
+.list-box .tools .filter a.current .end {background:image-url('filter_link_end.jpg') top right no-repeat;padding:5px 8px 6px 0px;}
+
+.list-box .people-list-scroll .people-list-scroll-inner {height:286px;overflow:auto;margin:0 4px;}
+.list-box .people-list-scroll ul {margin:10px 0; font-size: 12px;}
+.list-box .people-list-scroll li {width:132px;height:69px;float:left;margin:0 6px;position:relative;}
+.list-box .people-list-scroll li .list-deselct {width:12px;height:12px;display:block;position:absolute;top:5px;right:5px;background:image-url('list_deselect.jpg');}
+.list-box .people-list-scroll li.state-1, .list-box .people-list-scroll li:hover {background:image-url('people_list_state_1.jpg') center center no-repeat;}
+.list-box .people-list-scroll li.state-2 {background:image-url('people_list_state_2.jpg') center center no-repeat;}
+.list-box .people-list-scroll li .img {float:left;padding:2px;border:1px solid #e0e0e0;width:50px;margin:6px 3px;background:#fff;}
+.list-box .people-list-scroll li.state-1 .img , .list-box .people-list-scroll li.state-2 .img  {border:1px solid #858585;}
+.list-box .people-list-scroll li .details {float:right;width:70px;margin-top:7px;color:#030404;}
+.list-box .people-list-scroll li .details .group {color:#666;}
+.list-box .people-list-scroll li .details a {color:#333;}
+
+.list-box .action {padding:10px 20px 12px;text-align:right;}
+.list-box .lightbox-submit {background:image-url('btn_main.png') 0 0 no-repeat;width:104px;height:42px;color:#fff;border:0px none;line-height:29px;font-weight:bold;}
+.list-box .lightbox-submit:hover {background-position:left -40px;outline:none;}
+.list-box .lightbox-submit:active {background-position:left -80px;outline:none;}
+.list-box .lightbox-cancel {background:image-url('btn_sub.png') 0 0 no-repeat;width:104px;height:42px;color:#516064;border:0px none;line-height:29px;font-weight:bold;}
+.list-box .lightbox-cancel:hover {background-position:left -40px;outline:none;}
+.list-box .lightbox-cancel:active {background-position:left -80px;outline:none;}
+
+.background-transparent-overlay {
+  background-color: rgb(0, 0, 0) !important;
+  background-image: none !important;
+  opacity: 0.3 !important;
+  filter: alpha(opacity = 30) !important;
+  width: 1318px !important;
+  height: 1569px !important;
+}

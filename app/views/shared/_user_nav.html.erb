@@ -1,0 +1,20 @@
+<div id="user_nav">
+  <%- if user_signed_in? -%>
+  <span><%= link_to "Home", root_url -%></span>
+  <span>Hi <%= current_user.name -%></span>
+  <span><%= link_to "Sign out", destroy_user_session_path -%></span>
+  <span><%= link_to_function "Notifications", "alert('Not Implemented yet.')" -%></span>
+  <span><%= link_to_function "Messages", "alert('Not Implemented yet.')" -%></span>
+    
+  <%-else -%>
+  
+  <%- if false -%>
+  <!-- start erb comment -->
+  <%= link_to "Sign up", new_user_registration_path -%>
+  or
+  <!-- end erb comment -->
+  <%- end -%>
+  
+  <%= link_to "Sign in", new_user_session_path -%>                        
+  <%- end -%>
+</div>

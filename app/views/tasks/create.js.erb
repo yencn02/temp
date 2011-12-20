@@ -1,0 +1,51 @@
+(function($) {
+  <%- if flash[:error] -%>
+    alert("<%= flash.delete(:error) %>");
+  <%- else -%>
+    $('#submit-new-task-button').removeAttr('disabled');
+    flashNoticeMsg = "Task was successfully created."
+    <% if @is_reassign && @with_cancel %>
+      new_assignee = "<%= @task.assignee.formatted_name %>"
+      clone_assignee = "<%= @clone_task.assignee.formatted_name %>"
+      flashNoticeMsg = "Task successfully assigned for " + new_assignee + " and canceled from " + clone_assignee 
+    <% end %>
+    flashNotice(flashNoticeMsg, {
+      onUndo: function() {
+        $.post('<%= task_path(@task) %>', {_method: "delete"});
+      },
+      onClosed: function() {
+        <% if @is_reassign && @with_cancel %>
+          enableTaskActionButtons('<%= @clone_task.id %>');
+          <%- if !@notifications && remove_task_with_status?(@filters[:status], @clone_task.status.name) -%>
+          removeTask(<%= @clone_task.id %>);
+          createRightSideTags("<%=@tags%>");
+          <%- end -%>
+    
+          $.post("<%= status_task_path @clone_task.id %>", 
+                 {
+                   status: "<%= TaskStatus[:cancelled].name %>",
+                   assigner_action: true,
+                   save: true
+                 });
+        <%- end -%>
+      }
+    });
+    <%- if (@for_me && me?(@task.assignee)) || (@from_me && !me?(@task.assignee)) -%>
+      $("#main-tasks").prepend("<%= escape_javascript(render("shared/task", :task => @task, :sep => true, :task_lists => @task_lists)) %>");
+      $("#main-tasks .task-unit:first").after("<div class='dotted-line'></div>");
+      $("#main-tasks .task-unit:first .task-menu").jqTransform();
+      $("#main-tasks .task-unit:first .task-menu div:first").css("background-color", "transparent");
+      
+      taskBody = $("#main-tasks .task-unit:first .task-body");
+      taskBodyColor = taskBody.css('backgroundColor');
+      taskBody.animate({backgroundColor: '#ffda75'}, 100).delay(5000).animate({backgroundColor: taskBodyColor}, 3000);
+        
+      addTaskActionEvents(<%= @task.id %>);
+      replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");    
+    <%- end -%>   
+    
+    setTimeout('$j(".new-task-wrapper a.close").click()', 1000);
+  <%- end -%>
+  addZIndexCorrectionToItemSelect("#main-tasks .task-unit:first-child");
+  createRightSideTags("<%=@tags%>");
+})(jQuery);

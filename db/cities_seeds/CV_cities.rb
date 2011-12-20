@@ -1,0 +1,3 @@
+City.new(:country_id => "53", :name => "Santa Maria", :aliases => "Santa Maria,Santa Maria", :latitude => "16.6", :longitude => "-22.9").save
+City.new(:country_id => "53", :name => "Praia", :aliases => "Cidade da Praia,Municipio da Praia,MunicÃ­pio da Praia,Pragia,Praia,Praja,pei ya,peulaia,puraia,Î ÏÎ¬Î³Î¹Î±,ÐÑÐ°Ñ,ÐÑÐ°ÑÐ°,×¤×¨×××,áá«á«,ãã©ã¤ã¢,å¹äº,íë¼ì´ì,Praia", :latitude => "14.92148", :longitude => "-23.50868").save
+City.new(:country_id => "53", :name => "Mindelo", :aliases => "Mihdelo,Mindello,Mindelo,Mindelu,ÐÐ¸Ð½Ð´ÐµÐ»Ñ,Mindelo", :latitude => "16.89014", :longitude => "-24.98042").save

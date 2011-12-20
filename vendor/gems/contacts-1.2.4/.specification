@@ -1,0 +1,117 @@
+--- !ruby/object:Gem::Specification 
+name: contacts
+version: !ruby/object:Gem::Version 
+  hash: 23
+  prerelease: false
+  segments: 
+  - 1
+  - 2
+  - 4
+  version: 1.2.4
+platform: ruby
+authors: 
+- Lucas Carlson
+autorequire: contacts
+bindir: bin
+cert_chain: []
+
+date: 2010-07-06 00:00:00 +03:00
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: json
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 13
+        segments: 
+        - 0
+        - 4
+        - 1
+        version: 0.4.1
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: gdata
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - "="
+      - !ruby/object:Gem::Version 
+        hash: 17
+        segments: 
+        - 1
+        - 1
+        - 1
+        version: 1.1.1
+  type: :runtime
+  version_requirements: *id002
+description: "   A universal interface to grab contact list information from various providers including Yahoo, AOL, Gmail, Hotmail, and Plaxo.\n"
+email: lucas@rufy.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/contacts/aol.rb
+- lib/contacts/base.rb
+- lib/contacts/gmail.rb
+- lib/contacts/hotmail.rb
+- lib/contacts/json_picker.rb
+- lib/contacts/plaxo.rb
+- lib/contacts/yahoo.rb
+- lib/contacts.rb
+- test/example_accounts.yml
+- test/test_helper.rb
+- test/test_suite.rb
+- test/unit/aol_contact_importer_test.rb
+- test/unit/gmail_contact_importer_test.rb
+- test/unit/hotmail_contact_importer_test.rb
+- test/unit/test_accounts_test.rb
+- test/unit/yahoo_csv_contact_importer_test.rb
+- LICENSE
+- Rakefile
+- README
+- examples/grab_contacts.rb
+has_rdoc: true
+homepage: http://rubyforge.org/projects/contacts
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: 
+- A json parser, the gdata ruby gem
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: A universal interface to grab contact list information from various providers including Yahoo, AOL, Gmail, Hotmail, and Plaxo.
+test_files: []
+

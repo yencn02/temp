@@ -1,0 +1,30 @@
+City.new(:country_id => "234", :name => "Young", :aliases => ",Young", :latitude => "-32.68333", :longitude => "-57.63333").save
+City.new(:country_id => "234", :name => "Trinidad", :aliases => ",Trinidad", :latitude => "-33.53889", :longitude => "-56.88861").save
+City.new(:country_id => "234", :name => "Treinta y Tres", :aliases => "Treinta y Tres,Villa de Treinta y Tres,Treinta y Tres", :latitude => "-33.23333", :longitude => "-54.38333").save
+City.new(:country_id => "234", :name => "Tacuarembo", :aliases => "San Fructuoso,Tacuarembo,TacuarembÃ³,Takuarembo,Villa de San Fructuoso,Villa de Tacuarembo,Ð¢Ð°ÐºÑÐ°ÑÐµÐ¼Ð±Ð¾,TacuarembÃ³", :latitude => "-31.73333", :longitude => "-55.98333").save
+City.new(:country_id => "234", :name => "Santa Lucia", :aliases => "San Juan Bautista,Santa Lucia,Santa LucÃ­a,Santa LucÃ­a", :latitude => "-34.45333", :longitude => "-56.39056").save
+City.new(:country_id => "234", :name => "San Jose de Mayo", :aliases => "Ciudad de San Jose,Ciudad de San JosÃ©,San Jose,San Jose de Mayo,San JosÃ©,San JosÃ© de Mayo,San JosÃ© de Mayo", :latitude => "-34.3375", :longitude => "-56.71361").save
+City.new(:country_id => "234", :name => "San Carlos", :aliases => "San Carlos,Villa de San Carlos,San Carlos", :latitude => "-34.8", :longitude => "-54.91667").save
+City.new(:country_id => "234", :name => "Salto", :aliases => "Ciudad del Salto,Sal'to,Salta,Salto,Ð¡Ð°Ð»ÑÑÐ¾,Salto", :latitude => "-31.38333", :longitude => "-57.96667").save
+City.new(:country_id => "234", :name => "Rocha", :aliases => "Ciudad de Rocha,Rocha,Ð Ð¾ÑÐ°,Rocha", :latitude => "-34.48333", :longitude => "-54.33333").save
+City.new(:country_id => "234", :name => "Rivera", :aliases => "Rivera,Villa de Rivera,li wei la,Ð Ð¸Ð²ÐµÑÐ°,éé¦æ,Rivera", :latitude => "-30.9", :longitude => "-55.51667").save
+City.new(:country_id => "234", :name => "Progreso", :aliases => "Ingeniero Eduardo Garcia de Zuniga,Ingeniero Eduardo GarcÃ­a de ZÃºÃ±iga,Progreso,Progreso", :latitude => "-34.665", :longitude => "-56.21944").save
+City.new(:country_id => "234", :name => "Paysandu", :aliases => "Ciudad de Paysandu,Ciudad de PaysandÃº,Pajsandu,Paysandu,PaysandÃº,ÐÐ°Ð¹ÑÐ°Ð½Ð´Ñ,PaysandÃº", :latitude => "-32.32139", :longitude => "-58.07556").save
+City.new(:country_id => "234", :name => "Paso de Carrasco", :aliases => ",Paso de Carrasco", :latitude => "-34.86028", :longitude => "-56.05222").save
+City.new(:country_id => "234", :name => "Pando", :aliases => "Pando,Villa de Pando,ÐÐ°Ð½Ð´Ð¾,Pando", :latitude => "-34.71667", :longitude => "-55.95").save
+City.new(:country_id => "234", :name => "Montevideo", :aliases => "Ciudad de Montevideo,Montebideo,Montevidejas,Montevideo,Montevideu,MontevidÃ©u,MontevidÄjas,Muntivideu,MuntividÃ¨u,meng de wei de ya,meng te wei duo,montebide-o,montebideo,mwntyfydyw,mxn te wi de xo,ÎÎ¿Î½ÏÎµÎ²Î¹Î´Î­Î¿,ÐÐ¾Ð½ÑÐµÐ²Ð¸Ð´ÐµÐ¾,××× ××××××××,ÙÙÙØªÙâÙÛØ¯Ø¦,ÙÙÙØªÙâÙÛØ¯Ø¦Ù,ÙÙÙØªÙÙÙØ¯ÙÙ,à¸¡à¸­à¸à¹à¸à¸§à¸´à¹à¸à¹à¸­,áááá¢áááááá,ááá´áªá´á,ã¢ã³ããããª,èå¾ç»´çäº,èç¹ç¶­å¤,ëª¬íë¹ë°ì¤,Montevideo", :latitude => "-34.83346", :longitude => "-56.16735").save
+City.new(:country_id => "234", :name => "Minas", :aliases => "Ciudad de Minas,Lavalleja,Minas,ÐÐ¸Ð½Ð°Ñ,Minas", :latitude => "-34.37", :longitude => "-55.225").save
+City.new(:country_id => "234", :name => "Mercedes", :aliases => "Ciudad de Mercedes,Mercedes,Mercedes", :latitude => "-33.25583", :longitude => "-58.01917").save
+City.new(:country_id => "234", :name => "Melo", :aliases => "Ciudad de Melo,Mel,Melas,Melo,mei luo,ÐÐµÐ»,æ¢æ´,Melo", :latitude => "-32.36667", :longitude => "-54.18333").save
+City.new(:country_id => "234", :name => "Maldonado", :aliases => "Mal'donado,Maldonado,San Fernando de Maldonado,ÐÐ°Ð»ÑÐ´Ð¾Ð½Ð°Ð´Ð¾,Maldonado", :latitude => "-34.9", :longitude => "-54.95").save
+City.new(:country_id => "234", :name => "Las Piedras", :aliases => "Las Piedras,Las-P'edras,Piedras,San Isidrio,Villa de las Piedras,ÐÐ°Ñ-ÐÑÐµÐ´ÑÐ°Ñ,Las Piedras", :latitude => "-34.72639", :longitude => "-56.22").save
+City.new(:country_id => "234", :name => "La Paz", :aliases => ",La Paz", :latitude => "-34.76167", :longitude => "-56.22361").save
+City.new(:country_id => "234", :name => "Fray Bentos", :aliases => "Fraj-Bentos,Fray Bentos,Independencia,Villa Fray Bentos,Villa Independencia,Villa de Fray Bentos,Ð¤ÑÐ°Ð¹-ÐÐµÐ½ÑÐ¾Ñ,Fray Bentos", :latitude => "-33.1325", :longitude => "-58.29556").save
+City.new(:country_id => "234", :name => "Florida", :aliases => "Ciudad de la Florida,Florida,Ð¤Ð»Ð¾ÑÐ¸Ð´Ð°,Florida", :latitude => "-34.09556", :longitude => "-56.21417").save
+City.new(:country_id => "234", :name => "Durazno", :aliases => "Duranzo,Durazno,Durazno", :latitude => "-33.41306", :longitude => "-56.50056").save
+City.new(:country_id => "234", :name => "Dolores", :aliases => ",Dolores", :latitude => "-33.54417", :longitude => "-58.19722").save
+City.new(:country_id => "234", :name => "Delta del Tigre", :aliases => ",Delta del Tigre", :latitude => "-34.76333", :longitude => "-56.38528").save
+City.new(:country_id => "234", :name => "Colonia del Sacramento", :aliases => "Ciudad de la Colonia del Sacramento,Colonia,Colonia del Sacramento,Colonia do Sacramento,ColÃ´nia do Sacramento,Kolonija,Kolonija del Sakramentas,Kolonija-del'-Sakramento,La Ciudad de Colonia,Sacramento,ÐÐ¾Ð»Ð¾Ð½Ð¸Ñ-Ð´ÐµÐ»Ñ-Ð¡Ð°ÐºÑÐ°Ð¼ÐµÐ½ÑÐ¾,Colonia del Sacramento", :latitude => "-34.46667", :longitude => "-57.85").save
+City.new(:country_id => "234", :name => "Carmelo", :aliases => "Carmelo,Las Viboras,Las VÃ­boras,Carmelo", :latitude => "-33.98917", :longitude => "-58.28556").save
+City.new(:country_id => "234", :name => "Canelones", :aliases => "Canelones,Guadalupe,Villa de Canelones,Canelones", :latitude => "-34.52278", :longitude => "-56.27778").save
+City.new(:country_id => "234", :name => "Artigas", :aliases => "Artigas,San Eugenio,ÐÑÑÐ¸Ð³Ð°Ñ,Artigas", :latitude => "-30.4", :longitude => "-56.46667").save

@@ -1,0 +1,35 @@
+(function($) {
+  replaceTask(<%= @task.id %>, "<%= escape_javascript(render("shared/task", :task => @task, :task_lists => current_user.task_lists)) %>")
+  disableTaskActionButtons('<%= @task.id %>');
+  <%- unless @isundo -%>
+  taskNotice(<%= @task.id %>, {msg: "<%= reassign_task_msg(@task) %>",
+    onUndo: function() {
+      removeTaskNotice(<%= @task.id %>);
+    },
+    onClosed: function() {
+      enableTaskActionButtons('<%= @task.id %>');
+      <%- if !@notifications && remove_task_with_status?(@filters[:status], @task.status.name) -%>
+      removeTask(<%= @task.id %>);
+      createRightSideTags("<%=@tags%>");
+      <%- end -%>
+
+      $.post("<%= reassign_task_url(@task.id, params[:target_user]) %>",
+             {
+               save: true,
+               with_comments: "<%= params[:with_comments] %>"
+             }
+            );
+    },
+    counter: true
+  });
+  <%- else -%>
+    enableTaskActionButtons('<%= @task.id %>');
+  <%- end -%>
+
+  <%if @for_me%>
+  replaceSideTabs("<%= escape_javascript(render("task_lists/task_lists")) %>");
+  <%end%>  
+  $("#in_tasks_count").replaceWith("<%= escape_javascript(render("home/in_tasks_count", :user => current_user)) %>");
+  
+  addStyleToCurretTaskState(<%=@task.id%>);
+})(jQuery);

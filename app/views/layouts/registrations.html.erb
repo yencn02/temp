@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cheeve | Soon ... New era in human efficiency</title>
+<!-- Styles -->
+<%= stylesheet_link_tag "reset", "layout", "signup_layout"%>
+<!-- Scripts -->
+<%= javascript_include_tag "jquery", "common", "jquery.validate" %>
+</head>
+
+<body>
+  <div class="wrapper">
+  	<div class="wrapper-in">
+    	<div class="logo">
+        <h1><a href="#"><%= image_tag "logo.gif", :alt => "Cheeve" %></a></h1>
+      </div>
+      <div class="content">
+      	<div class="dual-box">
+        	<div class="box-hd"></div>
+          <div class="box-content">
+            <%= yield %>
+          </div>
+          <div class="box-ft"></div>
+        </div>
+      </div>        
+      <div class="footer">
+      	<span class="image-text">Cheeve | Insighd Inc. | © 2010 All Rights Reserved. | @cheeve.it</span>
+    	</div>
+    </div>
+  </div>
+</body>
+</html>
